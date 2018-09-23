@@ -1,12 +1,12 @@
 **Team 58: IU Athletics All Access App**\
 **Team Information**\
-|Item           |Value          |
-| ------------- |:-------------------------------------------------------------------:| 
-| Team Number   | 58            |
-| Team Name     | IU Athletics All Access |
-| Assigned AI   | Last, First   |
-| Platform      | IOS           |
-| Description   | Allow fans to track their favorite IU athletes and teams on the go |
+ Item           | Value          
+ --- |--- 
+ Team Number   | 58            
+ Team Name     | IU Athletics All Access 
+ Assigned AI   | Last, First   
+ Platform      | IOS           
+ Description   | Allow fans to track their favorite IU athletes and teams on the go 
 \
 **Team Members**
 You can find information on our team, our roles, and our training plans below.
