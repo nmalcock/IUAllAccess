@@ -3,9 +3,9 @@
 \
 Item | Value   
 Team Number | 58     
-Team Name | IU Athletics All Access 
-Assigned AI | Last, First 
-Platform | IOS 
+Team Name | IU Athletics All Access \
+Assigned AI | Last, First \
+Platform | IOS \
 Description | Allow fans to track their favorite IU athletes and teams on the go 
 
 
