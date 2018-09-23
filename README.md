@@ -1,6 +1,6 @@
 **Team 58: IU Athletics All Access App**\
 **Team Information**\
- Item           | Value          
+ Item | Value          
  --- |--- 
  Team Number   | 58            
  Team Name     | IU Athletics All Access 
