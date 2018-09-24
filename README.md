@@ -27,3 +27,11 @@ Main Role: Business Analyst
 - Database Management ({3 Weeks})
 - Legality/Negotiaton of App use with IU Athletic Department ({4 weeks})
 - X-Code Training ({4 weeks})
+
+**Alcock, Nick** (nmalcock)
+Main Role: Developer/Design
+**Training:**
+- X-Code Training ({4 Weeks})
+- Swift Training ({4 Weeks})
+- Design Skill Training ({2 Weeks})
+
