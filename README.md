@@ -27,3 +27,11 @@ Main Role: Business Analyst
 - Database Management ({3 Weeks})
 - Legality/Negotiaton of App use with IU Athletic Department ({4 weeks})
 - X-Code Training ({4 weeks})
+
+**Poplawski, Rebecca** (rpoplaws)
+Main Role: Project Design / Developer
+- Layout Design ({2 weeks})
+- X-Code Training ({4+ weeks})
+- Swift Training ({4 weeks})
+- IOS Implementation Training ({1 week})
+
