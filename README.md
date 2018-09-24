@@ -45,7 +45,7 @@ Main Role: Developer/Design
 **McGuire, Jack** (jarmcgui)
 Main Role: Developer / Analyst
 **Training:**
-- X-Code Trainig ({4 weeks})
+- X-Code Training ({4 weeks})
 - Swift Training ({4 weeks})
 - Database management ({3 weeks})
 
