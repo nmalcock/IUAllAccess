@@ -35,3 +35,11 @@ Main Role: Project Design / Developer
 - Swift Training ({4 weeks})
 - IOS Implementation Training ({1 week})
 
+**Alcock, Nick** (nmalcock)
+Main Role: Developer/Design
+**Training:**
+- X-Code Training ({4 Weeks})
+- Swift Training ({4 Weeks})
+- Design Skill Training ({2 Weeks})
+
+
