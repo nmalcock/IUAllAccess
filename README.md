@@ -13,7 +13,7 @@ Description | Allow fans to track their favorite IU athletes and teams on the go
 You can find information on our team, our roles, and our training plans below.
 
 **Jacobucci, Michael** (majacobu)
-Main Role: Design Implimentation
+Main Role: Design Implimentation \
 Training
 - Layout Design ({2 week})
 - X-Code Training ({4 weeks}) 
@@ -21,7 +21,7 @@ Training
 - IOS Implementation Training ({1 week})
 
 **Milhouse, Jacob** (jmilhous)
-Main Role: Business Analyst
+Main Role: Business Analyst \
 **Training**
 - SQL ({2 weeks})
 - Database Management ({3 Weeks})
@@ -29,21 +29,22 @@ Main Role: Business Analyst
 - X-Code Training ({4 weeks})
 
 **Poplawski, Rebecca** (rpoplaws)
-Main Role: Project Design / Developer
+Main Role: Project Design / Developer \
+**Training**
 - Layout Design ({2 weeks})
 - X-Code Training ({4+ weeks})
 - Swift Training ({4 weeks})
 - IOS Implementation Training ({1 week})
 
 **Alcock, Nick** (nmalcock)
-Main Role: Developer/Design
+Main Role: Developer/Design \
 **Training:**
 - X-Code Training ({4 Weeks})
 - Swift Training ({4 Weeks})
 - Design Skill Training ({2 Weeks})
 
 **McGuire, Jack** (jarmcgui)
-Main Role: Developer / Analyst
+Main Role: Developer / Analyst \
 **Training:**
 - X-Code Training ({4 weeks})
 - Swift Training ({4 weeks})
