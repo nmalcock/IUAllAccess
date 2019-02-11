@@ -18,6 +18,7 @@
 		02C5173721FFB29F00286F0A /* homeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5173621FFB29F00286F0A /* homeScreenViewController.swift */; };
 		02ED6D772208BE7700733A4D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED6D762208BE7700733A4D /* LogInViewController.swift */; };
 		15942344E0D8660D0CF6F8D3 /* Pods_Team58App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B029ED6BD997B0406DC559B /* Pods_Team58App.framework */; };
+		79D07A4622120AFB00FCDB61 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79D07A4522120AFB00FCDB61 /* credentials.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		02C5173621FFB29F00286F0A /* homeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeScreenViewController.swift; sourceTree = "<group>"; };
 		02ED6D762208BE7700733A4D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5B029ED6BD997B0406DC559B /* Pods_Team58App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Team58App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D07A4522120AFB00FCDB61 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = credentials.plist; path = ../../../../credentials.plist; sourceTree = "<group>"; };
 		84FBFFFB8D679CABC2076629 /* Pods-Team58App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Team58App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Team58App/Pods-Team58App.debug.xcconfig"; sourceTree = "<group>"; };
 		9EFBD6F8F43DCC8D4B982734 /* Pods-Team58App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Team58App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Team58App/Pods-Team58App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 		024FD0C621F9466B00869173 /* Team58App */ = {
 			isa = PBXGroup;
 			children = (
+				79D07A4522120AFB00FCDB61 /* credentials.plist */,
 				024FD0C721F9466B00869173 /* AppDelegate.swift */,
 				024FD0C921F9466B00869173 /* ViewController.swift */,
 				02C5173021FFB10300286F0A /* registrationViewController.swift */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				024FD0D221F9466C00869173 /* LaunchScreen.storyboard in Resources */,
+				79D07A4622120AFB00FCDB61 /* credentials.plist in Resources */,
 				024FD0CF21F9466C00869173 /* Assets.xcassets in Resources */,
 				024FD0CD21F9466B00869173 /* Main.storyboard in Resources */,
 			);
@@ -296,7 +300,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Team58App/Pods-Team58App-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Team58App/Pods-Team58App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -311,7 +315,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Team58App/Pods-Team58App-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Team58App/Pods-Team58App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AB246F9646444110C5A728EB /* [CP] Copy Pods Resources */ = {
@@ -322,7 +326,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Team58App/Pods-Team58App-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Team58App/Pods-Team58App-resources.sh",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -333,7 +337,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Team58App/Pods-Team58App-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Team58App/Pods-Team58App-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B525E866F324FD3751C25268 /* [CP] Check Pods Manifest.lock */ = {
