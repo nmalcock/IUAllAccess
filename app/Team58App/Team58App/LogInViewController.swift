@@ -8,8 +8,48 @@
 
 import UIKit
 import Alamofire
+import GoogleSignIn
+import Google
 
-class LogInViewController: UIViewController {
+
+class LogInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        var error : NSError?
+        
+    GGLContext.sharedInstance().configureWithError(&error)
+        
+        if error != nil{
+            print(error ?? "login error")
+            return
+        }
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance()?.delegate = self
+        
+        
+        let googleSignInButton = GIDSignInButton()
+        googleSignInButton.center = view.center
+        view.addSubview(googleSignInButton)
+        
+        
+        
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!){
+        
+        if error != nil{
+            print(error ?? "login error")
+            return;
+        }
+        
+        
+        
+        
+    }
+    
     
     //you can get the ip using ifconfig command in terminal
     let URL_USER_LOGIN = "http://192.168.1.105/SimplifiediOS/v1/login.php"
@@ -69,26 +109,21 @@ class LogInViewController: UIViewController {
                 }
         }
     }
+  
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //hiding the navigation button
-        
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //if user is already logged in switching to profile screen
-        if defaultValues.string(forKey: "username") != nil{
-            let ViewController = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-            self.navigationController?.pushViewController(ViewController, animated: true)
-        }
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
     
     
 }
+
+
+
+//hiding the navigation button
+
+
+//if user is already logged in switching to profile screen
+/*if defaultValues.string(forKey: "username") != nil{
+    let ViewController = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+    self.navigationController?.pushViewController(ViewController, animated: true)
+}
+*/
