@@ -14,7 +14,6 @@
 		024FD0D221F9466C00869173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024FD0D021F9466C00869173 /* LaunchScreen.storyboard */; };
 		024FD0DD21F9466C00869173 /* Team58AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FD0DC21F9466C00869173 /* Team58AppTests.swift */; };
 		024FD0E821F9466C00869173 /* Team58AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FD0E721F9466C00869173 /* Team58AppUITests.swift */; };
-		02AD398221FF8C3F00A72F8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02AD398121FF8C3F00A72F8A /* GoogleService-Info.plist */; };
 		02C5173121FFB10300286F0A /* registrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5173021FFB10300286F0A /* registrationViewController.swift */; };
 		02C5173721FFB29F00286F0A /* homeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5173621FFB29F00286F0A /* homeScreenViewController.swift */; };
 		02ED6D772208BE7700733A4D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED6D762208BE7700733A4D /* LogInViewController.swift */; };
@@ -52,7 +51,6 @@
 		024FD0E321F9466C00869173 /* Team58AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Team58AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		024FD0E721F9466C00869173 /* Team58AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team58AppUITests.swift; sourceTree = "<group>"; };
 		024FD0E921F9466C00869173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		02AD398121FF8C3F00A72F8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		02C5173021FFB10300286F0A /* registrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationViewController.swift; sourceTree = "<group>"; };
 		02C5173621FFB29F00286F0A /* homeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeScreenViewController.swift; sourceTree = "<group>"; };
 		02ED6D762208BE7700733A4D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 				024FD0CE21F9466C00869173 /* Assets.xcassets */,
 				024FD0D021F9466C00869173 /* LaunchScreen.storyboard */,
 				024FD0D321F9466C00869173 /* Info.plist */,
-				02AD398121FF8C3F00A72F8A /* GoogleService-Info.plist */,
 			);
 			path = Team58App;
 			sourceTree = "<group>";
@@ -269,7 +266,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				024FD0D221F9466C00869173 /* LaunchScreen.storyboard in Resources */,
-				02AD398221FF8C3F00A72F8A /* GoogleService-Info.plist in Resources */,
 				024FD0CF21F9466C00869173 /* Assets.xcassets in Resources */,
 				024FD0CD21F9466B00869173 /* Main.storyboard in Resources */,
 			);
