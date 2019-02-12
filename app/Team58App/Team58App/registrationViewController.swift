@@ -51,6 +51,7 @@ class registrationViewController: UIViewController {
                     //displaying the message in label
                     self.labelMessage.text = JSONData.value(forKey: "message") as! String?
                 }
+
         }
     
         
