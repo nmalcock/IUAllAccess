@@ -52,6 +52,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="buttonLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hxK-L5-I4V"/>
                                     <segue destination="cJe-uw-KE5" kind="show" identifier="logInPressed" id="hVU-UP-fw1"/>
                                 </connections>
                             </button>
@@ -225,7 +226,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cJe-uw-KE5" kind="presentation" identifier="homeScreen" id="Sp0-7m-qG7"/>
+
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQY-nZ-xOX">
@@ -235,19 +236,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vX-22-58D">
+                                <rect key="frame" x="166" y="626" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="560-gJ-mvd"/>
                     </view>
                     <navigationItem key="navigationItem" id="1de-AR-LXZ"/>
                     <connections>
+                        <outlet property="labelMessage" destination="0vX-22-58D" id="Bey-HP-MZi"/>
                         <outlet property="textFieldEmail" destination="WQu-RT-hOD" id="AFO-SM-wWz"/>
                         <outlet property="textFieldPassword" destination="eVU-oI-89o" id="gvn-cE-MdY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEl-6z-6Lh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="686"/>
+            <point key="canvasLocation" x="-207.19999999999999" y="685.90704647676171"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="IMS-Lb-e1o">
@@ -340,7 +349,4 @@
         <image name="settings" width="512" height="512"/>
         <image name="teams" width="200" height="200"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Sp0-7m-qG7"/>
-    </inferredMetricsTieBreakers>
 </document>

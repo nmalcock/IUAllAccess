@@ -8,47 +8,10 @@
 
 import UIKit
 import Alamofire
-import GoogleSignIn
-import Google
 
 
-class LogInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        var error : NSError?
-        
-    GGLContext.sharedInstance().configureWithError(&error)
-        
-        if error != nil{
-            print(error ?? "login error")
-            return
-        }
-        
-        GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance()?.delegate = self
-        
-        
-        let googleSignInButton = GIDSignInButton()
-        googleSignInButton.center = view.center
-        view.addSubview(googleSignInButton)
-        
-        
-        
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!){
-        
-        if error != nil{
-            print(error ?? "login error")
-            return;
-        }
-        
-        
-        
-        
-    }
+
+class LogInViewController: UIViewController {
     
     
     //you can get the ip using ifconfig command in terminal
