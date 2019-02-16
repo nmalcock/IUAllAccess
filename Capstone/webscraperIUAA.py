@@ -44,3 +44,4 @@ for item in individual_stat.find_all('tr'):
     ##            athlete.append(statType + ":" + statNum)
                 f.writerow([fname, lname, statType, statNum])
                 print(fname + " " + lname + " " + statType + ":" + statNum)
+				
