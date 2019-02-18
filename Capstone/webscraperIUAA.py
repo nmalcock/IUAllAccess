@@ -11,11 +11,12 @@ athlete = []
 individual = soup.find('section', id='individual-overall')
 individual_stat = individual.find('tbody')
 
+
 f = csv.writer(open('stats.csv','w'))
 f.writerow(['fname','lname','statType','statNum'])
 
 for item in individual_stat.find_all('tr'):
-    print(item)
+    #print(item)
     stats = item.find_all('td')
     name = item.find_all('span')
     for string in name:
@@ -42,6 +43,6 @@ for item in individual_stat.find_all('tr'):
                 statNum = str(line)[two_pos + len('">'):three_pos]
     ##            print(statType + ": " + statNum)
     ##            athlete.append(statType + ":" + statNum)
-                f.writerow([fname, lname, statType, statNum])
+##                f.writerow([fname, lname, statType, statNum])
                 print(fname + " " + lname + " " + statType + ":" + statNum)
 				
