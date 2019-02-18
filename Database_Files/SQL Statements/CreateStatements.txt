@@ -1,0 +1,70 @@
+CREATE TABLE team
+	(teamID INT AUTO_INCREMENT,
+	teamName VARCHAR(100),
+	PRIMARY KEY (teamID)
+)
+ENGINE = INNODB;
+	
+CREATE TABLE athlete 
+	(athleteID INT AUTO_INCREMENT,
+	fname VARCHAR(100),
+	lname VARCHAR(100),
+	number INT,
+	position VARCHAR(20),
+	year VARCHAR(5),
+image_path VARCHAR(200),
+	teamID INT NOT NULL,
+	PRIMARY KEY (athleteID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+
+CREATE TABLE schedule    
+	(scheduleID INT AUTO_INCREMENT,
+	opponent VARCHAR(50),
+	game_date DATETIME,
+	iu_score INT,
+	opponent_score INT,
+	season VARCHAR(10),
+	bTenOpp BOOLEAN,	
+	result BOOLEAN,
+	teamID INT,
+	PRIMARY KEY (scheduleID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE stat
+	(statID INT AUTO_INCREMENT,
+	stat_type VARCHAR(15),
+	stat_number INT,
+	athleteID INT NOT NULL,
+	teamID INT NOT NULL,
+	scheduleID INT NOT NULL,
+	PRIMARY KEY (statID),
+	FOREIGN KEY (athleteID) REFERENCES athlete(athleteID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID),
+	FOREIGN KEY (scheduleID) REFERENCES schedule(scheduleID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE user 
+	(userID INT AUTO_INCREMENT,
+	email VARCHAR(100),
+	password VARCHAR(15) UNIQUE,
+	finalScore BOOLEAN DEFAULT TRUE,
+	gameReminder BOOLEAN DEFAULT TRUE,
+	statUpdate BOOLEAN DEFAULT FALSE,
+	gameStart BOOLEAN DEFAULT FALSE,
+	PRIMARY KEY (userID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE userFavorites
+	(userID INT,
+	athleteID INT,
+	FOREIGN KEY (userID) REFERENCES user(userid),
+	FOREIGN KEY (athleteID) REFERENCES athlete(athleteID)
+)
+ENGINE = INNODB;
