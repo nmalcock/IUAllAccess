@@ -52,7 +52,7 @@
 		024FD0E321F9466C00869173 /* Team58AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Team58AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		024FD0E721F9466C00869173 /* Team58AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team58AppUITests.swift; sourceTree = "<group>"; };
 		024FD0E921F9466C00869173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		02C5173021FFB10300286F0A /* registrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationViewController.swift; sourceTree = "<group>"; };
+		02C5173021FFB10300286F0A /* registrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		02C5173621FFB29F00286F0A /* homeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeScreenViewController.swift; sourceTree = "<group>"; };
 		02ED6D762208BE7700733A4D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5B029ED6BD997B0406DC559B /* Pods_Team58App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Team58App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -301,12 +301,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Team58App/Pods-Team58App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -459,6 +461,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -513,6 +516,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -569,7 +573,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rpoplaws-.Team58AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Team58App.app/Team58App";
 			};
@@ -589,7 +593,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rpoplaws-.Team58AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Team58App.app/Team58App";
 			};

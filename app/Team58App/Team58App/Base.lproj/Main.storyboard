@@ -160,7 +160,7 @@
         <!--registrationViewController-->
         <scene sceneID="14z-Wb-GBG">
             <objects>
-                <viewController storyboardIdentifier="registrationViewController" title="registrationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Lb-I2-HTz" customClass="registrationViewController" customModule="Team58App" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registrationViewController" title="registrationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Lb-I2-HTz" customClass="registrationViewController" customModule="Team58App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vLJ-nZ-4xw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,18 +217,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfk-AB-BTM">
-                                <rect key="frame" x="0.0" y="569" width="375" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Register">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQY-nZ-xOX">
                                 <rect key="frame" x="0.0" y="347" width="39" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -236,20 +224,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vX-22-58D">
-                                <rect key="frame" x="166" y="626" width="42" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfk-AB-BTM">
+                                <rect key="frame" x="-16" y="558" width="391" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonRegister:" destination="2Lb-I2-HTz" eventType="touchUpInside" id="RDy-zG-SsU"/>
+                                    <segue destination="cJe-uw-KE5" kind="show" id="wu4-un-hxg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="560-gJ-mvd"/>
                     </view>
                     <navigationItem key="navigationItem" id="1de-AR-LXZ"/>
                     <connections>
-                        <outlet property="labelMessage" destination="0vX-22-58D" id="Bey-HP-MZi"/>
                         <outlet property="textFieldEmail" destination="WQu-RT-hOD" id="AFO-SM-wWz"/>
                         <outlet property="textFieldPassword" destination="eVU-oI-89o" id="gvn-cE-MdY"/>
                     </connections>
@@ -349,4 +342,7 @@
         <image name="settings" width="512" height="512"/>
         <image name="teams" width="200" height="200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wu4-un-hxg"/>
+    </inferredMetricsTieBreakers>
 </document>
