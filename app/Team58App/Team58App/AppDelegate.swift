@@ -33,8 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // if user is once logged in / register, keep him logged in
         if user != nil {
             
-            let id = user!["id"] as? String
-            if id != nil {
+            let ID = user!["ID"] as? String
+            if ID != nil {
                 login()
             }
             
