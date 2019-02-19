@@ -9,10 +9,54 @@
 import UIKit
 import Alamofire
 
+let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+
+
+// stores all information about current user
+var user : NSDictionary?
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    @objc var infoViewIsShowing = false
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+
+        
+        // load content in user var
+        user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
+        
+        // if user is once logged in / register, keep him logged in
+        if user != nil {
+            
+            let id = user!["id"] as? String
+            if id != nil {
+                login()
+            }
+            
+        }
+        
+        
+        return true
+    }
+    
+    // func to pass to home page ro to tabBar
+    @objc func login() {
+        
+        // refer to our Main.storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        // store our tabBar Object from Main.storyboard in tabBar var
+        let taBar = storyboard.instantiateViewController(withIdentifier: "tabBar")
+        
+        // present tabBar that is storing in tabBar var
+        window?.rootViewController = taBar
+        
+    }
  
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

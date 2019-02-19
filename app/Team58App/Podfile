@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'Team58App' do
 pod ‘Alamofire’, ‘~> 4.5’
+pod 'SwiftyJSON', '~> 4.0'
 
 end
 
