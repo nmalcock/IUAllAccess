@@ -33,7 +33,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="IU ATHLETICS ALL ACCESS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wXl-Jv-OPH">
                                 <rect key="frame" x="85" y="228" width="205" height="20"/>
@@ -72,8 +72,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="l0g-sW-bTN"/>
                     <connections>
+                        <outlet property="textFieldEmail" destination="ycl-8q-KQu" id="jBM-st-aOn"/>
                         <outlet property="textFieldPassword" destination="vZC-bU-OqB" id="NIr-XF-dtU"/>
-                        <outlet property="textFieldUserName" destination="ycl-8q-KQu" id="VbI-rZ-45x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -343,6 +343,6 @@
         <image name="teams" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wu4-un-hxg"/>
+        <segue reference="hVU-UP-fw1"/>
     </inferredMetricsTieBreakers>
 </document>

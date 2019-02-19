@@ -15,78 +15,96 @@ class LogInViewController: UIViewController {
     
     
     //you can get the ip using ifconfig command in terminal
-    let URL_USER_LOGIN = "http://192.168.1.105/SimplifiediOS/v1/login.php"
+    //let URL_USER_LOGIN = "http://cgi.sice.indiana.edu/~team58/login.php"
     
     //the defaultvalues to store user data
     let defaultValues = UserDefaults.standard
     
 
-    @IBOutlet weak var textFieldUserName: UITextField!
+    @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
     
     
     
     @IBAction func buttonLogin(_ sender: UIButton) {
-        let parameters: Parameters=[
-            "username":textFieldUserName.text!,
-            "password":textFieldPassword.text!
-        ]
-        
-        Alamofire.request(URL_USER_LOGIN, method: .post, parameters: parameters).responseJSON
-            {
-                response in
-                //printing response
-                print(response)
+
+        // if no text entered
+        if textFieldEmail.text!.isEmpty || textFieldPassword.text!.isEmpty {
+            
+            // text is entered
+        } else {
+            
+            
+            // remove keyboard
+            self.view.endEditing(true)
+            
+            // shortcuts
+           // let email = textFieldEmail.text!.lowercased()
+           // let password = textFieldPassword.text!
+            
+            // send request to mysql db
+            // url to access our php file
+            let url = URL(string: "http://cgi.sice.indiana.edu/~team58/login.php")!
+            
+            // request url
+            var request = URLRequest(url: url)
+            
+            // method to pass data POST - cause it is secured
+            request.httpMethod = "POST"
+            
+            // body gonna be appended to url
+            let body = "email=\(textFieldEmail.text!)&password=\(textFieldPassword.text!)"
+            
+            // append body to our request that gonna be sent
+            request.httpBody = body.data(using: .utf8)
+            
+            // launch session
+            URLSession.shared.dataTask(with: request) { data, response, error in
                 
-                //getting the json value from the server
-                if let result = response.result.value {
-                    let jsonData = result as! NSDictionary
+                if error == nil {
                     
-                    //if there is no error
-                    if(!(jsonData.value(forKey: "error") as! Bool)){
+                    
+                    do {
+                        // get json result
+                        let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
                         
-                        //getting the user from response
-                        let user = jsonData.value(forKey: "user") as! NSDictionary
+                        // assign json to new var parseJSON in guard/secured way
+                        guard let parseJSON = json else {
+                            print("Error while parsing")
+                            return
+                        }
                         
-                        //getting user values
-                        let userId = user.value(forKey: "id") as! Int
-                        let userName = user.value(forKey: "username") as! String
-                        let userEmail = user.value(forKey: "email") as! String
-                        let userPhone = user.value(forKey: "phone") as! String
+                        // get id from parseJSON dictionary
+                        let ID = parseJSON["ID"] as? String
                         
-                        //saving user values to defaults
-                        self.defaultValues.set(userId, forKey: "userid")
-                        self.defaultValues.set(userName, forKey: "username")
-                        self.defaultValues.set(userEmail, forKey: "useremail")
-                        self.defaultValues.set(userPhone, forKey: "userphone")
+                        // successfully registered
+                        if ID != nil {
+                            // save user information we received from our host
+                            UserDefaults.standard.set(parseJSON, forKey: "parseJSON")
+                            user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
+                            let message = parseJSON["message"] as! String
+                            print(message)
+                        }
                         
-                        //switching the screen
-                        let ViewController = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-                        self.navigationController?.pushViewController(ViewController, animated: true)
                         
-                        self.dismiss(animated: false, completion: nil)
-                    }else{
-                        //error message in case of invalid credential
-                        //self.labelMessage.text = "Invalid username or password"
+                        print(json!)
+                        
+                        
+                        
+                    } catch {
+                        print(error)
+                        
                     }
+                    
                 }
+                
+                // launch prepared session
+                }.resume()
+            
         }
+        
+        
     }
-  
-    
-
-    
-    
 }
+//yeet
 
-
-
-//hiding the navigation button
-
-
-//if user is already logged in switching to profile screen
-/*if defaultValues.string(forKey: "username") != nil{
-    let ViewController = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-    self.navigationController?.pushViewController(ViewController, animated: true)
-}
-*/

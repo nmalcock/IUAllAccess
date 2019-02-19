@@ -74,10 +74,10 @@ class registrationViewController: UIViewController {
                             }
                             
                             // get id from parseJSON dictionary
-                            let id = parseJSON["id"]
+                            let ID = parseJSON["ID"]
                             
                             // successfully registered
-                            if id != nil {
+                            if ID != nil {
                                 // save user information we received from our host
                                 UserDefaults.standard.set(parseJSON, forKey: "parseJSON")
                                 user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
