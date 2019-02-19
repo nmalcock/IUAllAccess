@@ -14,6 +14,12 @@
 		024FD0D221F9466C00869173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024FD0D021F9466C00869173 /* LaunchScreen.storyboard */; };
 		024FD0DD21F9466C00869173 /* Team58AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FD0DC21F9466C00869173 /* Team58AppTests.swift */; };
 		024FD0E821F9466C00869173 /* Team58AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FD0E721F9466C00869173 /* Team58AppUITests.swift */; };
+		0259E93D221BD2D4003DB80B /* StoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0259E937221BD2D3003DB80B /* StoreData.swift */; };
+		0259E93E221BD2D4003DB80B /* PullData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0259E938221BD2D3003DB80B /* PullData.swift */; };
+		0259E93F221BD2D4003DB80B /* StoreScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0259E939221BD2D3003DB80B /* StoreScheduleData.swift */; };
+		0259E940221BD2D4003DB80B /* scheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0259E93A221BD2D3003DB80B /* scheduleViewController.swift */; };
+		0259E941221BD2D4003DB80B /* teamRosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0259E93B221BD2D3003DB80B /* teamRosterViewController.swift */; };
+		0259E942221BD2D4003DB80B /* PullScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0259E93C221BD2D3003DB80B /* PullScheduleData.swift */; };
 		02C5173121FFB10300286F0A /* registrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5173021FFB10300286F0A /* registrationViewController.swift */; };
 		02C5173721FFB29F00286F0A /* homeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5173621FFB29F00286F0A /* homeScreenViewController.swift */; };
 		02ED6D772208BE7700733A4D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED6D762208BE7700733A4D /* LogInViewController.swift */; };
@@ -52,6 +58,12 @@
 		024FD0E321F9466C00869173 /* Team58AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Team58AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		024FD0E721F9466C00869173 /* Team58AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team58AppUITests.swift; sourceTree = "<group>"; };
 		024FD0E921F9466C00869173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0259E937221BD2D3003DB80B /* StoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreData.swift; sourceTree = "<group>"; };
+		0259E938221BD2D3003DB80B /* PullData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullData.swift; sourceTree = "<group>"; };
+		0259E939221BD2D3003DB80B /* StoreScheduleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreScheduleData.swift; sourceTree = "<group>"; };
+		0259E93A221BD2D3003DB80B /* scheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scheduleViewController.swift; sourceTree = "<group>"; };
+		0259E93B221BD2D3003DB80B /* teamRosterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teamRosterViewController.swift; sourceTree = "<group>"; };
+		0259E93C221BD2D3003DB80B /* PullScheduleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullScheduleData.swift; sourceTree = "<group>"; };
 		02C5173021FFB10300286F0A /* registrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		02C5173621FFB29F00286F0A /* homeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeScreenViewController.swift; sourceTree = "<group>"; };
 		02ED6D762208BE7700733A4D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +125,12 @@
 			isa = PBXGroup;
 			children = (
 				79D07A4522120AFB00FCDB61 /* credentials.plist */,
+				0259E938221BD2D3003DB80B /* PullData.swift */,
+				0259E93C221BD2D3003DB80B /* PullScheduleData.swift */,
+				0259E93A221BD2D3003DB80B /* scheduleViewController.swift */,
+				0259E937221BD2D3003DB80B /* StoreData.swift */,
+				0259E939221BD2D3003DB80B /* StoreScheduleData.swift */,
+				0259E93B221BD2D3003DB80B /* teamRosterViewController.swift */,
 				024FD0C721F9466B00869173 /* AppDelegate.swift */,
 				024FD0C921F9466B00869173 /* ViewController.swift */,
 				02C5173021FFB10300286F0A /* registrationViewController.swift */,
@@ -344,10 +362,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0259E93E221BD2D4003DB80B /* PullData.swift in Sources */,
 				02C5173721FFB29F00286F0A /* homeScreenViewController.swift in Sources */,
 				024FD0CA21F9466B00869173 /* ViewController.swift in Sources */,
+				0259E942221BD2D4003DB80B /* PullScheduleData.swift in Sources */,
 				024FD0C821F9466B00869173 /* AppDelegate.swift in Sources */,
+				0259E940221BD2D4003DB80B /* scheduleViewController.swift in Sources */,
+				0259E93D221BD2D4003DB80B /* StoreData.swift in Sources */,
 				02ED6D772208BE7700733A4D /* LogInViewController.swift in Sources */,
+				0259E93F221BD2D4003DB80B /* StoreScheduleData.swift in Sources */,
+				0259E941221BD2D4003DB80B /* teamRosterViewController.swift in Sources */,
 				02C5173121FFB10300286F0A /* registrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
