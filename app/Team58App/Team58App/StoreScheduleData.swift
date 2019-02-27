@@ -27,11 +27,11 @@ class StoreScheduleData: NSObject {
     
     //construct with @name, @address, @latitude, and @longitude parameters
     
-    init(Opponent: String, DateofGame: Date, IndianaScore: Int, OpponentScore: Int) {
+   /* init(Opponent: String, DateofGame: Date, IndianaScore: Int, OpponentScore: Int) {
         
-        self.opponent = Opponent
-        self.game_date = DateofGame
-        self.iu_score = IndianaScore
+        self.opponent = opponent
+        self.game_date = dateofgame
+        self.iu_score = score
         self.opponent_score = OpponentScore
         
     }
@@ -39,9 +39,9 @@ class StoreScheduleData: NSObject {
     
     //prints object's current state
     
-  //  override var description: String {
-        //return "Opponent: \(String(describing: opponent)), Date of Game: \(Date(describing: game_date)), IU Score: \(Int(describing: iu_score)), Opponent Score: \(Int(describing: opponent_score))"
-  //  }
+    override var description: String {
+        return "Opponent: \(String(describing: opponent)), Date of Game: \(Date(describing: game_date)), IU Score: \(Int(describing: iu_score)), Opponent Score: \(Int(describing: opponent_score))"
+    } */
     
     
 }

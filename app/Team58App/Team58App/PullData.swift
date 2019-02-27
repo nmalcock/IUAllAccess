@@ -7,6 +7,10 @@
 //
 // code structure https://www.skysilk.com/blog/2018/how-to-connect-an-ios-app-to-a-mysql-database-swift/
 
+//*********************************************************
+//HOME MODEL = ROSTER PULL DATA
+//*********************************************************
+
 import Foundation
 
 protocol PullDataProtocol: class {
@@ -38,7 +42,7 @@ class PullData: NSObject, URLSessionDataDelegate {
         }
         
         task.resume()
-        
+    
 }
     func parseJSON(_ data:Data) {
         
@@ -63,17 +67,20 @@ class PullData: NSObject, URLSessionDataDelegate {
             let athlete_info = StoreData()
             
             //the following insures none of the JsonElement values are nil through optional binding
-            if let name = jsonElement["name"] as? String,
+            if let fname = jsonElement["fname"] as? String,
+                let lname = jsonElement["lname"] as? String,
                 let number = jsonElement["number"] as? Int,
                 let position = jsonElement["position"] as? String,
                 let year = jsonElement["year"] as? String
                 
             {
-                print(name)
+                /*print(fname)
+                print(lname)
                 print(number)
                 print(position)
-                print(year)
-                athlete_info.name = name
+                print(year)*/
+                athlete_info.fname = fname
+                athlete_info.lname = lname
                 athlete_info.number = number
                 athlete_info.position = position
                 athlete_info.year = year

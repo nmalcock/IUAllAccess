@@ -41,7 +41,7 @@ class registrationViewController: UIViewController {
             self.view.endEditing(true)
             
             // url to php file
-            let url = URL(string: "http://cgi.sice.indiana.edu/~team58/createuser.php")!
+            let url = URL(string: "http://cgi.sice.indiana.edu/~team58/login.php")!
             
             // request to this file
             var request = URLRequest(url: url)
