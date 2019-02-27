@@ -6,6 +6,10 @@
 //  Copyright © 2019 rpoplaws. All rights reserved.
 //
 
+//*********************************************************
+//LOCATION MODEL = ROSTER STORE DATA 
+//*********************************************************
+
 import UIKit
 
 class StoreData: NSObject {

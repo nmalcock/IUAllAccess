@@ -91,7 +91,7 @@ class PullScheduleData: NSObject, URLSessionDataDelegate {
             let schedule = StoreScheduleData()
         
         //the following insures none of the JsonElement values are nil through optional binding
-            
+            //need all parameters on pic i took except box_score_link
             if let opponent = jsonElement["Opponent"] as? String,
                 let game_date = jsonElement["DateofGame"] as? Date,
                 let iu_score = jsonElement["IndianaScore"] as? Int,
