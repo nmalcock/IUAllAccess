@@ -15,7 +15,7 @@ class registrationViewController: UIViewController {
 
     //Defined a constant that holds the URL for our web service
 //ORIGINAL V
-   //let URL_USER_REGISTER = "http://cgi.sice.indiana.edu/~team58/createuser.php"
+   //let URL_USER_REGISTER = "http://cgi.sice.indiana.edu/~team58/beckycreateuser.php"
 
     
     //let defaultValues = UserDefaults.standard
@@ -74,10 +74,10 @@ class registrationViewController: UIViewController {
                             }
                             
                             // get id from parseJSON dictionary
-                            let ID = parseJSON["ID"]
+                            let userID = parseJSON["userID"]
                             
                             // successfully registered
-                            if ID != nil {
+                            if userID != nil {
                                 // save user information we received from our host
                                 UserDefaults.standard.set(parseJSON, forKey: "parseJSON")
                                 user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary

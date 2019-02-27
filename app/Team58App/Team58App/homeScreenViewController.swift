@@ -11,19 +11,27 @@ import UIKit
 
 class homeScreenViewController: UIViewController {
 
+    @IBOutlet weak var labelEmail: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
+        //getting user data from defaults
+        let defaultValues = UserDefaults.standard
+        if let name = defaultValues.string(forKey: "email"){
+            //setting the name to label
+            labelEmail.text = name
+        }else{
+            //send back to login view controller
+        }
+        
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    */
-
+    
+    
 }

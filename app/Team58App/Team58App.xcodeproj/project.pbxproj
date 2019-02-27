@@ -66,7 +66,7 @@
 		0259E93C221BD2D3003DB80B /* PullScheduleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullScheduleData.swift; sourceTree = "<group>"; };
 		02C5173021FFB10300286F0A /* registrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		02C5173621FFB29F00286F0A /* homeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeScreenViewController.swift; sourceTree = "<group>"; };
-		02ED6D762208BE7700733A4D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		02ED6D762208BE7700733A4D /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5B029ED6BD997B0406DC559B /* Pods_Team58App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Team58App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D07A4522120AFB00FCDB61 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		84FBFFFB8D679CABC2076629 /* Pods-Team58App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Team58App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Team58App/Pods-Team58App.debug.xcconfig"; sourceTree = "<group>"; };

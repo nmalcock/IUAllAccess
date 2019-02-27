@@ -21,20 +21,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    @objc var infoViewIsShowing = false
+   // @objc var infoViewIsShowing = false
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        return true
+    }
         // Override point for customization after application launch.
 
         
         // load content in user var
-        user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
+       // user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
         
         // if user is once logged in / register, keep him logged in
-        if user != nil {
+/*        if user != nil {
             
-            let ID = user!["ID"] as? String
-            if ID != nil {
+            let userID = user!["userID"] as? String
+            if userID != nil {
                 login()
             }
             
@@ -42,10 +44,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         return true
-    }
+    }*/
     
+
     // func to pass to home page ro to tabBar
-    @objc func login() {
+   /* @objc func login() {
         
         // refer to our Main.storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -56,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // present tabBar that is storing in tabBar var
         window?.rootViewController = taBar
         
-    }
+    }*/
  
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -82,4 +85,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
