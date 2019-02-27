@@ -15,96 +15,89 @@ class LogInViewController: UIViewController {
     
     
     //you can get the ip using ifconfig command in terminal
-    //let URL_USER_LOGIN = "http://cgi.sice.indiana.edu/~team58/login.php"
+    let URL_USER_LOGIN = "http://cgi.sice.indiana.edu/~team58/login.php"
     
-    //the defaultvalues to store user data
     let defaultValues = UserDefaults.standard
-    
 
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
-    
-    
-    
-    @IBAction func buttonLogin(_ sender: UIButton) {
 
-        // if no text entered
-        if textFieldEmail.text!.isEmpty || textFieldPassword.text!.isEmpty {
-            
-            // text is entered
-        } else {
-            
-            
-            // remove keyboard
-            self.view.endEditing(true)
-            
-            // shortcuts
-           // let email = textFieldEmail.text!.lowercased()
-           // let password = textFieldPassword.text!
-            
-            // send request to mysql db
-            // url to access our php file
-            let url = URL(string: "http://cgi.sice.indiana.edu/~team58/login.php")!
-            
-            // request url
-            var request = URLRequest(url: url)
-            
-            // method to pass data POST - cause it is secured
-            request.httpMethod = "POST"
-            
-            // body gonna be appended to url
-            let body = "email=\(textFieldEmail.text!)&password=\(textFieldPassword.text!)"
-            
-            // append body to our request that gonna be sent
-            request.httpBody = body.data(using: .utf8)
-            
-            // launch session
-            URLSession.shared.dataTask(with: request) { data, response, error in
+    
+    
+    @IBAction func LoginButton(_ sender: UIButton) {
+        
+
+        
+        let parameters: Parameters=[
+            "email":textFieldEmail.text!,
+            "password":textFieldPassword.text!
+        ]
+        
+        //making a post request
+        Alamofire.request(URL_USER_LOGIN, method: .post, parameters: parameters).responseString
+            {
+                response in
+                print("Request: \(String(describing: response.request))")   // original url request
+                print("Response: \(String(describing: response.response))") // http url response
+                print("Result: \(response.result)")
                 
-                if error == nil {
+                if let result = response.result.value {
                     
+                    let jsonData = result as! NSDictionary
+
                     
-                    do {
-                        // get json result
-                        let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
-                        
-                        // assign json to new var parseJSON in guard/secured way
-                        guard let parseJSON = json else {
-                            print("Error while parsing")
-                            return
-                        }
-                        
-                        // get id from parseJSON dictionary
-                        let ID = parseJSON["ID"] as? String
-                        
-                        // successfully registered
-                        if ID != nil {
-                            // save user information we received from our host
-                            UserDefaults.standard.set(parseJSON, forKey: "parseJSON")
-                            user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
-                            let message = parseJSON["message"] as! String
-                            print(message)
-                        }
+                    //if there is no error
+                    if(!(jsonData.value(forKey: "error") as! Bool)){
+
                         
                         
-                        print(json!)
+                        //getting the user from response
+                        let user = jsonData.value(forKey: "user") as! NSDictionary
+
+                        /*//getting user values - not neccesary
+                        let userId = user.value(forKey: "id") as! Int
+                        let userEmail = user.value(forKey: "email") as! String
+                        let userPassword = user.value(forKey: "password") as! String
+
                         
+                        //saving user values to defaults
+                        self.defaultValues.set(userId, forKey: "userid")
+                        self.defaultValues.set(userEmail, forKey: "useremail")
+                        self.defaultValues.set(userPassword, forKey: "userpassword")*/
                         
+                        //switching the screen
+                        let homeScreenViewController = self.storyboard?.instantiateViewController(withIdentifier: "homeScreenViewController") as! homeScreenViewController
+                        self.navigationController?.pushViewController(homeScreenViewController, animated: true)
                         
-                    } catch {
-                        print(error)
-                        
+                        self.dismiss(animated: false, completion: nil)
+                    }else{
+                        //error message in case of invalid credential
+                        print("Request: \(String(describing: response.request))")   // original url request
+                        print("Response: \(String(describing: response.response))") // http url response
+                        print("Result: \(response.result)")
                     }
-                    
                 }
-                
-                // launch prepared session
-                }.resume()
+        }
+    }
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        //if user is already logged in switching to profile screen
+        if defaultValues.string(forKey: "email") != nil{
+            let homeScreenViewController = self.storyboard?.instantiateViewController(withIdentifier: "homeScreenViewController") as! homeScreenViewController
+            self.navigationController?.pushViewController(homeScreenViewController, animated: true)
             
         }
-        
-        
     }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
 }
-//yeet
 
