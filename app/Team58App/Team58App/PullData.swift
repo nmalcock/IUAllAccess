@@ -25,6 +25,7 @@ class PullData: NSObject, URLSessionDataDelegate {
     weak var delegate: PullDataProtocol!
     
     let urlPath =  "https://cgi.sice.indiana.edu/~team58/GetAthlete.php"
+    
     func downloadItems() {
         
         let url: URL = URL(string: urlPath)!
@@ -35,15 +36,16 @@ class PullData: NSObject, URLSessionDataDelegate {
             if error != nil {
                 print("Error")
             }else {
-                print("statistics downloaded")
+                print("stocks downloaded")
                 self.parseJSON(data!)
             }
             
         }
         
         task.resume()
-    
-}
+    }
+
+
     func parseJSON(_ data:Data) {
         
         var jsonResult = NSArray()
@@ -74,11 +76,11 @@ class PullData: NSObject, URLSessionDataDelegate {
                 let year = jsonElement["year"] as? String
                 
             {
-                /*print(fname)
+                print(fname)
                 print(lname)
                 print(number)
                 print(position)
-                print(year)*/
+                print(year)
                 athlete_info.fname = fname
                 athlete_info.lname = lname
                 athlete_info.number = number
@@ -98,4 +100,5 @@ class PullData: NSObject, URLSessionDataDelegate {
             
         })
     }
- }
+    
+}

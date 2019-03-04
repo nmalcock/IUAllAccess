@@ -7,7 +7,8 @@
 //
 
 //*********************************************************
-//LOCATION MODEL = ROSTER STORE DATA 
+//LOCATION MODEL = ROSTER STORE DATA
+//WAS STOCK MODEL
 //*********************************************************
 
 import UIKit
@@ -35,7 +36,7 @@ class StoreData: NSObject {
         
         self.fname = fname
         self.lname = lname
-        self.name = "\(fname)\(lname)"
+        //self.name = "\(fname)\(lname)"
         self.number = number
         self.position = position
         self.year = year
@@ -45,8 +46,7 @@ class StoreData: NSObject {
     //prints a player of roster's info
     
     override var description: String {
-        return "Name: \(String(describing: name)), Number: \(String(describing: number)), Position: \(String(describing: position)), Year: \(String(describing: year))"
-        
+        return "Name: \(fname), Number: \(number), Position: \(position), Year: \(year)"
     }
  
  }

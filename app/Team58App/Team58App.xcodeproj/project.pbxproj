@@ -20,6 +20,7 @@
 		0259E940221BD2D4003DB80B /* scheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0259E93A221BD2D3003DB80B /* scheduleViewController.swift */; };
 		0259E941221BD2D4003DB80B /* teamRosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0259E93B221BD2D3003DB80B /* teamRosterViewController.swift */; };
 		0259E942221BD2D4003DB80B /* PullScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0259E93C221BD2D3003DB80B /* PullScheduleData.swift */; };
+		02C11ED52227651C002234D0 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11ED42227651C002234D0 /* FeedModel.swift */; };
 		02C5173121FFB10300286F0A /* registrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5173021FFB10300286F0A /* registrationViewController.swift */; };
 		02C5173721FFB29F00286F0A /* homeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5173621FFB29F00286F0A /* homeScreenViewController.swift */; };
 		02ED6D772208BE7700733A4D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED6D762208BE7700733A4D /* LogInViewController.swift */; };
@@ -64,6 +65,7 @@
 		0259E93A221BD2D3003DB80B /* scheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scheduleViewController.swift; sourceTree = "<group>"; };
 		0259E93B221BD2D3003DB80B /* teamRosterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teamRosterViewController.swift; sourceTree = "<group>"; };
 		0259E93C221BD2D3003DB80B /* PullScheduleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullScheduleData.swift; sourceTree = "<group>"; };
+		02C11ED42227651C002234D0 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		02C5173021FFB10300286F0A /* registrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		02C5173621FFB29F00286F0A /* homeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeScreenViewController.swift; sourceTree = "<group>"; };
 		02ED6D762208BE7700733A4D /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				0259E93C221BD2D3003DB80B /* PullScheduleData.swift */,
 				0259E93A221BD2D3003DB80B /* scheduleViewController.swift */,
 				0259E937221BD2D3003DB80B /* StoreData.swift */,
+				02C11ED42227651C002234D0 /* FeedModel.swift */,
 				0259E939221BD2D3003DB80B /* StoreScheduleData.swift */,
 				0259E93B221BD2D3003DB80B /* teamRosterViewController.swift */,
 				024FD0C721F9466B00869173 /* AppDelegate.swift */,
@@ -369,6 +372,7 @@
 				024FD0C821F9466B00869173 /* AppDelegate.swift in Sources */,
 				0259E940221BD2D4003DB80B /* scheduleViewController.swift in Sources */,
 				0259E93D221BD2D4003DB80B /* StoreData.swift in Sources */,
+				02C11ED52227651C002234D0 /* FeedModel.swift in Sources */,
 				02ED6D772208BE7700733A4D /* LogInViewController.swift in Sources */,
 				0259E93F221BD2D4003DB80B /* StoreScheduleData.swift in Sources */,
 				0259E941221BD2D4003DB80B /* teamRosterViewController.swift in Sources */,
