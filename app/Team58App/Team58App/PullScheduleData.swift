@@ -20,7 +20,7 @@ class PullScheduleData: NSObject, URLSessionDataDelegate {
     
     weak var delegate: PullScheduleDataProtocol!
     
-    let urlPath =  "https://cgi.sice.indiana.edu/~team58/scheduleSelect.php"
+    let urlPath =  "https://cgi.sice.indiana.edu/~team58/GetAthlete"
     func downloadItems() {
         
         let url: URL = URL(string: urlPath)!
