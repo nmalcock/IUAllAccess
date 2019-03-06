@@ -20,7 +20,7 @@ class StoreData: NSObject {
     var name: String?
     var number: Int?
     var position: String?
-    var year: String?
+    var year: Int?
     
     
     //empty constructor
@@ -32,7 +32,7 @@ class StoreData: NSObject {
     
     //construct with parameters
     
-    init(fname: String, lname: String, name: String, number: Int, position: String, year: String) {
+    init(fname: String, lname: String, name: String, number: Int, position: String, year: Int) {
         
         self.fname = fname
         self.lname = lname
@@ -46,7 +46,9 @@ class StoreData: NSObject {
     //prints a player of roster's info
     
     override var description: String {
-        return "Name: \(fname), Number: \(number), Position: \(position), Year: \(year)"
+      //  return "Name: \(fname), Number: \(number), Position: \(position), Year: \(year)"
+        return "Name: \(String(describing: fname))"
     }
+    
  
  }

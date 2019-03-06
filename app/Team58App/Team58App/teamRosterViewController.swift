@@ -11,7 +11,7 @@ import UIKit
 class teamRosterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PullDataProtocol  {
 
     var feedItems: NSArray = NSArray()
-    //was var selectedLocation
+
     var selectedTeam : StoreData = StoreData()
     
     //was originally named athleteResultsfeed, changed to teamRosterListTableView for clarity.
@@ -34,6 +34,11 @@ class teamRosterViewController: UIViewController, UITableViewDataSource, UITable
         feedItems = items
         self.teamRosterListTableView.reloadData()
     }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 5
+        //
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of feed items
@@ -42,18 +47,23 @@ class teamRosterViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+       
+       /* let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell", for: indexPath)
+        cell.textLabel?.text = feedItems[indexPath.row] as! String //StoreData
+        return cell
+       */
+       
         // Retrieve cell
         let cellIdentifier: String = "BasicCell"
         let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
         // Get the athletes to be shown
-        let item: StoreData = feedItems[indexPath.row] as! StoreData
+       let item: StoreData = feedItems[indexPath.row] as! StoreData
         
-        let titleStr: String = item.fname!
-        print(titleStr)
+       let titleStr: String? = item.fname
+       print(titleStr)
         
         myCell.textLabel!.text = item.fname
-        
+
         return myCell
     }
     
