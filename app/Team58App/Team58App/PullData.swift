@@ -36,7 +36,7 @@ class PullData: NSObject, URLSessionDataDelegate {
             if error != nil {
                 print("Error")
             }else {
-                print("stocks downloaded")
+                print("Rosters downloaded")
                 self.parseJSON(data!)
             }
             
@@ -73,7 +73,7 @@ class PullData: NSObject, URLSessionDataDelegate {
                 let lname = jsonElement["lname"] as? String,
                 let number = jsonElement["number"] as? Int,
                 let position = jsonElement["position"] as? String,
-                let year = jsonElement["year"] as? String
+                let year = jsonElement["year"] as? Int
                 
             {
                 print(fname)
