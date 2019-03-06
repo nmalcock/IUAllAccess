@@ -49,7 +49,7 @@ class teamRosterViewController: UIViewController, UITableViewDataSource, UITable
         // Get the athletes to be shown
         let item: StoreData = feedItems[indexPath.row] as! StoreData
         
-        let titleStr: String = item.fname! + ": " + item.lname!
+        let titleStr: String = item.fname!
         print(titleStr)
         
         myCell.textLabel!.text = item.fname

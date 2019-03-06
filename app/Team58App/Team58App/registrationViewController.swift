@@ -15,7 +15,7 @@ class registrationViewController: UIViewController {
 
     //Defined a constant that holds the URL for our web service
 //ORIGINAL V
-   //let URL_USER_REGISTER = "http://cgi.sice.indiana.edu/~team58/beckycreateuser.php"
+   //let URL_USER_REGISTER = "http://cgi.sice.indiana.edu/~team58/createuser.php"
 
     
     //let defaultValues = UserDefaults.standard
@@ -41,7 +41,7 @@ class registrationViewController: UIViewController {
             self.view.endEditing(true)
             
             // url to php file
-            let url = URL(string: "http://cgi.sice.indiana.edu/~team58/login.php")!
+            let url = URL(string: "http://cgi.sice.indiana.edu/~team58/createuser.php")!
             
             // request to this file
             var request = URLRequest(url: url)

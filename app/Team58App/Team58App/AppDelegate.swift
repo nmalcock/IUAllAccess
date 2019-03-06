@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import GoogleSignIn 
 
 let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
@@ -24,16 +25,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    // @objc var infoViewIsShowing = false
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        return true
+        //return true
+    
+    GIDSignIn.sharedInstance().clientID = "265550170320-riqi7o00i4eut31vn7dbet8n9fsdpkl2.apps.googleusercontent.com"
+    return true
     }
+func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    return GIDSignIn.sharedInstance().handle(url as URL?,
+                                             sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                                             annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+}
         // Override point for customization after application launch.
 
         
         // load content in user var
-       // user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
+        /*user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
         
-        // if user is once logged in / register, keep him logged in
-/*        if user != nil {
+         if user is once logged in / register, keep him logged in
+        if user != nil {
             
             let userID = user!["userID"] as? String
             if userID != nil {
@@ -44,7 +53,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         return true
-    }*/
+    }
+ */
     
 
     // func to pass to home page ro to tabBar
@@ -82,6 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+
 
 
 }
