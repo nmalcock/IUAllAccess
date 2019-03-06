@@ -52,7 +52,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T2d-nw-KMh"/>
                                     <segue destination="cJe-uw-KE5" kind="show" id="lAl-eC-kf0"/>
                                 </connections>
                             </button>
@@ -87,8 +86,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="l0g-sW-bTN"/>
                     <connections>
-                        <outlet property="btnGoogleSignIn" destination="Iqr-rc-ah6" id="rN6-jX-US6"/>
-                        <outlet property="lblTitle" destination="U5L-kY-sW0" id="jmI-BS-P67"/>
+                        <outlet property="btnGoogleSignIn" destination="Iqr-rc-ah6" id="izj-SX-fPd"/>
+                        <outlet property="lblTitle" destination="U5L-kY-sW0" id="cbX-6c-Ejj"/>
                         <outlet property="textFieldEmail" destination="ycl-8q-KQu" id="jBM-st-aOn"/>
                         <outlet property="textFieldPassword" destination="vZC-bU-OqB" id="NIr-XF-dtU"/>
                     </connections>
@@ -607,9 +606,9 @@
     </scenes>
     <resources>
         <image name="Todays-Events" width="770" height="440"/>
-        <image name="assemblyhall" width="1440" height="810"/>
+        <image name="assemblyhall" width="1920" height="1080"/>
         <image name="bell" width="512" height="512"/>
-        <image name="crimson" width="1920" height="1080"/>
+        <image name="crimson" width="960" height="540"/>
         <image name="forward" width="206" height="205"/>
         <image name="home" width="800" height="756"/>
         <image name="iuLOGO" width="328" height="328"/>
