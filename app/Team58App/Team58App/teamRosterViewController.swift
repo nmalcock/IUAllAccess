@@ -48,21 +48,17 @@ class teamRosterViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-       /* let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell", for: indexPath)
-        cell.textLabel?.text = feedItems[indexPath.row] as! String //StoreData
-        return cell
-       */
-       
         // Retrieve cell
         let cellIdentifier: String = "BasicCell"
         let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
         // Get the athletes to be shown
-       let item: StoreData = feedItems[indexPath.row] as! StoreData
+        let item: StoreData = feedItems[indexPath.row] as! StoreData
         
-       let titleStr: String? = item.fname
-       print(titleStr)
+        //let titleStr = feedItems
+        let titleStr: String = item.fname! + " " + item.lname! + " " + item.number! + " " + item.position! + " " + item.year!
+        print(titleStr)
         
-        myCell.textLabel!.text = item.fname
+        myCell.textLabel!.text = titleStr
 
         return myCell
     }

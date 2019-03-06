@@ -38,6 +38,7 @@ class PullData: NSObject, URLSessionDataDelegate {
             }else {
                 print("Rosters downloaded")
                 self.parseJSON(data!)
+                print(data!)
             }
             
         }
@@ -71,9 +72,9 @@ class PullData: NSObject, URLSessionDataDelegate {
             //the following insures none of the JsonElement values are nil through optional binding
             if let fname = jsonElement["fname"] as? String,
                 let lname = jsonElement["lname"] as? String,
-                let number = jsonElement["number"] as? Int,
+                let number = jsonElement["number"] as? String,
                 let position = jsonElement["position"] as? String,
-                let year = jsonElement["year"] as? Int
+                let year = jsonElement["year"] as? String
                 
             {
                 print(fname)
