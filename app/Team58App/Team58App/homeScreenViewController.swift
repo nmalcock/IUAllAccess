@@ -11,7 +11,7 @@ import UIKit
 
 class homeScreenViewController: UIViewController {
 
-    @IBOutlet weak var labelEmail: UILabel!
+    @IBOutlet weak var labelEmail: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
