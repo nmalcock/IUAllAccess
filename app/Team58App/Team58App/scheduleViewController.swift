@@ -40,12 +40,18 @@ class scheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Retrieve cell
-        let cellIdentifier: String = "BasicCell"
+        let cellIdentifier: String = "BasicCell2"
         let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
         // Get the game to be shown
         let item: StoreScheduleData = feedItems[indexPath.row] as! StoreScheduleData
         // Get references to labels of cell
-        myCell.textLabel!.text = item.opponent
+        
+        //let titleStr = feedItems
+        let titleStr: String = item.opponent! + " " + item.date_time! + " " + item.home_score! + " " + item.away_score!
+        print(titleStr)
+        
+        
+        myCell.textLabel!.text = titleStr
         
         return myCell
     }

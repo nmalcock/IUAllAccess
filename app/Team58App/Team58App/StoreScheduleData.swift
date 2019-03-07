@@ -6,16 +6,19 @@
 //  Copyright © 2019 rpoplaws. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class StoreScheduleData: NSObject {
     
     //properties
     
     var opponent: String?
-    var game_date: Date?
-    var iu_score: Int?
-    var opponent_score: Int?
+  //  var gameday: String?
+    var date_time: String?
+  //  var iuscore: String?
+    var home_score: String?
+  //  var opponentscore: String?
+    var away_score: String?
     
     
     //empty constructor
@@ -25,23 +28,25 @@ class StoreScheduleData: NSObject {
         
     }
     
-    //construct with @name, @address, @latitude, and @longitude parameters
-    
-   /* init(Opponent: String, DateofGame: Date, IndianaScore: Int, OpponentScore: Int) {
+    init(opponent: String, date_time: String, home_score: String, away_score: String)
+    {
+   // init(opponent: String, gameday: String, iuscore: String, opponentscore: String) {
         
         self.opponent = opponent
-        self.game_date = dateofgame
-        self.iu_score = score
-        self.opponent_score = OpponentScore
-        
+        self.date_time = date_time
+        self.home_score = home_score
+        self.away_score = away_score
+      //  self.gameday = gameday
+     //   self.iuscore = iuscore
+      //  self.opponentscore = opponentscore
+      
     }
     
     
-    //prints object's current state
-    
     override var description: String {
-        return "Opponent: \(String(describing: opponent)), Date of Game: \(Date(describing: game_date)), IU Score: \(Int(describing: iu_score)), Opponent Score: \(Int(describing: opponent_score))"
-    } */
-    
+       // return "Opponent: \(String(describing: opponent)), Date of Game: \(String(describing: gameday)), IU Score: \(String(describing: iuscore)), Opponent Score: \(String(describing: opponentscore))"
+        return "Opponent: \(String(describing: opponent)), Date_time: \(String(describing: date_time)), Home_score: \(String(describing: home_score)), Away_score: \(String(describing: away_score))"
+}
     
 }
+
