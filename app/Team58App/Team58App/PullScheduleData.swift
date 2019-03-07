@@ -15,12 +15,12 @@ protocol PullScheduleDataProtocol: class {
 }
 
 class PullScheduleData: NSObject, URLSessionDataDelegate {
-    
+
     
     
     weak var delegate: PullScheduleDataProtocol!
     
-    let urlPath =  "https://cgi.sice.indiana.edu/~team58/GetAthlete"
+    let urlPath =  "https://cgi.sice.indiana.edu/~team58/getSchedule.php"
     func downloadItems() {
         
         let url: URL = URL(string: urlPath)!
@@ -31,7 +31,7 @@ class PullScheduleData: NSObject, URLSessionDataDelegate {
             if error != nil {
                 print("Error")
             }else {
-                print("statistics downloaded")
+                print("Schedules downloaded")
                 self.parseJSON(data!)
             }
             
@@ -47,7 +47,7 @@ class PullScheduleData: NSObject, URLSessionDataDelegate {
     
   //  var data = Data()
     
-  //  let urlPath: String = "https://cgi.sice.indiana.edu/~team58/scheduleSelect.php"
+  //  let urlPath: String = "https://cgi.sice.indiana.edu/~team58/getSchedule.php"
 
   //  func downloadItems() {
         
@@ -92,16 +92,30 @@ class PullScheduleData: NSObject, URLSessionDataDelegate {
         
         //the following insures none of the JsonElement values are nil through optional binding
             //need all parameters on pic i took except box_score_link
-            if let opponent = jsonElement["Opponent"] as? String,
-                let game_date = jsonElement["DateofGame"] as? Date,
-                let iu_score = jsonElement["IndianaScore"] as? Int,
-                let opponent_score = jsonElement["OpponentScore"] as? Int
-            {
             
+            if let opponent = jsonElement["opponent"] as? String,
+                let date_time = jsonElement["date_time"] as? String,
+                let home_score = jsonElement["home_score"] as? String,
+                let away_score = jsonElement["away_score"] as? String
+                //let gameday = jsonElement["gameday"] as? String,
+               // let iuscore = jsonElement["iuscore"] as? String,
+              //  let opponentscore = jsonElement["opponentscore"] as? String
+            
+            {
+                print(opponent)
+             //   print(gameday)
+             //   print(iuscore)
+            //    print(opponentscore)
+                print(date_time)
+                print(home_score)
+                print(away_score)
                 schedule.opponent = opponent
-                schedule.game_date = game_date
-                schedule.iu_score = iu_score
-                schedule.opponent_score = opponent_score
+                schedule.date_time = date_time
+                schedule.home_score = home_score
+                schedule.away_score = away_score
+             //   schedule.gameday = gameday
+             //   schedule.iuscore = iuscore
+             //   schedule.opponentscore = opponentscore
             
             }
         
@@ -115,4 +129,5 @@ class PullScheduleData: NSObject, URLSessionDataDelegate {
         
         })
 }
+
 }

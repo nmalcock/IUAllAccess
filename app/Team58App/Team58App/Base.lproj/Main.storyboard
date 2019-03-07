@@ -302,6 +302,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="schedule" translatesAutoresizingMaskIntoConstraints="NO" id="UOj-Ku-zUU">
                                 <rect key="frame" x="237" y="607" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="58G-vH-yQ7">
                                 <rect key="frame" x="-1" y="193" width="376" height="388"/>
@@ -400,13 +403,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Todays-Events" translatesAutoresizingMaskIntoConstraints="NO" id="Boo-d6-Gzd">
-                                <rect key="frame" x="166" y="607" width="50" height="50"/>
+                                <rect key="frame" x="176" y="607" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="schedule" translatesAutoresizingMaskIntoConstraints="NO" id="OsF-Vv-1Dd">
                                 <rect key="frame" x="234" y="607" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="JKv-RU-pch">
                                 <rect key="frame" x="292" y="607" width="50" height="50"/>
@@ -462,10 +471,20 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWz-so-co8">
+                                <rect key="frame" x="234" y="595" width="46" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="w3y-Cw-u6X" kind="show" identifier="toTeamSchedule" id="ZSB-ZA-k6R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="b1S-AD-EvR"/>
                     </view>
+                    <connections>
+                        <segue destination="w3y-Cw-u6X" kind="show" id="DKb-Pq-VoE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bhq-cq-kKR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -604,6 +623,37 @@
             </objects>
             <point key="canvasLocation" x="2048.8000000000002" y="112.89355322338831"/>
         </scene>
+        <!--Schedule View Controller-->
+        <scene sceneID="9Mt-QC-2qd">
+            <objects>
+                <viewController storyboardIdentifier="scheduleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w3y-Cw-u6X" customClass="scheduleViewController" customModule="Team58App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FCy-rT-2WM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicCell2" id="Owf-UW-qc7">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Owf-UW-qc7" id="dKa-PQ-e5j">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="w3y-Cw-u6X" id="DoH-P9-Vn5"/>
+                            <outlet property="delegate" destination="w3y-Cw-u6X" id="prD-6N-IVh"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="listTableView" destination="FCy-rT-2WM" id="zu0-bg-41m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGc-Vr-Gak" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2049" y="932"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Todays-Events" width="770" height="440"/>
@@ -618,7 +668,8 @@
         <image name="teams" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kDA-gD-fN5"/>
+        <segue reference="DKb-Pq-VoE"/>
+        <segue reference="HGx-1m-SSf"/>
         <segue reference="lAl-eC-kf0"/>
     </inferredMetricsTieBreakers>
 </document>
