@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		024FD0C821F9466B00869173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FD0C721F9466B00869173 /* AppDelegate.swift */; };
 		024FD0CA21F9466B00869173 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FD0C921F9466B00869173 /* ViewController.swift */; };
-		024FD0CD21F9466B00869173 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024FD0CB21F9466B00869173 /* Main.storyboard */; };
 		024FD0CF21F9466C00869173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024FD0CE21F9466C00869173 /* Assets.xcassets */; };
 		024FD0D221F9466C00869173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024FD0D021F9466C00869173 /* LaunchScreen.storyboard */; };
 		024FD0DD21F9466C00869173 /* Team58AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FD0DC21F9466C00869173 /* Team58AppTests.swift */; };
@@ -20,10 +19,9 @@
 		0259E940221BD2D4003DB80B /* scheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0259E93A221BD2D3003DB80B /* scheduleViewController.swift */; };
 		0259E941221BD2D4003DB80B /* teamRosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0259E93B221BD2D3003DB80B /* teamRosterViewController.swift */; };
 		0259E942221BD2D4003DB80B /* PullScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0259E93C221BD2D3003DB80B /* PullScheduleData.swift */; };
-		02C11ED52227651C002234D0 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11ED42227651C002234D0 /* FeedModel.swift */; };
+		02A1D80D2240218000B182C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02A1D80C2240218000B182C1 /* Main.storyboard */; };
 		02C5173121FFB10300286F0A /* registrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5173021FFB10300286F0A /* registrationViewController.swift */; };
 		02C5173721FFB29F00286F0A /* homeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5173621FFB29F00286F0A /* homeScreenViewController.swift */; };
-		02ED6D772208BE7700733A4D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED6D762208BE7700733A4D /* LogInViewController.swift */; };
 		15942344E0D8660D0CF6F8D3 /* Pods_Team58App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B029ED6BD997B0406DC559B /* Pods_Team58App.framework */; };
 		79D07A4622120AFB00FCDB61 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79D07A4522120AFB00FCDB61 /* credentials.plist */; };
 /* End PBXBuildFile section */
@@ -49,7 +47,6 @@
 		024FD0C421F9466B00869173 /* Team58App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Team58App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		024FD0C721F9466B00869173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		024FD0C921F9466B00869173 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		024FD0CC21F9466B00869173 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		024FD0CE21F9466C00869173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		024FD0D121F9466C00869173 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		024FD0D321F9466C00869173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,10 +62,9 @@
 		0259E93A221BD2D3003DB80B /* scheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scheduleViewController.swift; sourceTree = "<group>"; };
 		0259E93B221BD2D3003DB80B /* teamRosterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teamRosterViewController.swift; sourceTree = "<group>"; };
 		0259E93C221BD2D3003DB80B /* PullScheduleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullScheduleData.swift; sourceTree = "<group>"; };
-		02C11ED42227651C002234D0 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		02A1D80C2240218000B182C1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		02C5173021FFB10300286F0A /* registrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		02C5173621FFB29F00286F0A /* homeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeScreenViewController.swift; sourceTree = "<group>"; };
-		02ED6D762208BE7700733A4D /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5B029ED6BD997B0406DC559B /* Pods_Team58App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Team58App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D07A4522120AFB00FCDB61 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		84FBFFFB8D679CABC2076629 /* Pods-Team58App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Team58App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Team58App/Pods-Team58App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,16 +127,14 @@
 				0259E93C221BD2D3003DB80B /* PullScheduleData.swift */,
 				0259E93A221BD2D3003DB80B /* scheduleViewController.swift */,
 				0259E937221BD2D3003DB80B /* StoreData.swift */,
-				02C11ED42227651C002234D0 /* FeedModel.swift */,
 				0259E939221BD2D3003DB80B /* StoreScheduleData.swift */,
 				0259E93B221BD2D3003DB80B /* teamRosterViewController.swift */,
 				024FD0C721F9466B00869173 /* AppDelegate.swift */,
 				024FD0C921F9466B00869173 /* ViewController.swift */,
 				02C5173021FFB10300286F0A /* registrationViewController.swift */,
 				02C5173621FFB29F00286F0A /* homeScreenViewController.swift */,
-				02ED6D762208BE7700733A4D /* LogInViewController.swift */,
-				024FD0CB21F9466B00869173 /* Main.storyboard */,
 				024FD0CE21F9466C00869173 /* Assets.xcassets */,
+				02A1D80C2240218000B182C1 /* Main.storyboard */,
 				024FD0D021F9466C00869173 /* LaunchScreen.storyboard */,
 				024FD0D321F9466C00869173 /* Info.plist */,
 			);
@@ -292,7 +286,7 @@
 				024FD0D221F9466C00869173 /* LaunchScreen.storyboard in Resources */,
 				79D07A4622120AFB00FCDB61 /* credentials.plist in Resources */,
 				024FD0CF21F9466C00869173 /* Assets.xcassets in Resources */,
-				024FD0CD21F9466B00869173 /* Main.storyboard in Resources */,
+				02A1D80D2240218000B182C1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,8 +393,6 @@
 				024FD0C821F9466B00869173 /* AppDelegate.swift in Sources */,
 				0259E940221BD2D4003DB80B /* scheduleViewController.swift in Sources */,
 				0259E93D221BD2D4003DB80B /* StoreData.swift in Sources */,
-				02C11ED52227651C002234D0 /* FeedModel.swift in Sources */,
-				02ED6D772208BE7700733A4D /* LogInViewController.swift in Sources */,
 				0259E93F221BD2D4003DB80B /* StoreScheduleData.swift in Sources */,
 				0259E941221BD2D4003DB80B /* teamRosterViewController.swift in Sources */,
 				02C5173121FFB10300286F0A /* registrationViewController.swift in Sources */,
@@ -439,14 +431,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		024FD0CB21F9466B00869173 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				024FD0CC21F9466B00869173 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		024FD0D021F9466C00869173 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
