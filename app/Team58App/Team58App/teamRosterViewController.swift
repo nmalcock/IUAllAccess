@@ -36,7 +36,7 @@ class teamRosterViewController: UIViewController, UITableViewDataSource, UITable
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 6
         //
     }
     
@@ -55,7 +55,8 @@ class teamRosterViewController: UIViewController, UITableViewDataSource, UITable
         let item: StoreData = feedItems[indexPath.row] as! StoreData
         
         //let titleStr = feedItems
-        let titleStr: String = item.fname! + " " + item.lname! + " " + item.number! + " " + item.position! + " " + item.year!
+
+        let titleStr: String = item.fname! + " " + item.lname! + " " + item.number! + " " + item.position! + " " + item.year! + " " + item.image_path!
         print(titleStr)
         
         myCell.textLabel!.text = titleStr

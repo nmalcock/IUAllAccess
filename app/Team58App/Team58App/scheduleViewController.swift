@@ -32,6 +32,11 @@ class scheduleViewController: UIViewController, UITableViewDataSource, UITableVi
         self.listTableView.reloadData()
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 6
+        //
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return feedItems.count
         
