@@ -32,7 +32,8 @@ class PullData: NSObject, URLSessionDataDelegate {
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
         let task = defaultSession.dataTask(with: url) { (data, response, error) in
-            
+        
+        
             if error != nil {
                 print("Error")
             }else {
@@ -74,20 +75,24 @@ class PullData: NSObject, URLSessionDataDelegate {
                 let lname = jsonElement["lname"] as? String,
                 let number = jsonElement["number"] as? String,
                 let position = jsonElement["position"] as? String,
-                let year = jsonElement["year"] as? String
-                
+                let year = jsonElement["year"] as? String,
+                let image_path = jsonElement["image_path"] as? String,
+                let teamID = jsonElement["teamID"] as? String
             {
+             //   if teamID == "3" {
                 print(fname)
                 print(lname)
                 print(number)
                 print(position)
                 print(year)
+                print(image_path)
                 athlete_info.fname = fname
                 athlete_info.lname = lname
                 athlete_info.number = number
                 athlete_info.position = position
                 athlete_info.year = year
-                
+                athlete_info.image_path = image_path
+             //   }
                 
             }
             
