@@ -1,28 +1,23 @@
 //
-//  PullData.swift
+//  PullDataSoc.swift
 //  Team58App
 //
-//  Created by Michael Jacobucci on 2/13/19.
+//  Created by Michael Jacobucci on 3/24/19.
 //  Copyright © 2019 rpoplaws. All rights reserved.
 //
-// code structure https://www.skysilk.com/blog/2018/how-to-connect-an-ios-app-to-a-mysql-database-swift/
-
-//*********************************************************
-//HOME MODEL = ROSTER PULL DATA
-//*********************************************************
 
 import Foundation
 
-protocol PullDataProtocol: class {
+protocol PullDataSocProtocol: class {
     func itemsDownloaded(items: NSArray)
 }
 
 
-class PullData: NSObject, URLSessionDataDelegate {
+class PullDataSoc: NSObject, URLSessionDataDelegate {
     
     
     
-    weak var delegate: PullDataProtocol!
+    weak var delegate: PullDataSocProtocol!
     
     let urlPath =  "https://cgi.sice.indiana.edu/~team58/getBBrost.php"
     
@@ -32,8 +27,8 @@ class PullData: NSObject, URLSessionDataDelegate {
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
         let task = defaultSession.dataTask(with: url) { (data, response, error) in
-        
-        
+            
+            
             if error != nil {
                 print("Error")
             }else {
@@ -46,8 +41,8 @@ class PullData: NSObject, URLSessionDataDelegate {
         
         task.resume()
     }
-
-
+    
+    
     func parseJSON(_ data:Data) {
         
         var jsonResult = NSArray()
@@ -79,7 +74,7 @@ class PullData: NSObject, URLSessionDataDelegate {
                 let image_path = jsonElement["image_path"] as? String,
                 let teamID = jsonElement["teamID"] as? String
             {
-             //   if teamID == "3" {
+                //   if teamID == "3" {
                 print(fname)
                 print(lname)
                 print(number)
@@ -92,7 +87,7 @@ class PullData: NSObject, URLSessionDataDelegate {
                 athlete_info.position = position
                 athlete_info.year = year
                 athlete_info.image_path = image_path
-             //   }
+                //   }
                 
             }
             
