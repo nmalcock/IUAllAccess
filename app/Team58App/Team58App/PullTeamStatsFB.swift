@@ -1,25 +1,26 @@
 //
-//  PullindividualStats.swift
+//  PullTeamStatsFB.swift
 //  Team58App
 //
-//  Created by Michael Jacobucci on 3/18/19.
+//  Created by Michael Jacobucci on 3/24/19.
 //  Copyright © 2019 rpoplaws. All rights reserved.
 //
 
 import Foundation
+import UIKit
 
-protocol PullindividualStatsDataProtocol: class {
+protocol PullTeamStatsDataFBProtocol: class {
     func itemsDownloaded(items: NSArray)
 }
 
 
-class PullindividualStatsData: NSObject, URLSessionDataDelegate {
+class PullTeamStatsDataFB: NSObject, URLSessionDataDelegate {
     
     
     
-    weak var delegate: PullindividualStatsDataProtocol!
+    weak var delegate: PullTeamStatsDataFBProtocol!
     
-    let urlPath =  "https://cgi.sice.indiana.edu/~team58/getBBstat.php"
+    let urlPath =  "https://cgi.sice.indiana.edu/~team58/getFBtstat.php"
     
     func downloadItems() {
         
@@ -31,7 +32,7 @@ class PullindividualStatsData: NSObject, URLSessionDataDelegate {
             if error != nil {
                 print("Error")
             }else {
-                print("Athlete's stats downloaded")
+                print("Team Stats downloaded")
                 self.parseJSON(data!)
                 print(data!)
             }
@@ -55,36 +56,44 @@ class PullindividualStatsData: NSObject, URLSessionDataDelegate {
         }
         
         var jsonElement = NSDictionary()
-        let stats = NSMutableArray()
+        let teams = NSMutableArray()
         
         for i in 0 ..< jsonResult.count
         {
             
             jsonElement = jsonResult[i] as! NSDictionary
             
-            let solo_statistics = StoreindividualStatsData()
-
-            if let stat_type = jsonElement["stat_type"] as? String,
+            let team_statistics = StoreTeamStatsData()
+            
+            if let teamID = jsonElement["teamID"] as? String,
+                let stat_type = jsonElement["stat_type"] as? String,
                 let stat_number = jsonElement["stat_number"] as? String
                 
+                /*if let stat_type = jsonElement["stat_type"] as? String,
+                 let stat_number = jsonElement["stat_number"] as? String,
+                 let teamID = jsonElement["teamID"] as? String*/
                 
             {
                 
-                print(stat_type)
-                print(stat_number)
-                solo_statistics.stat_type = stat_type
-                solo_statistics.stat_number = stat_number
+                if teamID == "1"{
+                    print(stat_type)
+                    print(stat_number)
+                    
+                    
+                    team_statistics.stat_type = stat_type
+                    team_statistics.stat_number = stat_number
+                    print(stat_type)
+                    print(stat_number)
+                }
             }
-            
-            stats.add(solo_statistics)
+            teams.add(team_statistics)
         }
         
         DispatchQueue.main.async(execute: { () -> Void in
             
-            self.delegate.itemsDownloaded(items: stats)
+            self.delegate.itemsDownloaded(items: teams)
             
         })
     }
     
 }
-

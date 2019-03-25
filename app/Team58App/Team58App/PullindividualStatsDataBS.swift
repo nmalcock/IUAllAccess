@@ -1,25 +1,25 @@
 //
-//  PullindividualStats.swift
+//  PullindividualStatsDataBS.swift
 //  Team58App
 //
-//  Created by Michael Jacobucci on 3/18/19.
+//  Created by Michael Jacobucci on 3/24/19.
 //  Copyright © 2019 rpoplaws. All rights reserved.
 //
 
 import Foundation
 
-protocol PullindividualStatsDataProtocol: class {
+protocol PullindividualStatsDataBSProtocol: class {
     func itemsDownloaded(items: NSArray)
 }
 
 
-class PullindividualStatsData: NSObject, URLSessionDataDelegate {
+class PullindividualStatsDataBS: NSObject, URLSessionDataDelegate {
     
     
     
-    weak var delegate: PullindividualStatsDataProtocol!
+    weak var delegate: PullindividualStatsDataBSProtocol!
     
-    let urlPath =  "https://cgi.sice.indiana.edu/~team58/getBBstat.php"
+    let urlPath =  "https://cgi.sice.indiana.edu/~team58/getBSstat.php"
     
     func downloadItems() {
         
@@ -63,7 +63,7 @@ class PullindividualStatsData: NSObject, URLSessionDataDelegate {
             jsonElement = jsonResult[i] as! NSDictionary
             
             let solo_statistics = StoreindividualStatsData()
-
+            
             if let stat_type = jsonElement["stat_type"] as? String,
                 let stat_number = jsonElement["stat_number"] as? String
                 
@@ -87,4 +87,3 @@ class PullindividualStatsData: NSObject, URLSessionDataDelegate {
     }
     
 }
-
