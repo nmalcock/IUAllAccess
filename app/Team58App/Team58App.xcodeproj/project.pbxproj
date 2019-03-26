@@ -7,6 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021579FA2249F464009275AF /* PullindividualStatsDataFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579CC2249F460009275AF /* PullindividualStatsDataFB.swift */; };
+		021579FB2249F464009275AF /* SCteamRosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579CD2249F460009275AF /* SCteamRosterViewController.swift */; };
+		021579FC2249F464009275AF /* PullindividualStatsDataSoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579CE2249F460009275AF /* PullindividualStatsDataSoc.swift */; };
+		021579FD2249F464009275AF /* SCscheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579CF2249F460009275AF /* SCscheduleViewController.swift */; };
+		021579FE2249F464009275AF /* StoreScheduleDataFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579D02249F461009275AF /* StoreScheduleDataFB.swift */; };
+		021579FF2249F464009275AF /* PullTeamStatsBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579D12249F461009275AF /* PullTeamStatsBS.swift */; };
+		02157A002249F464009275AF /* PullindividualStatsDataBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579D22249F461009275AF /* PullindividualStatsDataBS.swift */; };
+		02157A012249F464009275AF /* StoreindividualStatsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579D32249F461009275AF /* StoreindividualStatsData.swift */; };
+		02157A022249F464009275AF /* SCstatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579D42249F461009275AF /* SCstatsViewController.swift */; };
+		02157A032249F464009275AF /* StoreTeamStatsDataBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579D52249F461009275AF /* StoreTeamStatsDataBS.swift */; };
+		02157A042249F464009275AF /* FBPlayerStatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579D62249F461009275AF /* FBPlayerStatVC.swift */; };
+		02157A052249F464009275AF /* BBPlayerStatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579D72249F461009275AF /* BBPlayerStatVC.swift */; };
+		02157A062249F464009275AF /* PullScheduleDataSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579D82249F461009275AF /* PullScheduleDataSC.swift */; };
+		02157A072249F464009275AF /* PullScheduleDataBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579D92249F461009275AF /* PullScheduleDataBS.swift */; };
+		02157A082249F464009275AF /* PullTeamStatsSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579DA2249F461009275AF /* PullTeamStatsSC.swift */; };
+		02157A092249F464009275AF /* FBteamRostersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579DB2249F462009275AF /* FBteamRostersViewController.swift */; };
+		02157A0A2249F464009275AF /* teamStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579DC2249F462009275AF /* teamStatsViewController.swift */; };
+		02157A0B2249F464009275AF /* FBscheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579DD2249F462009275AF /* FBscheduleViewController.swift */; };
+		02157A0C2249F464009275AF /* PullTeamStatsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579DE2249F462009275AF /* PullTeamStatsData.swift */; };
+		02157A0D2249F464009275AF /* SCPlayerStatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579DF2249F462009275AF /* SCPlayerStatVC.swift */; };
+		02157A0E2249F464009275AF /* toTeamRostersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579E02249F462009275AF /* toTeamRostersViewController.swift */; };
+		02157A0F2249F464009275AF /* PullTeamStatsFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579E12249F462009275AF /* PullTeamStatsFB.swift */; };
+		02157A102249F464009275AF /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579E22249F462009275AF /* registerViewController.swift */; };
+		02157A112249F464009275AF /* PullDataSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579E32249F462009275AF /* PullDataSC.swift */; };
+		02157A122249F464009275AF /* BSteamStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579E42249F462009275AF /* BSteamStatsViewController.swift */; };
+		02157A132249F464009275AF /* StoreScheduleDataBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579E52249F462009275AF /* StoreScheduleDataBS.swift */; };
+		02157A142249F464009275AF /* BSscheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579E62249F463009275AF /* BSscheduleViewController.swift */; };
+		02157A152249F464009275AF /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579E72249F463009275AF /* Register.swift */; };
+		02157A162249F464009275AF /* StoreTeamStatsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579E82249F463009275AF /* StoreTeamStatsData.swift */; };
+		02157A172249F464009275AF /* StoreindividualStatsDataFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579E92249F463009275AF /* StoreindividualStatsDataFB.swift */; };
+		02157A182249F464009275AF /* StoreinidividualStatsDataBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579EA2249F463009275AF /* StoreinidividualStatsDataBS.swift */; };
+		02157A192249F464009275AF /* StoreDataFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579EB2249F463009275AF /* StoreDataFB.swift */; };
+		02157A1A2249F464009275AF /* StoreTeamStatsDataFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579EC2249F463009275AF /* StoreTeamStatsDataFB.swift */; };
+		02157A1B2249F464009275AF /* PullDataBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579ED2249F463009275AF /* PullDataBS.swift */; };
+		02157A1C2249F464009275AF /* PullindividualStatsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579EE2249F463009275AF /* PullindividualStatsData.swift */; };
+		02157A1D2249F464009275AF /* PullDataFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579EF2249F463009275AF /* PullDataFB.swift */; };
+		02157A1E2249F464009275AF /* StoreDataBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579F02249F463009275AF /* StoreDataBS.swift */; };
+		02157A1F2249F464009275AF /* StoreTeamStatsDataSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579F12249F464009275AF /* StoreTeamStatsDataSC.swift */; };
+		02157A202249F464009275AF /* BSPlayerStatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579F22249F464009275AF /* BSPlayerStatVC.swift */; };
+		02157A212249F464009275AF /* BSrosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579F32249F464009275AF /* BSrosterViewController.swift */; };
+		02157A222249F464009275AF /* FBteamRosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579F42249F464009275AF /* FBteamRosterViewController.swift */; };
+		02157A232249F464009275AF /* StoreDataSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579F52249F464009275AF /* StoreDataSC.swift */; };
+		02157A242249F464009275AF /* FBteamStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579F62249F464009275AF /* FBteamStatsViewController.swift */; };
+		02157A252249F464009275AF /* PullScheduleDataFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579F72249F464009275AF /* PullScheduleDataFB.swift */; };
+		02157A262249F464009275AF /* StoreindividualStatsDataSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579F82249F464009275AF /* StoreindividualStatsDataSC.swift */; };
+		02157A272249F464009275AF /* StoreScheduleDataSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579F92249F464009275AF /* StoreScheduleDataSC.swift */; };
+		023C6EEA2249F79D0047E969 /* editFavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C6EE92249F79D0047E969 /* editFavVC.swift */; };
+		023C6EEC2249F90D0047E969 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C6EEB2249F90D0047E969 /* FavoriteCell.swift */; };
+		023C6EEE2249F92D0047E969 /* FavoriteCellStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C6EED2249F92D0047E969 /* FavoriteCellStruct.swift */; };
+		023C6EF0224A024A0047E969 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C6EEF224A024A0047E969 /* LogInViewController.swift */; };
 		024FD0C821F9466B00869173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FD0C721F9466B00869173 /* AppDelegate.swift */; };
 		024FD0CA21F9466B00869173 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FD0C921F9466B00869173 /* ViewController.swift */; };
 		024FD0CF21F9466C00869173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024FD0CE21F9466C00869173 /* Assets.xcassets */; };
@@ -44,6 +94,56 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021579CC2249F460009275AF /* PullindividualStatsDataFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullindividualStatsDataFB.swift; sourceTree = "<group>"; };
+		021579CD2249F460009275AF /* SCteamRosterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCteamRosterViewController.swift; sourceTree = "<group>"; };
+		021579CE2249F460009275AF /* PullindividualStatsDataSoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullindividualStatsDataSoc.swift; sourceTree = "<group>"; };
+		021579CF2249F460009275AF /* SCscheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCscheduleViewController.swift; sourceTree = "<group>"; };
+		021579D02249F461009275AF /* StoreScheduleDataFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreScheduleDataFB.swift; sourceTree = "<group>"; };
+		021579D12249F461009275AF /* PullTeamStatsBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullTeamStatsBS.swift; sourceTree = "<group>"; };
+		021579D22249F461009275AF /* PullindividualStatsDataBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullindividualStatsDataBS.swift; sourceTree = "<group>"; };
+		021579D32249F461009275AF /* StoreindividualStatsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreindividualStatsData.swift; sourceTree = "<group>"; };
+		021579D42249F461009275AF /* SCstatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCstatsViewController.swift; sourceTree = "<group>"; };
+		021579D52249F461009275AF /* StoreTeamStatsDataBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreTeamStatsDataBS.swift; sourceTree = "<group>"; };
+		021579D62249F461009275AF /* FBPlayerStatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBPlayerStatVC.swift; sourceTree = "<group>"; };
+		021579D72249F461009275AF /* BBPlayerStatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBPlayerStatVC.swift; sourceTree = "<group>"; };
+		021579D82249F461009275AF /* PullScheduleDataSC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullScheduleDataSC.swift; sourceTree = "<group>"; };
+		021579D92249F461009275AF /* PullScheduleDataBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullScheduleDataBS.swift; sourceTree = "<group>"; };
+		021579DA2249F461009275AF /* PullTeamStatsSC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullTeamStatsSC.swift; sourceTree = "<group>"; };
+		021579DB2249F462009275AF /* FBteamRostersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBteamRostersViewController.swift; sourceTree = "<group>"; };
+		021579DC2249F462009275AF /* teamStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teamStatsViewController.swift; sourceTree = "<group>"; };
+		021579DD2249F462009275AF /* FBscheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBscheduleViewController.swift; sourceTree = "<group>"; };
+		021579DE2249F462009275AF /* PullTeamStatsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullTeamStatsData.swift; sourceTree = "<group>"; };
+		021579DF2249F462009275AF /* SCPlayerStatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPlayerStatVC.swift; sourceTree = "<group>"; };
+		021579E02249F462009275AF /* toTeamRostersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toTeamRostersViewController.swift; sourceTree = "<group>"; };
+		021579E12249F462009275AF /* PullTeamStatsFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullTeamStatsFB.swift; sourceTree = "<group>"; };
+		021579E22249F462009275AF /* registerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
+		021579E32249F462009275AF /* PullDataSC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullDataSC.swift; sourceTree = "<group>"; };
+		021579E42249F462009275AF /* BSteamStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSteamStatsViewController.swift; sourceTree = "<group>"; };
+		021579E52249F462009275AF /* StoreScheduleDataBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreScheduleDataBS.swift; sourceTree = "<group>"; };
+		021579E62249F463009275AF /* BSscheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSscheduleViewController.swift; sourceTree = "<group>"; };
+		021579E72249F463009275AF /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		021579E82249F463009275AF /* StoreTeamStatsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreTeamStatsData.swift; sourceTree = "<group>"; };
+		021579E92249F463009275AF /* StoreindividualStatsDataFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreindividualStatsDataFB.swift; sourceTree = "<group>"; };
+		021579EA2249F463009275AF /* StoreinidividualStatsDataBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreinidividualStatsDataBS.swift; sourceTree = "<group>"; };
+		021579EB2249F463009275AF /* StoreDataFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDataFB.swift; sourceTree = "<group>"; };
+		021579EC2249F463009275AF /* StoreTeamStatsDataFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreTeamStatsDataFB.swift; sourceTree = "<group>"; };
+		021579ED2249F463009275AF /* PullDataBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullDataBS.swift; sourceTree = "<group>"; };
+		021579EE2249F463009275AF /* PullindividualStatsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullindividualStatsData.swift; sourceTree = "<group>"; };
+		021579EF2249F463009275AF /* PullDataFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullDataFB.swift; sourceTree = "<group>"; };
+		021579F02249F463009275AF /* StoreDataBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDataBS.swift; sourceTree = "<group>"; };
+		021579F12249F464009275AF /* StoreTeamStatsDataSC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreTeamStatsDataSC.swift; sourceTree = "<group>"; };
+		021579F22249F464009275AF /* BSPlayerStatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSPlayerStatVC.swift; sourceTree = "<group>"; };
+		021579F32249F464009275AF /* BSrosterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSrosterViewController.swift; sourceTree = "<group>"; };
+		021579F42249F464009275AF /* FBteamRosterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBteamRosterViewController.swift; sourceTree = "<group>"; };
+		021579F52249F464009275AF /* StoreDataSC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDataSC.swift; sourceTree = "<group>"; };
+		021579F62249F464009275AF /* FBteamStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBteamStatsViewController.swift; sourceTree = "<group>"; };
+		021579F72249F464009275AF /* PullScheduleDataFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullScheduleDataFB.swift; sourceTree = "<group>"; };
+		021579F82249F464009275AF /* StoreindividualStatsDataSC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreindividualStatsDataSC.swift; sourceTree = "<group>"; };
+		021579F92249F464009275AF /* StoreScheduleDataSC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreScheduleDataSC.swift; sourceTree = "<group>"; };
+		023C6EE92249F79D0047E969 /* editFavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editFavVC.swift; sourceTree = "<group>"; };
+		023C6EEB2249F90D0047E969 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		023C6EED2249F92D0047E969 /* FavoriteCellStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCellStruct.swift; sourceTree = "<group>"; };
+		023C6EEF224A024A0047E969 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		024FD0C421F9466B00869173 /* Team58App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Team58App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		024FD0C721F9466B00869173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		024FD0C921F9466B00869173 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +222,52 @@
 		024FD0C621F9466B00869173 /* Team58App */ = {
 			isa = PBXGroup;
 			children = (
+				021579D72249F461009275AF /* BBPlayerStatVC.swift */,
+				021579F22249F464009275AF /* BSPlayerStatVC.swift */,
+				021579F32249F464009275AF /* BSrosterViewController.swift */,
+				021579E62249F463009275AF /* BSscheduleViewController.swift */,
+				021579E42249F462009275AF /* BSteamStatsViewController.swift */,
+				021579D62249F461009275AF /* FBPlayerStatVC.swift */,
+				021579DD2249F462009275AF /* FBscheduleViewController.swift */,
+				021579DB2249F462009275AF /* FBteamRostersViewController.swift */,
+				021579F42249F464009275AF /* FBteamRosterViewController.swift */,
+				021579F62249F464009275AF /* FBteamStatsViewController.swift */,
+				021579ED2249F463009275AF /* PullDataBS.swift */,
+				021579EF2249F463009275AF /* PullDataFB.swift */,
+				021579E32249F462009275AF /* PullDataSC.swift */,
+				021579EE2249F463009275AF /* PullindividualStatsData.swift */,
+				021579D22249F461009275AF /* PullindividualStatsDataBS.swift */,
+				021579CC2249F460009275AF /* PullindividualStatsDataFB.swift */,
+				021579CE2249F460009275AF /* PullindividualStatsDataSoc.swift */,
+				021579D92249F461009275AF /* PullScheduleDataBS.swift */,
+				021579F72249F464009275AF /* PullScheduleDataFB.swift */,
+				021579D82249F461009275AF /* PullScheduleDataSC.swift */,
+				021579D12249F461009275AF /* PullTeamStatsBS.swift */,
+				021579DE2249F462009275AF /* PullTeamStatsData.swift */,
+				021579E12249F462009275AF /* PullTeamStatsFB.swift */,
+				021579DA2249F461009275AF /* PullTeamStatsSC.swift */,
+				021579E72249F463009275AF /* Register.swift */,
+				021579E22249F462009275AF /* registerViewController.swift */,
+				021579DF2249F462009275AF /* SCPlayerStatVC.swift */,
+				021579CF2249F460009275AF /* SCscheduleViewController.swift */,
+				021579D42249F461009275AF /* SCstatsViewController.swift */,
+				021579CD2249F460009275AF /* SCteamRosterViewController.swift */,
+				021579F02249F463009275AF /* StoreDataBS.swift */,
+				021579EB2249F463009275AF /* StoreDataFB.swift */,
+				021579F52249F464009275AF /* StoreDataSC.swift */,
+				021579D32249F461009275AF /* StoreindividualStatsData.swift */,
+				021579E92249F463009275AF /* StoreindividualStatsDataFB.swift */,
+				021579F82249F464009275AF /* StoreindividualStatsDataSC.swift */,
+				021579EA2249F463009275AF /* StoreinidividualStatsDataBS.swift */,
+				021579E52249F462009275AF /* StoreScheduleDataBS.swift */,
+				021579D02249F461009275AF /* StoreScheduleDataFB.swift */,
+				021579F92249F464009275AF /* StoreScheduleDataSC.swift */,
+				021579E82249F463009275AF /* StoreTeamStatsData.swift */,
+				021579D52249F461009275AF /* StoreTeamStatsDataBS.swift */,
+				021579EC2249F463009275AF /* StoreTeamStatsDataFB.swift */,
+				021579F12249F464009275AF /* StoreTeamStatsDataSC.swift */,
+				021579DC2249F462009275AF /* teamStatsViewController.swift */,
+				021579E02249F462009275AF /* toTeamRostersViewController.swift */,
 				79D07A4522120AFB00FCDB61 /* credentials.plist */,
 				0259E938221BD2D3003DB80B /* PullData.swift */,
 				0259E93C221BD2D3003DB80B /* PullScheduleData.swift */,
@@ -137,6 +283,10 @@
 				02A1D80C2240218000B182C1 /* Main.storyboard */,
 				024FD0D021F9466C00869173 /* LaunchScreen.storyboard */,
 				024FD0D321F9466C00869173 /* Info.plist */,
+				023C6EE92249F79D0047E969 /* editFavVC.swift */,
+				023C6EED2249F92D0047E969 /* FavoriteCellStruct.swift */,
+				023C6EEB2249F90D0047E969 /* FavoriteCell.swift */,
+				023C6EEF224A024A0047E969 /* LogInViewController.swift */,
 			);
 			path = Team58App;
 			sourceTree = "<group>";
@@ -386,16 +536,66 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02157A022249F464009275AF /* SCstatsViewController.swift in Sources */,
+				02157A132249F464009275AF /* StoreScheduleDataBS.swift in Sources */,
+				02157A142249F464009275AF /* BSscheduleViewController.swift in Sources */,
+				02157A0B2249F464009275AF /* FBscheduleViewController.swift in Sources */,
+				02157A052249F464009275AF /* BBPlayerStatVC.swift in Sources */,
 				0259E93E221BD2D4003DB80B /* PullData.swift in Sources */,
+				02157A272249F464009275AF /* StoreScheduleDataSC.swift in Sources */,
+				02157A212249F464009275AF /* BSrosterViewController.swift in Sources */,
+				023C6EF0224A024A0047E969 /* LogInViewController.swift in Sources */,
+				02157A162249F464009275AF /* StoreTeamStatsData.swift in Sources */,
+				02157A1A2249F464009275AF /* StoreTeamStatsDataFB.swift in Sources */,
+				02157A1F2249F464009275AF /* StoreTeamStatsDataSC.swift in Sources */,
+				021579FE2249F464009275AF /* StoreScheduleDataFB.swift in Sources */,
+				021579FA2249F464009275AF /* PullindividualStatsDataFB.swift in Sources */,
+				02157A182249F464009275AF /* StoreinidividualStatsDataBS.swift in Sources */,
+				02157A102249F464009275AF /* registerViewController.swift in Sources */,
 				02C5173721FFB29F00286F0A /* homeScreenViewController.swift in Sources */,
 				024FD0CA21F9466B00869173 /* ViewController.swift in Sources */,
+				02157A172249F464009275AF /* StoreindividualStatsDataFB.swift in Sources */,
+				02157A262249F464009275AF /* StoreindividualStatsDataSC.swift in Sources */,
+				02157A232249F464009275AF /* StoreDataSC.swift in Sources */,
+				021579FB2249F464009275AF /* SCteamRosterViewController.swift in Sources */,
 				0259E942221BD2D4003DB80B /* PullScheduleData.swift in Sources */,
 				024FD0C821F9466B00869173 /* AppDelegate.swift in Sources */,
+				023C6EEE2249F92D0047E969 /* FavoriteCellStruct.swift in Sources */,
+				02157A1D2249F464009275AF /* PullDataFB.swift in Sources */,
+				02157A242249F464009275AF /* FBteamStatsViewController.swift in Sources */,
+				02157A122249F464009275AF /* BSteamStatsViewController.swift in Sources */,
+				02157A0F2249F464009275AF /* PullTeamStatsFB.swift in Sources */,
+				021579FF2249F464009275AF /* PullTeamStatsBS.swift in Sources */,
+				02157A1E2249F464009275AF /* StoreDataBS.swift in Sources */,
+				021579FD2249F464009275AF /* SCscheduleViewController.swift in Sources */,
+				02157A202249F464009275AF /* BSPlayerStatVC.swift in Sources */,
+				02157A062249F464009275AF /* PullScheduleDataSC.swift in Sources */,
+				02157A032249F464009275AF /* StoreTeamStatsDataBS.swift in Sources */,
+				02157A152249F464009275AF /* Register.swift in Sources */,
 				0259E940221BD2D4003DB80B /* scheduleViewController.swift in Sources */,
 				0259E93D221BD2D4003DB80B /* StoreData.swift in Sources */,
+				023C6EEA2249F79D0047E969 /* editFavVC.swift in Sources */,
+				02157A092249F464009275AF /* FBteamRostersViewController.swift in Sources */,
+				021579FC2249F464009275AF /* PullindividualStatsDataSoc.swift in Sources */,
+				02157A082249F464009275AF /* PullTeamStatsSC.swift in Sources */,
+				02157A1C2249F464009275AF /* PullindividualStatsData.swift in Sources */,
+				02157A002249F464009275AF /* PullindividualStatsDataBS.swift in Sources */,
+				02157A222249F464009275AF /* FBteamRosterViewController.swift in Sources */,
+				02157A0A2249F464009275AF /* teamStatsViewController.swift in Sources */,
+				02157A042249F464009275AF /* FBPlayerStatVC.swift in Sources */,
+				02157A012249F464009275AF /* StoreindividualStatsData.swift in Sources */,
+				02157A112249F464009275AF /* PullDataSC.swift in Sources */,
+				02157A072249F464009275AF /* PullScheduleDataBS.swift in Sources */,
+				02157A252249F464009275AF /* PullScheduleDataFB.swift in Sources */,
 				0259E93F221BD2D4003DB80B /* StoreScheduleData.swift in Sources */,
 				0259E941221BD2D4003DB80B /* teamRosterViewController.swift in Sources */,
+				023C6EEC2249F90D0047E969 /* FavoriteCell.swift in Sources */,
+				02157A0E2249F464009275AF /* toTeamRostersViewController.swift in Sources */,
+				02157A0D2249F464009275AF /* SCPlayerStatVC.swift in Sources */,
+				02157A192249F464009275AF /* StoreDataFB.swift in Sources */,
+				02157A0C2249F464009275AF /* PullTeamStatsData.swift in Sources */,
 				02C5173121FFB10300286F0A /* registrationViewController.swift in Sources */,
+				02157A1B2249F464009275AF /* PullDataBS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
