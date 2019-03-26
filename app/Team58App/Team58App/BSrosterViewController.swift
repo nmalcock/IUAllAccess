@@ -1,40 +1,44 @@
 //
-//  teamRosterViewController.swift
+//  BSrosterViewController.swift
 //  Team58App
 //
-//  Created by Michael Jacobucci on 2/13/19.
+//  Created by Michael Jacobucci on 3/25/19.
 //  Copyright © 2019 rpoplaws. All rights reserved.
 //
 
 import UIKit
 
-class teamRosterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PullDataProtocol  {
-
-    var feedItems: NSArray = NSArray()
-
-    var selectedTeam : StoreData = StoreData()
+class BSrosterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PullDataBSProtocol  {
     
-    //was originally named athleteResultsfeed, changed to teamRosterListTableView for clarity.
-    @IBOutlet weak var teamRosterListTableView: UITableView!
+    var feedItems: NSArray = NSArray()
+    
+    var selectedTeam : StoreDataBS = StoreDataBS()
+    
+    
+    @IBOutlet weak var TableView: UITableView!
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.teamRosterListTableView.delegate = self
-        self.teamRosterListTableView.dataSource = self
         
-        let pulldata = PullData()
-        pulldata.delegate = self
-        pulldata.downloadItems()
+        self.TableView.delegate = self
+        self.TableView.dataSource = self
+        
+        let pulldataBS = PullDataBS()
+        pulldataBS.delegate = self
+        pulldataBS.downloadItems()
         
     }
     
     func itemsDownloaded(items: NSArray) {
         
         feedItems = items
-        self.teamRosterListTableView.reloadData()
+        self.TableView.reloadData()
     }
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 6
         //
@@ -47,22 +51,25 @@ class teamRosterViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
+        
         // Retrieve cell
         let cellIdentifier: String = "BasicCell"
         let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
         // Get the athletes to be shown
-        let item: StoreData = feedItems[indexPath.row] as! StoreData
+        let item: StoreDataBS = feedItems[indexPath.row] as! StoreDataBS
         
         //let titleStr = feedItems
-
+        
         let titleStr: String = item.fname! + " " + item.lname! + " " + item.number! + " " + item.position! + " " + item.year! + " " + item.image_path!
         print(titleStr)
         
         myCell.textLabel!.text = titleStr
-
+        
         return myCell
     }
     
 }
+
+
+
 

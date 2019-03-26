@@ -62,7 +62,7 @@ class PullindividualStatsDataFB: NSObject, URLSessionDataDelegate {
             
             jsonElement = jsonResult[i] as! NSDictionary
             
-            let solo_statistics = StoreindividualStatsData()
+            let solo_statistics = StoreindividualStatsDataFB()
             
             if let stat_type = jsonElement["stat_type"] as? String,
                 let stat_number = jsonElement["stat_number"] as? String

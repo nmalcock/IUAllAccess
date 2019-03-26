@@ -1,66 +1,66 @@
 //
-//  teamRosterViewController.swift
+//  BSscheduleViewController.swift
 //  Team58App
 //
-//  Created by Michael Jacobucci on 2/13/19.
+//  Created by Michael Jacobucci on 3/25/19.
 //  Copyright © 2019 rpoplaws. All rights reserved.
 //
 
 import UIKit
 
-class teamRosterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PullDataProtocol  {
+class BSscheduleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PullScheduleDataBSProtocol {
 
     var feedItems: NSArray = NSArray()
-
-    var selectedTeam : StoreData = StoreData()
+    var selectedSchedule : StoreScheduleDataBS = StoreScheduleDataBS()
     
-    //was originally named athleteResultsfeed, changed to teamRosterListTableView for clarity.
-    @IBOutlet weak var teamRosterListTableView: UITableView!
+    @IBOutlet weak var TableView: UITableView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.teamRosterListTableView.delegate = self
-        self.teamRosterListTableView.dataSource = self
         
-        let pulldata = PullData()
-        pulldata.delegate = self
-        pulldata.downloadItems()
+        self.TableView.delegate = self
+        self.TableView.dataSource = self
+        
+        let pullScheduleDataBS = PullScheduleBSData()
+        pullScheduleDataBS.delegate = self
+        pullScheduleDataBS.downloadItems()
         
     }
     
     func itemsDownloaded(items: NSArray) {
         
         feedItems = items
-        self.teamRosterListTableView.reloadData()
+        self.TableView.reloadData()
     }
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 6
         //
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of feed items
         return feedItems.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
+        
         // Retrieve cell
         let cellIdentifier: String = "BasicCell"
         let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
-        // Get the athletes to be shown
-        let item: StoreData = feedItems[indexPath.row] as! StoreData
+        // Get the game to be shown
+        let item: StoreScheduleDataBS = feedItems[indexPath.row] as! StoreScheduleDataBS
+        // Get references to labels of cell
         
         //let titleStr = feedItems
-
-        let titleStr: String = item.fname! + " " + item.lname! + " " + item.number! + " " + item.position! + " " + item.year! + " " + item.image_path!
+        let titleStr: String = item.opponent! + " " + item.date_time! + " " + item.w_L! + " " + item.home_score! + " " + item.away_score!
         print(titleStr)
         
+        
         myCell.textLabel!.text = titleStr
-
+        
         return myCell
     }
     

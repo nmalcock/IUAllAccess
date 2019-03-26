@@ -20,7 +20,7 @@ class PullTeamStatsData: NSObject, URLSessionDataDelegate {
     
     weak var delegate: PullTeamStatsDataProtocol!
     
-    let urlPath =  "https://cgi.sice.indiana.edu/~team58/getBBtstat.php"
+    let urlPath =  "https://cgi.sice.indiana.edu/~team58/getBBstat.php"
     
     func downloadItems() {
         
@@ -65,26 +65,17 @@ class PullTeamStatsData: NSObject, URLSessionDataDelegate {
             
             let team_statistics = StoreTeamStatsData()
             
-            if let teamID = jsonElement["teamID"] as? String,
-                let stat_type = jsonElement["stat_type"] as? String,
+            if let stat_type = jsonElement["stat_type"] as? String,
                 let stat_number = jsonElement["stat_number"] as? String
             
-            /*if let stat_type = jsonElement["stat_type"] as? String,
-                let stat_number = jsonElement["stat_number"] as? String,
-                let teamID = jsonElement["teamID"] as? String*/
-                
             {
-
-               if teamID == "1"{
                 print(stat_type)
                 print(stat_number)
             
 
                 team_statistics.stat_type = stat_type
                 team_statistics.stat_number = stat_number
-                print(stat_type)
-                print(stat_number)
-            }
+               
             }
             teams.add(team_statistics)
         }

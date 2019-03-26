@@ -1,27 +1,23 @@
 //
-//  StoreData.swift
+//  StoreDataFB.swift
 //  Team58App
 //
-//  Created by Michael Jacobucci on 2/13/19.
+//  Created by Michael Jacobucci on 3/25/19.
 //  Copyright © 2019 rpoplaws. All rights reserved.
 //
 
-//*********************************************************
-//LOCATION MODEL = ROSTER STORE DATA
-//WAS STOCK MODEL
-//*********************************************************
-
+import Foundation
 import UIKit
 
-class StoreData: NSObject {
-   
+class StoreDataFB: NSObject {
+    
     var fname: String?
     var lname: String?
     var number: String?
     var position: String?
     var year: String?
     var image_path: String?
-
+    
     
     override init()
     {
@@ -47,4 +43,4 @@ class StoreData: NSObject {
         return "Name: \(String(describing: fname)), Number: \(String(describing: number)), Position: \(String(describing: position)), Year: \(String(describing: year)), Image: \(String(describing: image_path))"
     }
     
- }
+}

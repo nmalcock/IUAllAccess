@@ -63,7 +63,7 @@ class PullDataFB: NSObject, URLSessionDataDelegate {
             
             jsonElement = jsonResult[i] as! NSDictionary
             
-            let athlete_info = StoreData()
+            let athlete_info = StoreDataFB()
             
             //the following insures none of the JsonElement values are nil through optional binding
             if let fname = jsonElement["fname"] as? String,
@@ -71,10 +71,9 @@ class PullDataFB: NSObject, URLSessionDataDelegate {
                 let number = jsonElement["number"] as? String,
                 let position = jsonElement["position"] as? String,
                 let year = jsonElement["year"] as? String,
-                let image_path = jsonElement["image_path"] as? String,
-                let teamID = jsonElement["teamID"] as? String
+                let image_path = jsonElement["image_path"] as? String
             {
-                //   if teamID == "3" {
+    
                 print(fname)
                 print(lname)
                 print(number)
@@ -87,7 +86,6 @@ class PullDataFB: NSObject, URLSessionDataDelegate {
                 athlete_info.position = position
                 athlete_info.year = year
                 athlete_info.image_path = image_path
-                //   }
                 
             }
             

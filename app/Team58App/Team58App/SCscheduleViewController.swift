@@ -1,35 +1,39 @@
 //
-//  scheduleViewController.swift
+//  SCscheduleViewController.swift
 //  Team58App
 //
-//  Created by Michael Jacobucci on 2/18/19.
+//  Created by Michael Jacobucci on 3/25/19.
 //  Copyright © 2019 rpoplaws. All rights reserved.
 //
 
 import UIKit
 
-class scheduleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PullScheduleDataProtocol {
+class SCscheduleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PullScheduleDataSCProtocol {
+    
+    @IBOutlet weak var TableView: UITableView!
     
     var feedItems: NSArray = NSArray()
-    var selectedSchedule : StoreScheduleData = StoreScheduleData()
-
-    @IBOutlet weak var listTableView: UITableView!
+    var selectedSchedule : StoreScheduleDataSC = StoreScheduleDataSC()
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.listTableView.delegate = self
-        self.listTableView.dataSource = self
         
-        let pullScheduleData = PullScheduleData()
-        pullScheduleData.delegate = self
-        pullScheduleData.downloadItems()
+        self.TableView.delegate = self
+        self.TableView.dataSource = self
+        
+        let pullScheduleDataSC = PullScheduleDataSC()
+        pullScheduleDataSC.delegate = self
+        pullScheduleDataSC.downloadItems()
         
     }
     
     func itemsDownloaded(items: NSArray) {
         
         feedItems = items
-        self.listTableView.reloadData()
+        self.TableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,10 +49,10 @@ class scheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Retrieve cell
-        let cellIdentifier: String = "BasicCell2"
+        let cellIdentifier: String = "SoccerBasicCell3"
         let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
         // Get the game to be shown
-        let item: StoreScheduleData = feedItems[indexPath.row] as! StoreScheduleData
+        let item: StoreScheduleDataSC = feedItems[indexPath.row] as! StoreScheduleDataSC
         // Get references to labels of cell
         
         //let titleStr = feedItems
