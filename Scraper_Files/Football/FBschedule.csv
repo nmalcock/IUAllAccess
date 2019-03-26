@@ -1,0 +1,13 @@
+opponent,date_time,site,home_score,away_score,bTenOpp,w_L,box_score_link,teamID
+Florida International,2018-09-01 19:00:00,Away,38,28,Non-Conference,W,https://iuhoosiers.com/boxscore.aspx?id=11121&path=football,2
+Virginia,2018-09-08 19:30:00,Home,20,16,Non-Conference,W,https://iuhoosiers.com/boxscore.aspx?id=11120&path=football,2
+Ball State,2018-09-15 12:00:00,Home,38,10,Non-Conference,W,https://iuhoosiers.com/boxscore.aspx?id=11123&path=football,2
+#24 Michigan State,2018-09-22 19:30:00,Home,21,35,Big Ten,L,https://iuhoosiers.com/boxscore.aspx?id=3738&path=football,2
+Rutgers,2018-09-29 12:00:00,Away,24,17,Big Ten,W,https://iuhoosiers.com/boxscore.aspx?id=3739&path=football,2
+#3 Ohio State,2018-10-06 16:00:00,Away,26,49,Big Ten,L,https://iuhoosiers.com/boxscore.aspx?id=3740&path=football,2
+Iowa,2018-10-13 12:00:00,Home,16,42,Big Ten,L,https://iuhoosiers.com/boxscore.aspx?id=3741&path=football,2
+#18 Penn State,2018-10-20 15:30:00,Home,28,33,Big Ten,L,https://iuhoosiers.com/boxscore.aspx?id=3742&path=football,2
+Minnesota,2018-10-26 20:00:00,Away,31,38,Big Ten,L,https://iuhoosiers.com/boxscore.aspx?id=3743&path=football,2
+Maryland,2018-11-10 12:00:00,Home,34,32,Big Ten,W,https://iuhoosiers.com/boxscore.aspx?id=3744&path=football,2
+Michigan,2018-11-17 16:00:00,Away,20,31,Big Ten,L,https://iuhoosiers.com/boxscore.aspx?id=3745&path=football,2
+Purdue,2018-11-24 12:00:00,Home,21,28,Big Ten,L,https://iuhoosiers.com/boxscore.aspx?id=3746&path=football,2
