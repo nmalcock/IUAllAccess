@@ -1,16 +1,15 @@
-INSERT INTO user (email, username, password) 
-VALUES ('johndoe@iu.edu', 'johnd123', 'betaeta1892'), ('hbwells@gmail.com', 'hwells327', '1015Njo');
+INSERT INTO user (email, password) 
+VALUES ('johndoe@iu.edu', 'betaeta1892'), ('hbwells@gmail.com', '1015Njo'), ('becky1','becky1');
 
-INSERT INTO team (teamName)
-VALUES ("Men's Golf"), ("Men's Basketball");
+INSERT INTO team (teamName, season_start, season_end)
+VALUES ("Men's Basketball", 2018, 2019),("Football", 2018, 2018),("Baseball", 2019, 2019),("Men's Soccer", 2018, 2018);
 
-INSERT INTO schedule (opponent, game_date, iu_score, opponent_score, season, bTenOpp, result, teamID)
-VALUES ('Michigan', '2019-04-12 12:30:00', 270, 283, '2019', TRUE, TRUE, 1), ( 'Butler', '2018-12-20 13:30:00', 70, 69, '2019', FALSE, TRUE, 2);
 
-INSERT INTO athlete (fname, lname, number, position, teamID)
-VALUES ('Tiger', 'Woods', 1, 'First Golfer', 1), ('Phil', 'Mickleson', 2, 'Second Golfer', 1), ('Jordan', 'Spieth', 3, 'Third Golfer', 1), ('Jeff', 'Overton', 4, 'Fourth Golfer', 1), ('Juwan', 'Morgan', 5, 'PF', 2), ('Rob', 'Phinisee', 1, 'PG', 2), ('Romeo', 'Langford', 0, 'SG', 2);
-INSERT INTO stat (stat_type, stat_number, athleteID, teamID, scheduleID)
-VALUES ('Score', 65,1, 1, 1), ('Score',67,2, 1, 1), ('Score', 68,3, 1, 1), ('Score', 70,4, 1,1), ( 'Points', 25, 7, 2, 2), ( 'Rebounds', 7, 7, 2, 2), ('Assists', 3,7, 2, 2), ('Points',20, 5, 2, 2), ( 'Rebounds', 3,5, 2, 2), ('Assists', 6, 5, 2, 2), ('Points', 28,6, 2, 2), ('Rebounds', 10,6, 2, 2), ( 'Assists', 2, 6, 2, 2);
+INSERT INTO userFavorites (userID, BBathleteID)
+VALUES (3, 34), (3,18);
 
-INSERT INTO userFavorites (userID, athleteID)
-VALUES (1, 1), (2,7), (1,5), (2,6);
+INSERT INTO userFavorites (userID, FBathleteID)
+VALUES (3, 14);
+
+INSERT INTO userFavorites (userID, SCathleteID)
+VALUES (3, 15);
