@@ -63,28 +63,19 @@ class PullTeamStatsDataFB: NSObject, URLSessionDataDelegate {
             
             jsonElement = jsonResult[i] as! NSDictionary
             
-            let team_statistics = StoreTeamStatsData()
+            let team_statistics = StoreTeamStatsDataFB()
             
-            if let teamID = jsonElement["teamID"] as? String,
-                let stat_type = jsonElement["stat_type"] as? String,
+            if let stat_type = jsonElement["stat_type"] as? String,
                 let stat_number = jsonElement["stat_number"] as? String
                 
-                /*if let stat_type = jsonElement["stat_type"] as? String,
-                 let stat_number = jsonElement["stat_number"] as? String,
-                 let teamID = jsonElement["teamID"] as? String*/
-                
             {
+                print(stat_type)
+                print(stat_number)
                 
-                if teamID == "1"{
-                    print(stat_type)
-                    print(stat_number)
-                    
-                    
-                    team_statistics.stat_type = stat_type
-                    team_statistics.stat_number = stat_number
-                    print(stat_type)
-                    print(stat_number)
-                }
+                
+                team_statistics.stat_type = stat_type
+                team_statistics.stat_number = stat_number
+                
             }
             teams.add(team_statistics)
         }

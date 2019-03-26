@@ -1,28 +1,20 @@
-//
-//  scheduleViewController.swift
-//  Team58App
-//
-//  Created by Michael Jacobucci on 2/18/19.
-//  Copyright © 2019 rpoplaws. All rights reserved.
-//
-
 import UIKit
 
-class scheduleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PullScheduleDataProtocol {
+class FBscheduleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PullScheduleDataFBProtocol {
     
     var feedItems: NSArray = NSArray()
-    var selectedSchedule : StoreScheduleData = StoreScheduleData()
-
-    @IBOutlet weak var listTableView: UITableView!
+    var selectedSchedule : StoreScheduleDataFB = StoreScheduleDataFB()
+    
+   @IBOutlet weak var listTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.listTableView.delegate = self
         self.listTableView.dataSource = self
         
-        let pullScheduleData = PullScheduleData()
-        pullScheduleData.delegate = self
-        pullScheduleData.downloadItems()
+        let pullScheduleDataFB = PullScheduleDataFB()
+        pullScheduleDataFB.delegate = self
+        pullScheduleDataFB.downloadItems()
         
     }
     
@@ -45,10 +37,10 @@ class scheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Retrieve cell
-        let cellIdentifier: String = "BasicCell2"
+        let cellIdentifier: String = "BasicCellFBSchedule"
         let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
         // Get the game to be shown
-        let item: StoreScheduleData = feedItems[indexPath.row] as! StoreScheduleData
+        let item: StoreScheduleDataFB = feedItems[indexPath.row] as! StoreScheduleDataFB
         // Get references to labels of cell
         
         //let titleStr = feedItems

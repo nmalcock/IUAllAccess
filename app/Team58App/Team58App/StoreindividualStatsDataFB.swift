@@ -1,14 +1,15 @@
 //
-//  StoreindividualStatsData.swift
+//  StoreIndividualStatsDataFB.swift
 //  Team58App
 //
-//  Created by Michael Jacobucci on 3/18/19.
+//  Created by Michael Jacobucci on 3/25/19.
 //  Copyright © 2019 rpoplaws. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class StoreindividualStatsData: NSObject {
+class StoreindividualStatsDataFB: NSObject {
     
     var stat_type: String?
     var stat_number: String?
@@ -32,9 +33,8 @@ class StoreindividualStatsData: NSObject {
     //prints a team's statistics
     
     override var description: String {
-
+        
         return "Stat_type: \(String(describing: stat_type)), Stat_number: \(String(describing: stat_number))"
     }
     
 }
-

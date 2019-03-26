@@ -24,7 +24,9 @@ class PullData: NSObject, URLSessionDataDelegate {
     
     weak var delegate: PullDataProtocol!
     
+    
     let urlPath =  "https://cgi.sice.indiana.edu/~team58/getBBrost.php"
+
     
     func downloadItems() {
         
@@ -46,7 +48,6 @@ class PullData: NSObject, URLSessionDataDelegate {
         
         task.resume()
     }
-
 
     func parseJSON(_ data:Data) {
         
@@ -76,10 +77,8 @@ class PullData: NSObject, URLSessionDataDelegate {
                 let number = jsonElement["number"] as? String,
                 let position = jsonElement["position"] as? String,
                 let year = jsonElement["year"] as? String,
-                let image_path = jsonElement["image_path"] as? String,
-                let teamID = jsonElement["teamID"] as? String
+                let image_path = jsonElement["image_path"] as? String
             {
-             //   if teamID == "3" {
                 print(fname)
                 print(lname)
                 print(number)
@@ -92,7 +91,6 @@ class PullData: NSObject, URLSessionDataDelegate {
                 athlete_info.position = position
                 athlete_info.year = year
                 athlete_info.image_path = image_path
-             //   }
                 
             }
             
