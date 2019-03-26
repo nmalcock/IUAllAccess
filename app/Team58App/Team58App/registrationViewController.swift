@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 
 
@@ -15,7 +16,7 @@ class registrationViewController: UIViewController {
 
     //Defined a constant that holds the URL for our web service
 //ORIGINAL V
-   //let URL_USER_REGISTER = "http://cgi.sice.indiana.edu/~team58/createuser.php"
+   let URL_USER_REGISTER = "http://cgi.sice.indiana.edu/~team58/createuser.php"
 
     
     //let defaultValues = UserDefaults.standard
@@ -25,15 +26,61 @@ class registrationViewController: UIViewController {
     @IBOutlet weak var textFieldPassword: UITextField!
     @IBOutlet weak var textFieldEmail: UITextField!
 
-
+    func createAlert (title:String, message:String)
+    {
+        let alert = UIAlertController(title:title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
 
 
     
     
     //Button action
     @IBAction func buttonRegister(_ Sender: UIButton) {
-        
-        if  textFieldEmail.text!.isEmpty || textFieldPassword.text!.isEmpty {
+        let parameters: Parameters=[
+            "email":textFieldEmail.text!,
+            "password":textFieldPassword.text!
+        ]
+
+        Alamofire.request(URL_USER_REGISTER, method: .post, parameters: parameters).responseString
+            {
+                response in
+                
+                //                print("Request: \(String(describing: response.request))")   // original url request
+                //                print("Response: \(String(describing: response.response))") // http url response
+                print("Result: \(response.result)")
+                print(response.result.value!)
+                
+                //
+                //                //self.ResponseLabel.text = "Result: \(response.result)"
+                
+                //                let result = response.result.value
+                
+                
+                
+                //if there is no error
+                
+                //                    if result["SUCCESS"] {
+                
+                if response.result.value!.contains("true") {
+                    
+                self.performSegue(withIdentifier: "toLogIn", sender: nil)
+    
+                } else  {
+                    
+                self.createAlert(title: "", message: "User Already Registered")
+                    
+                }
+                
+        }
+    }
+}
+
+       /* if  textFieldEmail.text!.isEmpty || textFieldPassword.text!.isEmpty {
             
         } else {
             
@@ -105,4 +152,4 @@ class registrationViewController: UIViewController {
 
 }
 }
-//yeet
+//yeet*/
