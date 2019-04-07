@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 struct ExpandableTeams {
     var isExpanded: Bool
     var teams: [Favorite]
