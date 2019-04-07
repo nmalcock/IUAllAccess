@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import GoogleSignIn
+import SwiftyJSON
 
 
 
@@ -18,7 +19,7 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
     //you can get the ip using ifconfig command in terminal
     let URL_USER_LOGIN = "http://cgi.sice.indiana.edu/~team58/login.php"
     
-    //let defaultValues = UserDefaults.standard
+    let defaultValues = UserDefaults.standard
     
     
     @IBOutlet weak var textFieldEmail: UITextField!
@@ -85,98 +86,48 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
         
         //making a post request
         //making a post request
-        Alamofire.request(URL_USER_LOGIN, method: .post, parameters: parameters).responseString
+        Alamofire.request(URL_USER_LOGIN, method: .post, parameters: parameters).responseJSON
             {
                 response in
-
+                print(response)
                 
-                //                print("Request: \(String(describing: response.request))")   // original url request
-                //print("Response: \(String(describing: response))") // http url response
-                print("Result: \(response.result)")
-                print("hi")
-                let s = response.result.value!
-                let i = s.index(s.startIndex, offsetBy: 53)
-                let b = s.index(s.startIndex, offsetBy: 54)
-                print(s[i])
-                print(s[b])
-                var user = ""
-                user.append(s[i])
-                user.append(s[b])
-                print(user)
-                //let user2 = s
-                //print(jsonResult[0]["userID"])
-                
-                ////////////this prints the userID v
-                print(response.result.value!)
-                
-
-                /*
- 
-                result, which is a JSON array
-                 if result["status"] == true {
-                    then get the user id
-                    userid = result['userID']
-                 
-                    create view controller
-                    show it...
-                 
-                 
-                 } else {
-                 
- */
-
-
-                
-                //
-                //                //self.ResponseLabel.text = "Result: \(response.result)"
-                
-                //                let result = response.result.value
-                
-                
-                
-                //if there is no error
-                
-                //                    if result["SUCCESS"] {
-                //result, which is a JSON array
-                    //if response.["status"] == true {
-                    //then get the user id
-                    //userid = result['userID']
-                if response.result.value!.contains("true") {
+                //getting the json value from the server
+                if let result = response.result.value {
                     
                     
-                    
-                    
-                    //getting the user from response
-                    //
-                    //                        //getting user values - not neccesary
-                    //                        if let userEmail = result["email"] {
-                    //                            self.defaultValues.set(userEmail, forKey: "email")
-                    //                        }
-                    //                        if let userPassword = result["password"] {
-                    //                            self.defaultValues.set(userPassword, forKey: "password")
-                    //                        }
+                    //if there is no error
+                    if let jsonData = result as? NSDictionary {
+                        
+                        //getting the user from response
+                        let user = jsonData
+                        //print(user)
+                        //getting user values
+                        let userID = user.value(forKey: "userID") as! Int
+                        print(userID)
+                        //saving user values to defaults
+                        self.defaultValues.set(user, forKey: "userID")
+                        //print(jsonData[2])
+
+                        
+                        //switching the screen
+                        //let profileViewController = self.storyboard?.instantiateViewController(withIdentifier: "ProfileViewcontroller") as! ProfileViewController
+                        //self.navigationController?.pushViewController(profileViewController, animated: true)
+                        
+                        //self.dismiss(animated: false, completion: nil)
+                    }else{
+                        //error message in case of invalid credential
+                        //self.labelMessage.text = "Invalid username or password"
+                    }
+                }
+        
                     self.performSegue(withIdentifier: "homeScreenViewController", sender: nil)
                     
                     func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                         let DestViewController : homeScreenViewController = segue.destination as! homeScreenViewController
-                        DestViewController.user = user
+                        //DestViewController.user = user
                         //DestViewController.label.text = self.textFieldEmail.text!
                         //print(DestViewController.label.text!)
                     }
-                    
-                    
-                    
-                    
-                    //
-                } else  {
-                    
-                    self.createAlert(title: "", message: "invalid username or password")
-                    
-                    
-                }
-                
-                
-                
         }
     }
 }

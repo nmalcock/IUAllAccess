@@ -21,6 +21,9 @@ class playerDetailViewController: UIViewController {
     var position = ""
     var year = ""
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         lbl.text = "\(name)"

@@ -14,13 +14,13 @@ let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
 
 // stores all information about current user
-var user : NSDictionary?
-
+var userID : NSDictionary?
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    var userID = String()
     
     
     /// Google login ///
