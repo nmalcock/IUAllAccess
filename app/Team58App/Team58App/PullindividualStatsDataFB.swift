@@ -19,7 +19,7 @@ class PullindividualStatsDataFB: NSObject, URLSessionDataDelegate {
     
     weak var delegate: PullindividualStatsDataFBProtocol!
     
-    let urlPath =  "https://cgi.sice.indiana.edu/~team58/getFBstat.php"
+    let urlPath =  "https://cgi.sice.indiana.edu/~team58/getFBindiv.php"
     
     func downloadItems() {
         
@@ -64,16 +64,22 @@ class PullindividualStatsDataFB: NSObject, URLSessionDataDelegate {
             
             let solo_statistics = StoreindividualStatsDataFB()
             
-            if let stat_type = jsonElement["stat_type"] as? String,
-                let stat_number = jsonElement["stat_number"] as? String
+         //   if let stat_type = jsonElement["stat_type"] as? String,
+         //       let stat_number = jsonElement["stat_number"] as? String
+            if let FullName = jsonElement["FullName"] as? String,
+                let stats = jsonElement["stats"] as? String
                 
                 
             {
                 
-                print(stat_type)
-                print(stat_number)
-                solo_statistics.stat_type = stat_type
-                solo_statistics.stat_number = stat_number
+                print(FullName)
+                print(stats)
+                solo_statistics.FullName = FullName
+                solo_statistics.stats = stats
+//                print(stat_type)
+//                print(stat_number)
+//                solo_statistics.stat_type = stat_type
+//                solo_statistics.stat_number = stat_number
             }
             
             stats.add(solo_statistics)

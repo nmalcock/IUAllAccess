@@ -36,7 +36,7 @@ class SCPlayerStatVC: UIViewController, UITableViewDataSource, UITableViewDelega
         self.TableView.reloadData()
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return 1
         //
     }
     
@@ -57,11 +57,12 @@ class SCPlayerStatVC: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //let titleStr = feedItems
         
-        let titleStr: String = item.stat_type! + " " + item.stat_number!
+        let titleStr: String = item.FullName! + " " + item.stats!
         print(titleStr)
         
         
         myCell.textLabel!.text = titleStr
+        myCell.textLabel!.numberOfLines = 0
         
         return myCell
     }
