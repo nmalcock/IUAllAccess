@@ -71,21 +71,35 @@ class PullDataFB: NSObject, URLSessionDataDelegate {
                 let number = jsonElement["number"] as? String,
                 let position = jsonElement["position"] as? String,
                 let year = jsonElement["year"] as? String,
-                let image_path = jsonElement["image_path"] as? String
+                let image_path = jsonElement["image_path"] as? String,
+                let teamID = jsonElement["teamID"] as? String,
+                let height = jsonElement["height"] as? String,
+                let weight = jsonElement["weight"] as? String,
+                let hometown = jsonElement["hometown"] as? String,
+                let highschool = jsonElement["highschool"] as? String
             {
-    
                 print(fname)
                 print(lname)
                 print(number)
                 print(position)
                 print(year)
                 print(image_path)
+                print(teamID)
+                print(height)
+                print(weight)
+                print(hometown)
+                print(highschool)
                 athlete_info.fname = fname
                 athlete_info.lname = lname
                 athlete_info.number = number
                 athlete_info.position = position
                 athlete_info.year = year
                 athlete_info.image_path = image_path
+                athlete_info.teamID = teamID
+                athlete_info.height = height
+                athlete_info.weight = weight
+                athlete_info.hometown = hometown
+                athlete_info.highschool = highschool
                 
             }
             

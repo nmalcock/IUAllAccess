@@ -61,6 +61,7 @@ class teamStatsViewController: UIViewController, UITableViewDataSource, UITableV
         
         
         myCell.textLabel!.text = titleStr
+        myCell.textLabel!.numberOfLines = 0
         
         return myCell
     }

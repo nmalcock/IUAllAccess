@@ -61,6 +61,7 @@ class SCstatsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         
         myCell.textLabel!.text = titleStr
+        myCell.textLabel!.numberOfLines = 0
         
         return myCell
     }

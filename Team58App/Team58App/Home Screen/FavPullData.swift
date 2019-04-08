@@ -105,13 +105,18 @@ class FavPullData: NSObject, URLSessionDataDelegate {
             if let fname = jsonElement["fname"] as? String,
                 let lname = jsonElement["lname"] as? String,
                 let image_path = jsonElement["image_path"] as? String
+                //let teamID = jsonElement["teamID"] as? String
+
             {
                 print(fname)
                 print(lname)
                 print(image_path)
+                //print(teamID)
                 favorites_info.fname = fname
                 favorites_info.lname = lname
                 favorites_info.image_path = image_path
+                //favorites_info.teamID = teamID
+
 
                 
             }

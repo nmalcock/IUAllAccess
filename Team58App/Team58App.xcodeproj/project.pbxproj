@@ -78,6 +78,9 @@
 		02ED785322512AFE00AC8EEE /* FavBBVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED785222512AFE00AC8EEE /* FavBBVC.swift */; };
 		15942344E0D8660D0CF6F8D3 /* Pods_Team58App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B029ED6BD997B0406DC559B /* Pods_Team58App.framework */; };
 		79D07A4622120AFB00FCDB61 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79D07A4522120AFB00FCDB61 /* credentials.plist */; };
+		79FC1449225ADF6700573A45 /* todaysGamesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC1448225ADF6700573A45 /* todaysGamesVC.swift */; };
+		79FC144B225AE0AC00573A45 /* TGPullData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC144A225AE0AC00573A45 /* TGPullData.swift */; };
+		79FC144D225AE0B800573A45 /* TGStoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC144C225AE0B800573A45 /* TGStoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +178,9 @@
 		02ED785222512AFE00AC8EEE /* FavBBVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavBBVC.swift; sourceTree = "<group>"; };
 		5B029ED6BD997B0406DC559B /* Pods_Team58App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Team58App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D07A4522120AFB00FCDB61 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		79FC1448225ADF6700573A45 /* todaysGamesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todaysGamesVC.swift; sourceTree = "<group>"; };
+		79FC144A225AE0AC00573A45 /* TGPullData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TGPullData.swift; sourceTree = "<group>"; };
+		79FC144C225AE0B800573A45 /* TGStoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TGStoreData.swift; sourceTree = "<group>"; };
 		84FBFFFB8D679CABC2076629 /* Pods-Team58App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Team58App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Team58App/Pods-Team58App.debug.xcconfig"; sourceTree = "<group>"; };
 		9EFBD6F8F43DCC8D4B982734 /* Pods-Team58App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Team58App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Team58App/Pods-Team58App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				02A1D80C2240218000B182C1 /* Main.storyboard */,
+				79FC144E225AE57900573A45 /* Todays Games Schedule */,
 				02923210225A8E09003AA261 /* Home Screen */,
 				02923212225A8E67003AA261 /* LogInandRegistration */,
 				02ED785222512AFE00AC8EEE /* FavBBVC.swift */,
@@ -247,6 +254,7 @@
 				021579DB2249F462009275AF /* FBteamRostersViewController.swift */,
 				021579F42249F464009275AF /* FBteamRosterViewController.swift */,
 				021579F62249F464009275AF /* FBteamStatsViewController.swift */,
+				0259E938221BD2D3003DB80B /* PullData.swift */,
 				021579ED2249F463009275AF /* PullDataBS.swift */,
 				021579EF2249F463009275AF /* PullDataFB.swift */,
 				021579E32249F462009275AF /* PullDataSC.swift */,
@@ -265,6 +273,7 @@
 				021579CF2249F460009275AF /* SCscheduleViewController.swift */,
 				021579D42249F461009275AF /* SCstatsViewController.swift */,
 				021579CD2249F460009275AF /* SCteamRosterViewController.swift */,
+				0259E937221BD2D3003DB80B /* StoreData.swift */,
 				021579F02249F463009275AF /* StoreDataBS.swift */,
 				021579EB2249F463009275AF /* StoreDataFB.swift */,
 				021579F52249F464009275AF /* StoreDataSC.swift */,
@@ -282,10 +291,8 @@
 				021579DC2249F462009275AF /* teamStatsViewController.swift */,
 				021579E02249F462009275AF /* toTeamRostersViewController.swift */,
 				79D07A4522120AFB00FCDB61 /* credentials.plist */,
-				0259E938221BD2D3003DB80B /* PullData.swift */,
 				0259E93C221BD2D3003DB80B /* PullScheduleData.swift */,
 				0259E93A221BD2D3003DB80B /* scheduleViewController.swift */,
-				0259E937221BD2D3003DB80B /* StoreData.swift */,
 				0259E939221BD2D3003DB80B /* StoreScheduleData.swift */,
 				0259E93B221BD2D3003DB80B /* teamRosterViewController.swift */,
 				024FD0C721F9466B00869173 /* AppDelegate.swift */,
@@ -343,6 +350,16 @@
 				5B029ED6BD997B0406DC559B /* Pods_Team58App.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79FC144E225AE57900573A45 /* Todays Games Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				79FC144C225AE0B800573A45 /* TGStoreData.swift */,
+				79FC1448225ADF6700573A45 /* todaysGamesVC.swift */,
+				79FC144A225AE0AC00573A45 /* TGPullData.swift */,
+			);
+			path = "Todays Games Schedule";
 			sourceTree = "<group>";
 		};
 		9C540DE786C7119926E764F9 /* Pods */ = {
@@ -601,6 +618,7 @@
 				0292320F2257F59C003AA261 /* FavStoreData.swift in Sources */,
 				02157A202249F464009275AF /* BSPlayerStatVC.swift in Sources */,
 				02157A062249F464009275AF /* PullScheduleDataSC.swift in Sources */,
+				79FC144D225AE0B800573A45 /* TGStoreData.swift in Sources */,
 				02157A032249F464009275AF /* StoreTeamStatsDataBS.swift in Sources */,
 				0259E940221BD2D4003DB80B /* scheduleViewController.swift in Sources */,
 				0259E93D221BD2D4003DB80B /* StoreData.swift in Sources */,
@@ -621,7 +639,9 @@
 				0259E93F221BD2D4003DB80B /* StoreScheduleData.swift in Sources */,
 				0259E941221BD2D4003DB80B /* teamRosterViewController.swift in Sources */,
 				02157A0E2249F464009275AF /* toTeamRostersViewController.swift in Sources */,
+				79FC144B225AE0AC00573A45 /* TGPullData.swift in Sources */,
 				02157A0D2249F464009275AF /* SCPlayerStatVC.swift in Sources */,
+				79FC1449225ADF6700573A45 /* todaysGamesVC.swift in Sources */,
 				02157A192249F464009275AF /* StoreDataFB.swift in Sources */,
 				02157A0C2249F464009275AF /* PullTeamStatsData.swift in Sources */,
 				02ED784F22512AA100AC8EEE /* FavFBVC.swift in Sources */,

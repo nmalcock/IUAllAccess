@@ -61,6 +61,7 @@ class BSteamStatsViewController: UIViewController, UITableViewDataSource, UITabl
         
         
         myCell.textLabel!.text = titleStr
+        myCell.textLabel!.numberOfLines = 0
         
         return myCell
     }
