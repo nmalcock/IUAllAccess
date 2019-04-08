@@ -65,5 +65,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Starjout.ttf</string>
+		<string>Arial.ttf</string>
+	</array>
 </dict>
 </plist>

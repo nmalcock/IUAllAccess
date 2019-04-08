@@ -1600,7 +1600,7 @@
         <!--Basketball-->
         <scene sceneID="Xjo-nr-I93">
             <objects>
-                <tabBarController title="Basketball" id="pNi-Mo-NY5" sceneMemberID="viewController">
+                <tabBarController title="Basketball" wantsFullScreenLayout="YES" id="pNi-Mo-NY5" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="wMU-Qj-HJR">
@@ -1630,11 +1630,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicCell3" rowHeight="60" id="zg9-uy-wPa">
-                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicCell3" rowHeight="523" id="zg9-uy-wPa">
+                                <rect key="frame" x="0.0" y="28" width="375" height="523"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zg9-uy-wPa" id="RrP-ys-c3V">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1865,6 +1865,6 @@
         <segue reference="8n2-Lk-lPU"/>
         <segue reference="PHn-Ap-zgC"/>
         <segue reference="gcu-jD-yLD"/>
-        <segue reference="0pd-PL-f90"/>
+        <segue reference="E0f-E4-io5"/>
     </inferredMetricsTieBreakers>
 </document>
