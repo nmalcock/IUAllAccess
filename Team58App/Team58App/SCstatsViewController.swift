@@ -35,7 +35,7 @@ class SCstatsViewController: UIViewController, UITableViewDataSource, UITableVie
         self.TableView.reloadData()
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return 1
         //
     }
     
@@ -56,7 +56,7 @@ class SCstatsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         //let titleStr = feedItems
  
-        let titleStr: String = item.stat_type! + " " + item.stat_number!
+        let titleStr: String = item.stats!
         print(titleStr)
         
         

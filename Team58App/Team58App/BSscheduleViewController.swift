@@ -36,7 +36,7 @@ class BSscheduleViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return 1
         //
     }
     

@@ -29,7 +29,7 @@ class FBteamStatsViewController: UIViewController, UITableViewDataSource, UITabl
         self.ListTableView.reloadData()
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return 1
         //
     }
     
@@ -48,7 +48,7 @@ class FBteamStatsViewController: UIViewController, UITableViewDataSource, UITabl
         
         // Get references to labels of cell
 
-        let titleStr: String = item.stat_type! + " " + item.stat_number!
+        let titleStr: String = item.stats!
         print(titleStr)
         
         
