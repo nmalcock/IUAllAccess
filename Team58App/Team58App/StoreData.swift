@@ -26,6 +26,7 @@ class StoreData: NSObject {
     var weight: String?
     var hometown: String?
     var highschool: String?
+    var athleteID: String?
     
 
     
@@ -36,7 +37,7 @@ class StoreData: NSObject {
     
     //construct with parameters
     
-    init(fname: String, lname: String, name: String, number: String, position: String, year: String, image_path: String, teamID: String, height: String, weight: String, hometown: String, highschool: String) {
+    init(fname: String, lname: String, name: String, number: String, position: String, year: String, image_path: String, teamID: String, height: String, weight: String, hometown: String, highschool: String, athleteID: String) {
         
         self.fname = fname
         self.lname = lname
@@ -49,6 +50,7 @@ class StoreData: NSObject {
         self.weight = weight
         self.hometown = hometown
         self.highschool = highschool
+        self.athleteID = athleteID
         
     }
     
