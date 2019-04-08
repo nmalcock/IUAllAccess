@@ -38,6 +38,9 @@ class homeScreenViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //self.tableView.reloadData()
+        
+        
         session = URLSession.shared
         task = URLSessionDownloadTask()
         
@@ -132,8 +135,24 @@ class homeScreenViewController: UIViewController, UITableViewDataSource, UITable
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as? FavTableViewCell
+        let vc = storyboard?.instantiateViewController(withIdentifier:  "playerDetailViewController") as? playerDetailViewController
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? FavTableViewCell
+        let item: FavStoreData = feedItems[indexPath.row] as! FavStoreData
+        vc?.image = (self.cache.object(forKey: (indexPath as NSIndexPath).row as AnyObject) as? UIImage)!
+        vc?.name = item.fname! + " " + item.lname!
+        vc?.number = item.number!
+        vc?.position = item.position!
+        vc?.year = item.year!
+        vc?.athleteID = item.athleteID!
+        vc?.teamID = item.teamID!
+        vc?.height = item.height!
+        vc?.weight = item.weight!
+        vc?.hometown = item.hometown!
+        vc?.highschool = item.highschool!
+
         
+        
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     

@@ -81,7 +81,7 @@ class FavFBVC: UIViewController, UITableViewDataSource, UITableViewDelegate, Pul
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? FavTableViewCell
         //possibly call the array that passes image here?
         let item: StoreDataFB = feedItems[indexPath.row] as! StoreDataFB
-        cell?.lbl.text = item.fname! + " " + item.lname!
+        cell?.lbl.text = item.fname! + " " + item.lname! + " " 
         
         //cell?.img?.image = UIImage(named: "placeholder")
         
