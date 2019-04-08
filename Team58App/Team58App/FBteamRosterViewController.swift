@@ -57,10 +57,12 @@ class FBteamRosterViewController: UIViewController, UITableViewDataSource, UITab
         
         //let titleStr = feedItems
         
-        let titleStr: String = item.fname! + " " + item.lname! + " " + item.number! + " " + item.position! + " " + item.year! + " " + item.image_path!
+        let titleStr: String = item.fname! + " " + item.lname! + " " + item.number! + " " + item.position! + " " + item.year! + " " + item.height! +  " " + item.weight! + " " + item.hometown! + " " + item.highschool!
         print(titleStr)
         
         myCell.textLabel!.text = titleStr
+        myCell.textLabel!.numberOfLines = 0
+
         
         return myCell
     }

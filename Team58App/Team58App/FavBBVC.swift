@@ -131,6 +131,7 @@ class FavBBVC: UIViewController, UITableViewDataSource, UITableViewDelegate, Pul
         vc?.position = item.position!
         vc?.year = item.year!
         
+        
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     

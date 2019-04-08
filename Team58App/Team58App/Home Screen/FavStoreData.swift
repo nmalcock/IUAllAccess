@@ -15,6 +15,9 @@ class FavStoreData: NSObject {
     var fname: String?
     var lname: String?
     var image_path: String?
+    //var teamID: String?
+
+    
 
     
     
@@ -31,6 +34,8 @@ class FavStoreData: NSObject {
         self.fname = fname
         self.lname = lname
         self.image_path = image_path
+        //self.teamID = teamID
+
         
     }
     

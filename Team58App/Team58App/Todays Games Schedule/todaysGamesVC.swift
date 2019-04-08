@@ -1,39 +1,40 @@
 //
-//  scheduleViewController.swift
+//  todaysGamesVC.swift
 //  Team58App
 //
-//  Created by Michael Jacobucci on 2/18/19.
+//  Created by Michael Jacobucci on 4/7/19.
 //  Copyright © 2019 rpoplaws. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class scheduleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PullScheduleDataProtocol {
+class todaysGamesVC: ViewController, UITableViewDataSource, UITableViewDelegate, PullTGProtocol {
     
     var feedItems: NSArray = NSArray()
-    var selectedSchedule : StoreScheduleData = StoreScheduleData()
-
-    @IBOutlet weak var listTableView: UITableView!
+    var todaysGame : StoreDataTG = StoreDataTG()
+    
+    @IBOutlet weak var todaysTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.listTableView.delegate = self
-        self.listTableView.dataSource = self
         
-        let pullScheduleData = PullScheduleData()
-        pullScheduleData.delegate = self
-        pullScheduleData.downloadItems()
+        self.todaysTableView.delegate = self
+        self.todaysTableView.dataSource = self
+        
+        let pullDataTG = PullDataTG()
+        pullDataTG.delegate = self
+        pullDataTG.downloadItems()
         
     }
     
     func itemsDownloaded(items: NSArray) {
         
         feedItems = items
-        self.listTableView.reloadData()
+        self.todaysTableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return 1
         //
     }
     
@@ -45,21 +46,21 @@ class scheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Retrieve cell
-        let cellIdentifier: String = "BasicCell2"
+        let cellIdentifier: String = "TodaysGamesCell"
         let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
         // Get the game to be shown
-        let item: StoreScheduleData = feedItems[indexPath.row] as! StoreScheduleData
+        let item: StoreDataTG = feedItems[indexPath.row] as! StoreDataTG
         // Get references to labels of cell
         
         //let titleStr = feedItems
-        let titleStr: String = item.opponent! + " " + item.date_time! + " " + item.w_L! + " " + item.home_score! + " " + item.away_score!
-        print(titleStr)
         
+        let titleStr = String(item.opponent!)
         
-        myCell.textLabel!.text = titleStr
+        myCell.textLabel!.text = String("Baseball: " +  titleStr)
         
         return myCell
     }
     
 }
+    
 

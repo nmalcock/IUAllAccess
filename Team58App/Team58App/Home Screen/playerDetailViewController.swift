@@ -20,6 +20,7 @@ class playerDetailViewController: UIViewController {
     var number = ""
     var position = ""
     var year = ""
+
     
     
     

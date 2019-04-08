@@ -21,6 +21,12 @@ class StoreData: NSObject {
     var position: String?
     var year: String?
     var image_path: String?
+    var teamID: String?
+    var height: String?
+    var weight: String?
+    var hometown: String?
+    var highschool: String?
+    
 
     
     override init()
@@ -30,7 +36,7 @@ class StoreData: NSObject {
     
     //construct with parameters
     
-    init(fname: String, lname: String, name: String, number: String, position: String, year: String, image_path: String) {
+    init(fname: String, lname: String, name: String, number: String, position: String, year: String, image_path: String, teamID: String, height: String, weight: String, hometown: String, highschool: String) {
         
         self.fname = fname
         self.lname = lname
@@ -38,6 +44,11 @@ class StoreData: NSObject {
         self.position = position
         self.year = year
         self.image_path = image_path
+        self.teamID = teamID
+        self.height = height
+        self.weight = weight
+        self.hometown = hometown
+        self.highschool = highschool
         
     }
     

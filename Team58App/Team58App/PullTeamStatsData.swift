@@ -20,7 +20,7 @@ class PullTeamStatsData: NSObject, URLSessionDataDelegate {
     
     weak var delegate: PullTeamStatsDataProtocol!
     
-    let urlPath =  "https://cgi.sice.indiana.edu/~team58/getBBstat.php"
+    let urlPath =  "https://cgi.sice.indiana.edu/~team58/getBBtstat.php"
     
     func downloadItems() {
         
