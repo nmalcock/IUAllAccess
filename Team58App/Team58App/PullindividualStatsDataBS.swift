@@ -64,16 +64,22 @@ class PullindividualStatsDataBS: NSObject, URLSessionDataDelegate {
             
             let solo_statistics = StoreindividualStatsDataBS()
             
-            if let stat_type = jsonElement["stat_type"] as? String,
-                let stat_number = jsonElement["stat_number"] as? String
+            //   if let stat_type = jsonElement["stat_type"] as? String,
+            //       let stat_number = jsonElement["stat_number"] as? String
+            if let FullName = jsonElement["FullName"] as? String,
+                let stats = jsonElement["stats"] as? String
                 
                 
             {
                 
-                print(stat_type)
-                print(stat_number)
-                solo_statistics.stat_type = stat_type
-                solo_statistics.stat_number = stat_number
+                print(FullName)
+                print(stats)
+                solo_statistics.FullName = FullName
+                solo_statistics.stats = stats
+                //                print(stat_type)
+                //                print(stat_number)
+                //                solo_statistics.stat_type = stat_type
+                //                solo_statistics.stat_number = stat_number
             }
             
             stats.add(solo_statistics)

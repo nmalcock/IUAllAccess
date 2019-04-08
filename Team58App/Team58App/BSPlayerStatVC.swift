@@ -35,7 +35,7 @@ class BSPlayerStatVC: UIViewController, UITableViewDataSource, UITableViewDelega
         self.TableView.reloadData()
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return 1
         //
     }
     
@@ -51,16 +51,18 @@ class BSPlayerStatVC: UIViewController, UITableViewDataSource, UITableViewDelega
         let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
         // Get the stats to be shown
         let item: StoreindividualStatsDataBS = feedItems[indexPath.row] as! StoreindividualStatsDataBS
+
         
         // Get references to labels of cell
         
         //let titleStr = feedItems
         
-        let titleStr: String = item.stat_type! + " " + item.stat_number!
+        let titleStr: String = item.FullName! + " " + item.stats!
         print(titleStr)
         
         
         myCell.textLabel!.text = titleStr
+        myCell.textLabel!.numberOfLines = 0
         
         return myCell
     }
