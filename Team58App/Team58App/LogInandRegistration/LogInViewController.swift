@@ -12,7 +12,7 @@ import SwiftyJSON
 
 
 
-class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelegate {
+class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelegate, UITextFieldDelegate {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var btnGoogleSignIn:UIButton!
     
@@ -40,7 +40,8 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
         ///Google Sign in////
         btnGoogleSignIn.addTarget(self, action: #selector(signinUserUsingGoogle(_:)), for: .touchUpInside)
         // Do any additional setup after loading the view, typically from a nib.
-        
+        self.textFieldEmail.delegate = self
+        self.textFieldPassword.delegate = self
     }
     
     
@@ -83,51 +84,57 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
             "email":textFieldEmail.text!,
             "password":textFieldPassword.text!,
         ]
+//        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//            self.view.endEditing(true)
+//            return false
+//        }
         
         //making a post request
         //making a post request
         Alamofire.request(URL_USER_LOGIN, method: .post, parameters: parameters).responseJSON
             {
                 response in
-                print(response)
+                print(response.result.value!)
                 
                 //getting the json value from the server
                 if let result = response.result.value {
                     
                     
                     //if there is no error
-                    if let jsonData = result as? NSDictionary {
+                        let jsonData = result as? NSDictionary
                         
                         //getting the user from response
                         let user = jsonData
                         //print(user)
                         //getting user values
-                        let userID = user.value(forKey: "userID") as! Int
+                    let userID = user!.value(forKey: "userID") as! Int
                         print(userID)
                         //saving user values to defaults
                         self.defaultValues.set(user, forKey: "userID")
                         //print(jsonData[2])
 
+                    
+                        self.performSegue(withIdentifier: "homeScreenViewController", sender: nil)
                         
-                        //switching the screen
-                        //let profileViewController = self.storyboard?.instantiateViewController(withIdentifier: "ProfileViewcontroller") as! ProfileViewController
-                        //self.navigationController?.pushViewController(profileViewController, animated: true)
-                        
-                        //self.dismiss(animated: false, completion: nil)
+                        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                            let DestViewController : homeScreenViewController = segue.destination as! homeScreenViewController
+                            //                        DestViewController.user = user
+                            //                        DestViewController.label.text = self.textFieldEmail.text!
+                            //                        print(DestViewController.label.text!)
+                        }
+                    
+                
                     }else{
                         //error message in case of invalid credential
                         //self.labelMessage.text = "Invalid username or password"
                     }
-                }
+                
         
-                    self.performSegue(withIdentifier: "homeScreenViewController", sender: nil)
-                    
-                    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                        let DestViewController : homeScreenViewController = segue.destination as! homeScreenViewController
-                        //DestViewController.user = user
-                        //DestViewController.label.text = self.textFieldEmail.text!
-                        //print(DestViewController.label.text!)
-                    }
+
         }
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
