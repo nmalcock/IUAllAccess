@@ -12,13 +12,16 @@ import Alamofire
 
 
 
-class registrationViewController: UIViewController {
+class registrationViewController: UIViewController, UITextFieldDelegate {
 
     //Defined a constant that holds the URL for our web service
 //ORIGINAL V
    let URL_USER_REGISTER = "http://cgi.sice.indiana.edu/~team58/createuser.php"
 
-    
+    override func viewDidLoad() {
+        self.textFieldEmail.delegate = self
+        self.textFieldPassword.delegate = self
+    }
     //let defaultValues = UserDefaults.standard
 
     //View variables
@@ -77,6 +80,10 @@ class registrationViewController: UIViewController {
                 }
                 
         }
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
 

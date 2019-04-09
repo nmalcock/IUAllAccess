@@ -54,7 +54,7 @@ class FavStoreData: NSObject {
         self.highschool = highschool
         self.teamID = teamID
         self.image_path = image_path
-        //self.teamID = teamID
+        self.teamID = teamID
 
         
     }

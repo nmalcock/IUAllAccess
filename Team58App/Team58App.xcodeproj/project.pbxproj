@@ -22,7 +22,6 @@
 		02157A062249F464009275AF /* PullScheduleDataSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579D82249F461009275AF /* PullScheduleDataSC.swift */; };
 		02157A072249F464009275AF /* PullScheduleDataBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579D92249F461009275AF /* PullScheduleDataBS.swift */; };
 		02157A082249F464009275AF /* PullTeamStatsSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579DA2249F461009275AF /* PullTeamStatsSC.swift */; };
-		02157A092249F464009275AF /* FBteamRostersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579DB2249F462009275AF /* FBteamRostersViewController.swift */; };
 		02157A0A2249F464009275AF /* teamStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579DC2249F462009275AF /* teamStatsViewController.swift */; };
 		02157A0B2249F464009275AF /* FBscheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579DD2249F462009275AF /* FBscheduleViewController.swift */; };
 		02157A0C2249F464009275AF /* PullTeamStatsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021579DE2249F462009275AF /* PullTeamStatsData.swift */; };
@@ -116,7 +115,6 @@
 		021579D82249F461009275AF /* PullScheduleDataSC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullScheduleDataSC.swift; sourceTree = "<group>"; };
 		021579D92249F461009275AF /* PullScheduleDataBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullScheduleDataBS.swift; sourceTree = "<group>"; };
 		021579DA2249F461009275AF /* PullTeamStatsSC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullTeamStatsSC.swift; sourceTree = "<group>"; };
-		021579DB2249F462009275AF /* FBteamRostersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBteamRostersViewController.swift; sourceTree = "<group>"; };
 		021579DC2249F462009275AF /* teamStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teamStatsViewController.swift; sourceTree = "<group>"; };
 		021579DD2249F462009275AF /* FBscheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBscheduleViewController.swift; sourceTree = "<group>"; };
 		021579DE2249F462009275AF /* PullTeamStatsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullTeamStatsData.swift; sourceTree = "<group>"; };
@@ -251,7 +249,6 @@
 				021579E42249F462009275AF /* BSteamStatsViewController.swift */,
 				021579D62249F461009275AF /* FBPlayerStatVC.swift */,
 				021579DD2249F462009275AF /* FBscheduleViewController.swift */,
-				021579DB2249F462009275AF /* FBteamRostersViewController.swift */,
 				021579F42249F464009275AF /* FBteamRosterViewController.swift */,
 				021579F62249F464009275AF /* FBteamStatsViewController.swift */,
 				0259E938221BD2D3003DB80B /* PullData.swift */,
@@ -622,7 +619,6 @@
 				02157A032249F464009275AF /* StoreTeamStatsDataBS.swift in Sources */,
 				0259E940221BD2D4003DB80B /* scheduleViewController.swift in Sources */,
 				0259E93D221BD2D4003DB80B /* StoreData.swift in Sources */,
-				02157A092249F464009275AF /* FBteamRostersViewController.swift in Sources */,
 				021579FC2249F464009275AF /* PullindividualStatsDataSoc.swift in Sources */,
 				02157A082249F464009275AF /* PullTeamStatsSC.swift in Sources */,
 				02ED785322512AFE00AC8EEE /* FavBBVC.swift in Sources */,
@@ -818,13 +814,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CMN89Q8XXY;
 				INFOPLIST_FILE = Team58App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rpoplaws-.Team58App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bucci-.Team58App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -837,13 +833,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CMN89Q8XXY;
 				INFOPLIST_FILE = Team58App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rpoplaws-.Team58App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bucci-.Team58App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

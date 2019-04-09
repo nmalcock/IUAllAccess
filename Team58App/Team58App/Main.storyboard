@@ -1165,6 +1165,7 @@
             <objects>
                 <tabBarController title="Baseball" id="Ykh-e1-2bE" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="9nf-cO-SBM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="OV0-Sd-mhx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
