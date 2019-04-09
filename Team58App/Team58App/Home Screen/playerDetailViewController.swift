@@ -45,7 +45,7 @@ class playerDetailViewController: UIViewController {
     
     let addFavURL = "http://cgi.sice.indiana.edu/~team58/userFavoriteadd.php"
     
-    let getStatsURL = "http://cgi.sice.indiana.edu/~team58/individualstat.php"
+    let getStatsURL = "http://cgi.sice.indiana.edu/~team58/getindividualstat.php"
     
     let deleteFavURL = "http://cgi.sice.indiana.edu/~team58/userFavoriteDelete.php"
     
@@ -93,7 +93,7 @@ class playerDetailViewController: UIViewController {
         let favvc = storyboard?.instantiateViewController(withIdentifier:  "homeScreenViewController") as? homeScreenViewController
         
         let parameters: Parameters=[
-            "userID":95,
+            "userID":107,
             "teamID":teamID,
             "athleteID":athleteID
         ]
@@ -132,7 +132,7 @@ class playerDetailViewController: UIViewController {
         let favvc = storyboard?.instantiateViewController(withIdentifier:  "homeScreenViewController") as? homeScreenViewController
         
         let parameters: Parameters=[
-            "userID":95,
+            "userID":107,
             "teamID":teamID,
             "athleteID":athleteID
             ]

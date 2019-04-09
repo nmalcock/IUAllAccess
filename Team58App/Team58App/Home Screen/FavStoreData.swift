@@ -12,6 +12,7 @@ import UIKit
 
 class FavStoreData: NSObject {
     
+    var userID: String?
     var fname: String?
     var lname: String?
     var image_path: String?

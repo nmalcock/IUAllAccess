@@ -30,7 +30,7 @@ class FavPullData: NSObject, URLSessionDataDelegate {
     
     
     let parameters: Parameters=[
-        "userID": 95
+        "userID": 107
     ]
     
     
@@ -118,6 +118,7 @@ class FavPullData: NSObject, URLSessionDataDelegate {
                 //let teamID = jsonElement["teamID"] as? String
 
             {
+                print(athleteID)
                 print(fname)
                 print(lname)
                 print(image_path)
@@ -129,7 +130,6 @@ class FavPullData: NSObject, URLSessionDataDelegate {
                 print(weight)
                 print(hometown)
                 print(highschool)
-                print(athleteID)
                 print(teamID)
                 favorites_info.fname = fname
                 favorites_info.lname = lname
