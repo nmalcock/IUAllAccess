@@ -56,7 +56,7 @@ class teamStatsViewController: UIViewController, UITableViewDataSource, UITableV
         
         //let titleStr = feedItems
        // let titleStr: String = item.GP! + " " + item.fieldgoalP! + " " + item.threepointP! + " " + item.freethrowP! + " " + item.ppg! + " " + item.rebounds! + " " + item.fouls! + " " + item.assists! + " " + item.turnovers! + " " + item.steals! + " " + item.blocks!
-        let titleStr: String = item.stats!
+        let titleStr: String = item.stat_type! + " : " + item.stat_number!
         print(titleStr)
         
         

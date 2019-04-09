@@ -11,8 +11,8 @@ import UIKit
 
 class StoreTeamStatsDataSC: NSObject {
     
-    
-    var stats: String?
+    var stat_type: String?
+    var stat_number: String?
     
     
     override init()
@@ -21,16 +21,17 @@ class StoreTeamStatsDataSC: NSObject {
     }
     
     
-    init(stats: String) {
+    init(stat_type: String, stat_number: String) {
         
         
-        self.stats = stats
+        self.stat_type = stat_type
+        self.stat_number = stat_number
     }
     
     //prints a team's statistics
     
     override var description: String {
-        return "Stats: \(String(describing: stats))"
+        return "Stat_type: \(String(describing: stat_type))"
     }
     
 }
