@@ -84,10 +84,10 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
             "email":textFieldEmail.text!,
             "password":textFieldPassword.text!,
         ]
-//        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//            self.view.endEditing(true)
-//            return false
-//        }
+        //        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //            self.view.endEditing(true)
+        //            return false
+        //        }
         
         //making a post request
         //making a post request
@@ -97,23 +97,23 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
                 print(response.result.value!)
                 
                 //getting the json value from the server
-                if let result = response.result.value {
-                    
-                    
+                if let result = response.result.value{
+                    //if(response.result.value.contains("true"){
+                    let result = response.result.value
                     //if there is no error
-                        let jsonData = result as? NSDictionary
-                        
-                        //getting the user from response
-                        let user = jsonData
-                        //print(user)
-                        //getting user values
-                    let userID = user!.value(forKey: "userID") as! Int
+                    let jsonData = result as? NSDictionary
+                    
+                    //getting the user from response
+                    let user = jsonData
+                    //print(user)
+                    //getting user values
+                    if let userID = user!.value(forKey: "userID") as? Int {
                         print(userID)
                         //saving user values to defaults
                         self.defaultValues.set(user, forKey: "userID")
                         //print(jsonData[2])
-
-                    
+                        
+                        
                         self.performSegue(withIdentifier: "homeScreenViewController", sender: nil)
                         
                         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -122,15 +122,13 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
                             //                        DestViewController.label.text = self.textFieldEmail.text!
                             //                        print(DestViewController.label.text!)
                         }
-                    
-                
-                    }else{
-                        //error message in case of invalid credential
-                        //self.labelMessage.text = "Invalid username or password"
                     }
+                    
+                }else{
+                    //error message in case of invalid credential
+                    self.createAlert(title: "", message: "Invalid username or password")
+                }
                 
-        
-
         }
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

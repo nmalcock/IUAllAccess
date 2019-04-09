@@ -63,8 +63,8 @@ class playerDetailViewController: UIViewController {
 
         
         let parameters: Parameters=[
-            "athleteID":18,
-            "teamID":1
+            "athleteID":athleteID,
+            "teamID":teamID
 
         ]
         Alamofire.request(getStatsURL, method: .post, parameters: parameters).responseJSON
@@ -93,7 +93,7 @@ class playerDetailViewController: UIViewController {
         let favvc = storyboard?.instantiateViewController(withIdentifier:  "homeScreenViewController") as? homeScreenViewController
         
         let parameters: Parameters=[
-            "userID":107,
+            "userID":95,
             "teamID":teamID,
             "athleteID":athleteID
         ]
@@ -132,7 +132,7 @@ class playerDetailViewController: UIViewController {
         let favvc = storyboard?.instantiateViewController(withIdentifier:  "homeScreenViewController") as? homeScreenViewController
         
         let parameters: Parameters=[
-            "userID":107,
+            "userID":95,
             "teamID":teamID,
             "athleteID":athleteID
             ]

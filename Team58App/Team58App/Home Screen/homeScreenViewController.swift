@@ -38,7 +38,7 @@ class homeScreenViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.tableView.reloadData()
+        self.tableView.reloadData()
         
         
         session = URLSession.shared

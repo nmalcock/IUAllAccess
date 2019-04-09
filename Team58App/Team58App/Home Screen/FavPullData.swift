@@ -30,7 +30,7 @@ class FavPullData: NSObject, URLSessionDataDelegate {
     
     
     let parameters: Parameters=[
-        "userID": 107
+        "userID": 95
     ]
     
     
