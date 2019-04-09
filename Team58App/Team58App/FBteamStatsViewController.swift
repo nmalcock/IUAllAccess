@@ -48,7 +48,7 @@ class FBteamStatsViewController: UIViewController, UITableViewDataSource, UITabl
         
         // Get references to labels of cell
 
-        let titleStr: String = item.stats!
+        let titleStr: String = item.stat_type! + " : " + item.stat_number!
         print(titleStr)
         
         

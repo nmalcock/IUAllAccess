@@ -56,7 +56,7 @@ class SCstatsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         //let titleStr = feedItems
  
-        let titleStr: String = item.stats!
+        let titleStr: String = item.stat_type! + " : " + item.stat_number!
         print(titleStr)
         
         

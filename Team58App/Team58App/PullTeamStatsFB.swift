@@ -65,13 +65,16 @@ class PullTeamStatsDataFB: NSObject, URLSessionDataDelegate {
             
             let team_statistics = StoreTeamStatsDataFB()
             
-            if let stats = jsonElement["stats"] as? String
+            if let stat_type = jsonElement["stat_type"] as? String,
+                let stat_number = jsonElement["stat_number"] as? String
                 
             {
-                print(stats)
+                print(stat_type)
+                print(stat_number)
                 
                 
-                team_statistics.stats = stats
+                team_statistics.stat_type = stat_type
+                team_statistics.stat_number = stat_number
                 
             }
             teams.add(team_statistics)
