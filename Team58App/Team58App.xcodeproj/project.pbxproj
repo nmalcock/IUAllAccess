@@ -69,6 +69,7 @@
 		02A1D80D2240218000B182C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02A1D80C2240218000B182C1 /* Main.storyboard */; };
 		02C5173121FFB10300286F0A /* registrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5173021FFB10300286F0A /* registrationViewController.swift */; };
 		02C5173721FFB29F00286F0A /* homeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5173621FFB29F00286F0A /* homeScreenViewController.swift */; };
+		02E0C494225D5E710010C398 /* homeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E0C493225D5E710010C398 /* homeController.swift */; };
 		02ED784A22512AA100AC8EEE /* FavTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED784222512AA000AC8EEE /* FavTableViewCell.swift */; };
 		02ED784C22512AA100AC8EEE /* FavBSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED784422512AA000AC8EEE /* FavBSVC.swift */; };
 		02ED784D22512AA100AC8EEE /* FavSCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED784522512AA000AC8EEE /* FavSCVC.swift */; };
@@ -168,6 +169,7 @@
 		02A1D80C2240218000B182C1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		02C5173021FFB10300286F0A /* registrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		02C5173621FFB29F00286F0A /* homeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeScreenViewController.swift; sourceTree = "<group>"; };
+		02E0C493225D5E710010C398 /* homeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeController.swift; sourceTree = "<group>"; };
 		02ED784222512AA000AC8EEE /* FavTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavTableViewCell.swift; sourceTree = "<group>"; };
 		02ED784422512AA000AC8EEE /* FavBSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavBSVC.swift; sourceTree = "<group>"; };
 		02ED784522512AA000AC8EEE /* FavSCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavSCVC.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		024FD0BB21F9466B00869173 = {
 			isa = PBXGroup;
 			children = (
+				02E0C493225D5E710010C398 /* homeController.swift */,
 				024FD0C621F9466B00869173 /* Team58App */,
 				024FD0DB21F9466C00869173 /* Team58AppTests */,
 				024FD0E621F9466C00869173 /* Team58AppUITests */,
@@ -593,6 +596,7 @@
 				021579FE2249F464009275AF /* StoreScheduleDataFB.swift in Sources */,
 				021579FA2249F464009275AF /* PullindividualStatsDataFB.swift in Sources */,
 				02157A182249F464009275AF /* StoreinidividualStatsDataBS.swift in Sources */,
+				02E0C494225D5E710010C398 /* homeController.swift in Sources */,
 				02C5173721FFB29F00286F0A /* homeScreenViewController.swift in Sources */,
 				024FD0CA21F9466B00869173 /* ViewController.swift in Sources */,
 				02157A172249F464009275AF /* StoreindividualStatsDataFB.swift in Sources */,
