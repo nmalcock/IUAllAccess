@@ -90,7 +90,7 @@ class playerDetailViewController: UIViewController {
     
     @IBAction func onClickDelete(_ sender: Any) {
         
-        let favvc = storyboard?.instantiateViewController(withIdentifier:  "homeScreenViewController") as? homeScreenViewController
+        let goHome = storyboard?.instantiateViewController(withIdentifier:  "homeController") as? UITabBarController
         
         let parameters: Parameters=[
             "userID":95,
@@ -120,7 +120,7 @@ class playerDetailViewController: UIViewController {
         //favvc?.favname = name
         
         
-        self.navigationController?.pushViewController(favvc!, animated: true)
+        self.navigationController?.pushViewController(goHome!, animated: true)
         
         
     }
@@ -129,7 +129,7 @@ class playerDetailViewController: UIViewController {
     
     @IBAction func onClickFavorite(_ sender: Any) {
         
-        let favvc = storyboard?.instantiateViewController(withIdentifier:  "homeScreenViewController") as? homeScreenViewController
+        let goHome = storyboard?.instantiateViewController(withIdentifier:  "homeController") as? UITabBarController
         
         let parameters: Parameters=[
             "userID":95,
@@ -159,7 +159,7 @@ class playerDetailViewController: UIViewController {
         //favvc?.favname = name
 
         
-        self.navigationController?.pushViewController(favvc!, animated: true)
+        self.navigationController?.pushViewController(goHome!, animated: true)
         
         
     }
