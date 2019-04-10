@@ -151,6 +151,13 @@ class FavBSVC: UIViewController, UITableViewDataSource, UITableViewDelegate, Pul
         vc?.number = item.number!
         vc?.position = item.position!
         vc?.year = item.year!
+        vc?.athleteID = item.athleteID!
+        vc?.teamID = item.teamID!
+        vc?.height = item.height!
+        vc?.weight = item.weight!
+        vc?.hometown = item.hometown!
+        vc?.highschool = item.highschool!
+
         
         self.navigationController?.pushViewController(vc!, animated: true)
     }
