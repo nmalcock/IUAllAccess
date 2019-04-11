@@ -77,7 +77,7 @@ class PullDataBS: NSObject, URLSessionDataDelegate {
                 let weight = jsonElement["weight"] as? String,
                 let hometown = jsonElement["hometown"] as? String,
                 let highschool = jsonElement["highschool"] as? String,
-                let athleteID = jsonElement["BBathleteID"] as? String
+                let athleteID = jsonElement["BSathleteID"] as? String
             {
                 print(fname)
                 print(lname)
