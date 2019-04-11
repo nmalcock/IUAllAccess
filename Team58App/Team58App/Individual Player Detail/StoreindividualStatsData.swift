@@ -10,14 +10,8 @@ import UIKit
 
 class StoreindividualStatsData: NSObject {
     
-    var FullName: String?
-    var stats: String?
-    //    var stat_type: String?
-    //    var stat_number: String?
-    
-    
-    
-    //empty constructor
+    var stat_type: String?
+    var stat_number: String?
     
     override init()
     {
@@ -25,13 +19,10 @@ class StoreindividualStatsData: NSObject {
     }
     
     
-    //    init(stat_type: String, stat_number: String) {
-    init(FullName: String, stats: String) {
+    init(stat_type: String, stat_number: String) {
         
-        //        self.stat_type = stat_type
-        //        self.stat_number = stat_number
-        self.FullName = FullName
-        self.stats = stats
+        self.stat_type = stat_type
+        self.stat_number = stat_number
     }
     
     //prints a team's statistics
@@ -39,7 +30,7 @@ class StoreindividualStatsData: NSObject {
     override var description: String {
         
         //        return "Stat_type: \(String(describing: stat_type)), Stat_number: \(String(describing: stat_number))"
-        return "FullName: \(String(describing: FullName)), Stats: \(String(describing: stats))"
+        return "Stat Type: \(String(describing: stat_type)), Stat Number: \(String(describing: stat_number))"
     }
     
 }

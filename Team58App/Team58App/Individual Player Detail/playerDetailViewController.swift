@@ -11,7 +11,16 @@ import Alamofire
 import SwiftyJSON
 import Foundation
 
-class playerDetailViewController: UIViewController {
+
+
+class playerDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PullindividualStatsDataProtocol {
+    
+    var feedItems: NSArray = NSArray()
+    var selectedTeamStats : StoreindividualStatsData = StoreindividualStatsData()
+
+    
+    @IBOutlet weak var ListTableView: UITableView!
+    
     
     
     @IBOutlet weak var img: UIImageView!
@@ -43,6 +52,8 @@ class playerDetailViewController: UIViewController {
     var athleteID = ""
     //var
     
+
+    
     let addFavURL = "http://cgi.sice.indiana.edu/~team58/userFavoriteadd.php"
     
     let getStatsURL = "http://cgi.sice.indiana.edu/~team58/getindividualstat.php"
@@ -51,6 +62,8 @@ class playerDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
         lbl.text = "\(name)"
         img.image = image
         lblnum.text = "Number: \(number)"
@@ -60,30 +73,39 @@ class playerDetailViewController: UIViewController {
         lblweight.text = "Weight: \(weight)"
         lblhighschool.text = "Highschool: \(highschool)"
         lblheight.text = "Height: \(height)"
-
+        
+        
+        self.ListTableView.delegate = self
+        self.ListTableView.dataSource = self
+        
+        
         
         let parameters: Parameters=[
-            "athleteID":athleteID,
-            "teamID":teamID
-
+            "teamID":teamID,
+            "athleteID":athleteID
         ]
-        Alamofire.request(getStatsURL, method: .post, parameters: parameters).responseJSON
+        
+        
+        Alamofire.request(getStatsURL, method: .post, parameters: parameters).responseString
             {
                 response in
-                print(response)
-
-                //getting the json value from the server
-    
                 
-
-           
-                    //error message in case of invalid credential
-                    //self.labelMessage.text = "Invalid username or password"
+                //print(response.result.value!)
+                let data = response.data!
                 
+                let pullindividualstatsdata = PullindividualStatsData()
+                pullindividualstatsdata.delegate = self
+                //favpulldata.sendUserID()
+                pullindividualstatsdata.parseJSON(data)
+
         }
         
+
+
+
         
     }
+    
     
 
 
@@ -164,4 +186,42 @@ class playerDetailViewController: UIViewController {
         
     }
     
+    
+    func itemsDownloaded(items: NSArray) {
+        
+        feedItems = items
+        self.ListTableView.reloadData()
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+        //
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return feedItems.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // Retrieve cell
+        let cellIdentifier: String = "PlayerStat1"
+        let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
+        // Get the stats to be shown
+        let item: StoreindividualStatsData = feedItems[indexPath.row] as! StoreindividualStatsData
+        
+        // Get references to labels of cell
+        
+        //let titleStr = feedItems
+        // let titleStr: String = item.GP! + " " + item.fieldgoalP! + " " + item.threepointP! + " " + item.freethrowP! + " " + item.ppg! + " " + item.rebounds! + " " + item.fouls! + " " + item.assists! + " " + item.turnovers! + " " + item.steals! + " " + item.blocks!
+        let titleStr: String = item.stat_type! + " " + item.stat_number!
+        print(titleStr)
+        
+        
+        myCell.textLabel!.text = titleStr
+        myCell.textLabel!.numberOfLines = 0
+        
+        return myCell
+    }
+
 }

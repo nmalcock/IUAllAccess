@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import Alamofire
+
+
 
 protocol PullindividualStatsDataProtocol: class {
     func itemsDownloaded(items: NSArray)
@@ -16,29 +19,17 @@ protocol PullindividualStatsDataProtocol: class {
 class PullindividualStatsData: NSObject, URLSessionDataDelegate {
     
     
-    
     weak var delegate: PullindividualStatsDataProtocol!
     
-    let urlPath =  "https://cgi.sice.indiana.edu/~team58/getBBstat.php"
+
+
     
+    let urlPath =  "https://cgi.sice.indiana.edu/~team58/getindividualstat.php"
+    
+
     func downloadItems() {
         
-        let url: URL = URL(string: urlPath)!
-        let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
-        
-        let task = defaultSession.dataTask(with: url) { (data, response, error) in
-            
-            if error != nil {
-                print("Error")
-            }else {
-                print("Athlete's stats downloaded")
-                self.parseJSON(data!)
-                print(data!)
-            }
-            
-        }
-        
-        task.resume()
+
     }
     
     
@@ -66,20 +57,17 @@ class PullindividualStatsData: NSObject, URLSessionDataDelegate {
             
             //   if let stat_type = jsonElement["stat_type"] as? String,
             //       let stat_number = jsonElement["stat_number"] as? String
-            if let FullName = jsonElement["FullName"] as? String,
-                let stats = jsonElement["stats"] as? String
+            if let stat_type = jsonElement["stat_type"] as? String,
+                let stat_number = jsonElement["stat_number"] as? String
                 
                 
             {
                 
-                print(FullName)
-                print(stats)
-                solo_statistics.FullName = FullName
-                solo_statistics.stats = stats
-                //                print(stat_type)
-                //                print(stat_number)
-                //                solo_statistics.stat_type = stat_type
-                //                solo_statistics.stat_number = stat_number
+                print(stat_type)
+                print(stat_number)
+                solo_statistics.stat_type = stat_type
+                solo_statistics.stat_number = stat_number
+
             }
             
             stats.add(solo_statistics)

@@ -1,5 +1,5 @@
 //
-//  PullDataFB.swift
+//  PullDataSoc.swift
 //  Team58App
 //
 //  Created by Michael Jacobucci on 3/24/19.
@@ -8,18 +8,18 @@
 
 import Foundation
 
-protocol PullDataFBProtocol: class {
+protocol PullDataSCProtocol: class {
     func itemsDownloaded(items: NSArray)
 }
 
 
-class PullDataFB: NSObject, URLSessionDataDelegate {
+class PullDataSC: NSObject, URLSessionDataDelegate {
     
     
     
-    weak var delegate: PullDataFBProtocol!
+    weak var delegate: PullDataSCProtocol!
     
-    let urlPath =  "https://cgi.sice.indiana.edu/~team58/getFBrost.php"
+    let urlPath =  "https://cgi.sice.indiana.edu/~team58/getSCrost.php"
     
     func downloadItems() {
         
@@ -63,7 +63,7 @@ class PullDataFB: NSObject, URLSessionDataDelegate {
             
             jsonElement = jsonResult[i] as! NSDictionary
             
-            let athlete_info = StoreDataFB()
+            let athlete_info = StoreDataSC()
             
             //the following insures none of the JsonElement values are nil through optional binding
             if let fname = jsonElement["fname"] as? String,
@@ -77,7 +77,7 @@ class PullDataFB: NSObject, URLSessionDataDelegate {
                 let weight = jsonElement["weight"] as? String,
                 let hometown = jsonElement["hometown"] as? String,
                 let highschool = jsonElement["highschool"] as? String,
-                let athleteID = jsonElement["BBathleteID"] as? String
+                let athleteID = jsonElement["SCathleteID"] as? String
             {
                 print(fname)
                 print(lname)
