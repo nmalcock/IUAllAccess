@@ -98,6 +98,10 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
                 
                 //getting the json value from the server
                 if let result = response.result.value{
+                    ///////////////////////////////////////
+                    
+                    
+                  ///////////////////////////////////////////
                     //if(response.result.value.contains("true"){
                     let result = response.result.value
                     //if there is no error
@@ -107,22 +111,23 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
                     let user = jsonData
                     //print(user)
                     //getting user values
-                    if let userID = user!.value(forKey: "userID") as? String {
-                        print(userID)
+                    if let userID = user!.value(forKey: "userID") as? Int {
+                        print("hi",userID)
+                        
                         //saving user values to defaults
-                        self.defaultValues.set(user, forKey: "userID")
+                        self.defaultValues.set(userID, forKey: "userID")
+                        //////// THIS CALLS IT FROM APP DELEGATE:
+                        let myuser = UserDefaults.standard.integer(forKey: "userID")
+                        print("yo", myuser)
                         //print(jsonData[2])
-                        
-                        
                         self.performSegue(withIdentifier: "homeScreenViewController", sender: nil)
                         
                         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                             let DestViewController : homeScreenViewController = segue.destination as! homeScreenViewController
-                            //DestViewController.userID = userID
+                            //                        DestViewController.user = user
                             //                        DestViewController.label.text = self.textFieldEmail.text!
                             //                        print(DestViewController.label.text!)
                         }
-                    }
                     
                 }else{
                     //error message in case of invalid credential
@@ -135,4 +140,5 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
         self.view.endEditing(true)
         return false
     }
+}
 }

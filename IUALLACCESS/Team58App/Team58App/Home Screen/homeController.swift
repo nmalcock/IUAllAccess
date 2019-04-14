@@ -11,13 +11,11 @@ import UIKit
 
 class homeController: UITabBarController {
 
-var userID = ""
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if userID != nil {
-            print(userID)
-        }
+
     }
     
     

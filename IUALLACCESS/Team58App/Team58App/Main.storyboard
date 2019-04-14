@@ -71,7 +71,6 @@
                                 </state>
                                 <connections>
                                     <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T2d-nw-KMh"/>
-                                    <segue destination="sY8-Ab-Bpm" kind="show" id="iHb-nJ-wqE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5L-kY-sW0">
@@ -104,7 +103,7 @@
                         <outlet property="lblTitle" destination="U5L-kY-sW0" id="jmI-BS-P67"/>
                         <outlet property="textFieldEmail" destination="ycl-8q-KQu" id="jBM-st-aOn"/>
                         <outlet property="textFieldPassword" destination="vZC-bU-OqB" id="NIr-XF-dtU"/>
-                        <segue destination="sY8-Ab-Bpm" kind="show" identifier="homeScreenViewController" id="Yp5-7Z-Xat"/>
+                        <segue destination="sY8-Ab-Bpm" kind="show" identifier="homeScreenViewController" id="JKc-dg-jog"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -794,7 +793,7 @@
         <!--Player Detail View Controller-->
         <scene sceneID="pbh-vW-Cme">
             <objects>
-                <viewController storyboardIdentifier="playerDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O2g-9D-DLa" customClass="playerDetailViewController" customModule="Team58App" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="playerDetailViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O2g-9D-DLa" customClass="playerDetailViewController" customModule="Team58App" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ctM-IG-AV1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -803,17 +802,6 @@
                                 <rect key="frame" x="24" y="91" width="174" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozn-NS-vzz">
-                                <rect key="frame" x="206" y="597" width="150" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Add Favorite">
-                                    <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onClickFavorite:" destination="O2g-9D-DLa" eventType="touchUpInside" id="spH-ID-7SI"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFl-dN-t0M">
                                 <rect key="frame" x="142" y="48" width="172" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -864,7 +852,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKV-so-nGE">
-                                <rect key="frame" x="24" y="597" width="150" height="50"/>
+                                <rect key="frame" x="24" y="587" width="150" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Delete Favorite">
@@ -882,7 +870,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2DN-Yk-BSL">
-                                <rect key="frame" x="24" y="371" width="331" height="206"/>
+                                <rect key="frame" x="25" y="361" width="331" height="206"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -900,12 +888,25 @@
                                     <outlet property="delegate" destination="ctM-IG-AV1" id="UJ1-J1-lQF"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozn-NS-vzz">
+                                <rect key="frame" x="205" y="587" width="150" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Add Favorite">
+                                    <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickFavorite:" destination="O2g-9D-DLa" eventType="touchUpInside" id="spH-ID-7SI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <viewLayoutGuide key="safeArea" id="aQh-lF-Bpd"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="ListTableView" destination="2DN-Yk-BSL" id="ecm-6X-Oyw"/>
                         <outlet property="img" destination="wPf-9X-avv" id="Zky-9v-WYe"/>
@@ -986,6 +987,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="reminders:" destination="pNu-8V-Pww" eventType="valueChanged" id="rIu-8i-qna"/>
+                                    <action selector="remindersSwitch:" destination="pNu-8V-Pww" eventType="valueChanged" id="mPg-XV-1qb"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stat Updates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuF-Lc-r8W">
@@ -1056,6 +1058,12 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Settings" id="sCD-af-GeE"/>
+                    <connections>
+                        <outlet property="confirmPassword" destination="l8H-c5-TvU" id="xX7-oo-4Lb"/>
+                        <outlet property="enterEmail" destination="nOh-BF-4V2" id="O8Y-HE-Koi"/>
+                        <outlet property="newPassword" destination="3HV-8U-ed8" id="RwI-We-2aa"/>
+                        <outlet property="oldPassword" destination="n3E-jL-3rc" id="qRz-S0-kwG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4O-U2-wnM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1547,7 +1555,6 @@
         <image name="iuLOGO" width="328" height="328"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Yp5-7Z-Xat"/>
         <segue reference="fDk-Uy-FZg"/>
         <segue reference="0pd-PL-f90"/>
     </inferredMetricsTieBreakers>

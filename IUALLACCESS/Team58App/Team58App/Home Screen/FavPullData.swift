@@ -17,21 +17,19 @@ protocol FavPullDataProtocol: class {
 
 class FavPullData: NSObject, URLSessionDataDelegate {
     
-    
+   // let myUser = ""
     
     weak var delegate: FavPullDataProtocol!
-    
-    
+
     
     let urlPath =  "https://cgi.sice.indiana.edu/~team58/userFavorites.php"
     
     
     let URL_USER_ID = "http://cgi.sice.indiana.edu/~team58/userFavorites.php"
     
+    //let myUserID = myUser
     
-    let parameters: Parameters=[
-        "userID": 95
-    ]
+
     
     
     /*func sendUserID() {
@@ -46,6 +44,16 @@ class FavPullData: NSObject, URLSessionDataDelegate {
 
     
     func downloadItems() {
+        
+        let defaultValues = UserDefaults.standard
+        let myUser = defaultValues.string(forKey: "userID")!
+        print(myUser)
+        print("fav pull data testing", myUser)
+
+        
+        let parameters: Parameters=[
+            "userID": myUser
+        ]
         
         Alamofire.request(URL_USER_ID, method: .post, parameters: parameters).responseString
             {
