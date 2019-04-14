@@ -13,18 +13,210 @@ import Alamofire
 class settingsVC: UIViewController {
     
 var userID = ""
+
     
-    @IBAction func reminders(_ sender: Any) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let userSettingsURL = "https://cgi.sice.indiana.edu/~team58/userSetting.php"
+        let defaultValues = UserDefaults.standard
+        let myUser = defaultValues.string(forKey: "userID")!
+        
+        let parameters: Parameters=[
+            "userID":myUser
+        ]
+        
+        Alamofire.request(userSettingsURL, method: .post, parameters: parameters).responseJSON
+            {
+                response in
+                print(response)
+                
+                //getting the json value from the server
+                if let result = response.result.value {
+                    print(result)
+                    //print(jsonData[2])
+                }else{
+                    //error message in case of invalid credential
+                    //self.labelMessage.text = "Invalid username or password"
+                }
+        }
     }
     
     
-    @IBAction func updates(_ sender: Any) {
+    
+//TURNING GAME REMINDERS ON OR OFF
+    @IBAction func reminders(_ sender: UISwitch) {
+        
+        if (sender.isOn == true ) {
+            
+        
+        let gameRemindersURL = "https://cgi.sice.indiana.edu/~team58/ModuserSetting.php"
+        let defaultValues = UserDefaults.standard
+        let myUser = defaultValues.string(forKey: "userID")!
+        
+        let parameters: Parameters=[
+            "userID":myUser,
+            "gameReminder":"Yes",
+            "statUpdate":"No"
+        ]
+        
+        Alamofire.request(gameRemindersURL, method: .post, parameters: parameters).responseJSON
+            {
+                response in
+                print(response)
+                
+                //getting the json value from the server
+                if let result = response.result.value {
+                    print(result)
+                    //print(jsonData[2])
+                }else{
+                    //error message in case of invalid credential
+                    //self.labelMessage.text = "Invalid username or password"
+                }
+            }
+        } else {
+            let gameRemindersURL = "https://cgi.sice.indiana.edu/~team58/ModuserSetting.php"
+            let defaultValues = UserDefaults.standard
+            let myUser = defaultValues.string(forKey: "userID")!
+            
+            let parameters: Parameters=[
+                "userID":myUser,
+                "gameReminder":"No",
+                "statUpdate":"No"
+            ]
+            
+            Alamofire.request(gameRemindersURL, method: .post, parameters: parameters).responseJSON
+                {
+                    response in
+                    print(response)
+                    
+                    //getting the json value from the server
+                    if let result = response.result.value {
+                        print(result)
+                        //print(jsonData[2])
+                    }else{
+                        //error message in case of invalid credential
+                        //self.labelMessage.text = "Invalid username or password"
+                    }
+            }
+            
+        }
+        
+    }
+        
+    
+//TURNING STAT UPDATES ON OR OFF
+    @IBAction func updates(_ sender: UISwitch) {
+        
+        if (sender.isOn == true ) {
+        let gameRemindersURL = "https://cgi.sice.indiana.edu/~team58/ModuserSetting.php"
+        let defaultValues = UserDefaults.standard
+        let myUser = defaultValues.string(forKey: "userID")!
+        
+        let parameters: Parameters=[
+            "userID":myUser,
+            "gameReminder":"No",
+            "statUpdate":"Yes"
+        ]
+        
+        Alamofire.request(gameRemindersURL, method: .post, parameters: parameters).responseJSON
+            {
+                response in
+                print(response)
+                
+                //getting the json value from the server
+                if let result = response.result.value {
+                    print(result)
+                    //print(jsonData[2])
+                }else{
+                    //error message in case of invalid credential
+                    //self.labelMessage.text = "Invalid username or password"
+                }
+        }
+        } else {
+            let gameRemindersURL = "https://cgi.sice.indiana.edu/~team58/ModuserSetting.php"
+            let defaultValues = UserDefaults.standard
+            let myUser = defaultValues.string(forKey: "userID")!
+            
+            let parameters: Parameters=[
+                "userID":myUser,
+                "gameReminder":"No",
+                "statUpdate":"Yes"
+            ]
+            
+            Alamofire.request(gameRemindersURL, method: .post, parameters: parameters).responseJSON
+                {
+                    response in
+                    print(response)
+                    
+                    //getting the json value from the server
+                    if let result = response.result.value {
+                        print(result)
+                        //print(jsonData[2])
+                    }else{
+                        //error message in case of invalid credential
+                        //self.labelMessage.text = "Invalid username or password"
+                    }
+            }
+            
+        }
+        
     }
     
     
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    @IBOutlet weak var enterEmail: UITextField!
+    
+    
+    @IBOutlet weak var oldPassword: UITextField!
+    
+    @IBOutlet weak var newPassword: UITextField!
+    
+    @IBOutlet weak var confirmPassword: UITextField!
+    
+    
+    
+//CHANGING THE PASSWORD
     @IBAction func changePsw(_ sender: Any) {
+        
+        let changePassURL = "https://cgi.sice.indiana.edu/~team58/changePW.php"
+        
+        let defaultValues = UserDefaults.standard
+        let myUser = defaultValues.string(forKey: "userID")!
+        
+        let parameters: Parameters=[
+            "userID":myUser,
+            "email":enterEmail.text!,
+            "oldPW":oldPassword.text!,
+            "newPW":newPassword.text!,
+            "confirmNewPW":confirmPassword.text!
+        ]
+        
+        Alamofire.request(changePassURL, method: .post, parameters: parameters).responseJSON
+            {
+                response in
+                print(response)
+                
+                //getting the json value from the server
+                if let result = response.result.value {
+                    print(result)
+                    //print(jsonData[2])
+                }else{
+                    //error message in case of invalid credential
+                    //self.labelMessage.text = "Invalid username or password"
+                }
+        }
     }
     
-    
+ 
     
 }

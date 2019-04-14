@@ -37,9 +37,14 @@ class homeScreenViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       /* let defaultValues = UserDefaults.standard
+        let myUser = defaultValues.string(forKey: "userID")
+        print(myUser!)
+        print("did this work", myUser!)*/
         
         self.tableView.reloadData()
         
+
         
         session = URLSession.shared
         task = URLSessionDownloadTask()
@@ -149,7 +154,7 @@ class homeScreenViewController: UIViewController, UITableViewDataSource, UITable
         vc?.weight = item.weight!
         vc?.hometown = item.hometown!
         vc?.highschool = item.highschool!
-
+        //vc?.myUser = myUser
         
         
         self.navigationController?.pushViewController(vc!, animated: true)

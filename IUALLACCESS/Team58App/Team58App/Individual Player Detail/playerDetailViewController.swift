@@ -113,9 +113,11 @@ class playerDetailViewController: UIViewController, UITableViewDataSource, UITab
     @IBAction func onClickDelete(_ sender: Any) {
         
         let goHome = storyboard?.instantiateViewController(withIdentifier:  "homeController") as? UITabBarController
+        let defaultValues = UserDefaults.standard
+        let myUser = defaultValues.string(forKey: "userID")!
         
         let parameters: Parameters=[
-            "userID":95,
+            "userID":myUser,
             "teamID":teamID,
             "athleteID":athleteID
         ]
@@ -153,11 +155,15 @@ class playerDetailViewController: UIViewController, UITableViewDataSource, UITab
         
         let goHome = storyboard?.instantiateViewController(withIdentifier:  "homeController") as? UITabBarController
         
+
+        let defaultValues = UserDefaults.standard
+        let myUser = defaultValues.string(forKey: "userID")!
+        
         let parameters: Parameters=[
-            "userID":95,
+            "userID":myUser,
             "teamID":teamID,
             "athleteID":athleteID
-            ]
+        ]
         
         Alamofire.request(addFavURL, method: .post, parameters: parameters).responseJSON
             {
