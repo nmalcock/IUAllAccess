@@ -1,0 +1,15 @@
+INSERT INTO user (email, password) 
+VALUES ('johndoe@iu.edu', 'betaeta1892'), ('hbwells@gmail.com', '1015Njo'), ('becky1','becky1');
+
+INSERT INTO team (teamName, season_start, season_end)
+VALUES ("Men's Basketball", 2018, 2019),("Football", 2018, 2018),("Baseball", 2019, 2019),("Men's Soccer", 2018, 2018);
+
+
+INSERT INTO userFavorites (userID, BBathleteID)
+VALUES (3, 34), (3,18);
+
+INSERT INTO userFavorites (userID, FBathleteID)
+VALUES (3, 14);
+
+INSERT INTO userFavorites (userID, SCathleteID)
+VALUES (3, 15);

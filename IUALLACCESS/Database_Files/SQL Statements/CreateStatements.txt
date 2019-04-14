@@ -1,0 +1,262 @@
+CREATE TABLE team
+	(teamID INT AUTO_INCREMENT,
+	teamName VARCHAR(100),
+	season_start YEAR(4),
+	season_end YEAR(4),
+	PRIMARY KEY (teamID)
+)
+ENGINE = INNODB;
+	
+
+CREATE TABLE user 
+	(userID INT AUTO_INCREMENT,
+	email VARCHAR(100),
+	password VARCHAR(260) UNIQUE,
+	finalScore BOOLEAN DEFAULT TRUE,
+	gameReminder BOOLEAN DEFAULT TRUE,
+	statUpdate BOOLEAN DEFAULT FALSE,
+	gameStart BOOLEAN DEFAULT FALSE,
+	PRIMARY KEY (userID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE userFavorites
+	(userID INT,
+	BBathleteID INT,
+	FBathleteID INT,
+	BSathleteID INT,
+	SCathleteID INT,
+	teamID INT,
+	FOREIGN KEY (userID) REFERENCES user(userid),
+	FOREIGN KEY (BBathleteID) REFERENCES BBathlete(BBathleteID),
+	FOREIGN KEY (FBathleteID) REFERENCES FBathlete(FBathleteID),
+	FOREIGN KEY (BSathleteID) REFERENCES BSathlete(BSathleteID),
+	FOREIGN KEY (SCathleteID) REFERENCES SCathlete(SCathleteID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+
+CREATE TABLE BBathlete 
+	(BBathleteID INT AUTO_INCREMENT,
+	fname VARCHAR(100),
+	lname VARCHAR(100),
+	number INT,
+	position VARCHAR(20),
+	year VARCHAR(9),
+	height VARCHAR(7),
+	weight VARCHAR(8),
+	hometown VARCHAR(50),
+	highschool VARCHAR(50),
+	image_path VARCHAR(200),
+	teamID INT NOT NULL,
+	PRIMARY KEY (BBathleteID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE BBstat
+	(BBstatID INT AUTO_INCREMENT,
+	stat_type VARCHAR(15),
+	stat_number FLOAT,
+	BBathleteID INT NOT NULL,
+	teamID INT NOT NULL,
+	PRIMARY KEY (BBstatID),
+	FOREIGN KEY (BBathleteID) REFERENCES BBathlete(BBathleteID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE BBschedule    
+	(BBscheduleID INT AUTO_INCREMENT,
+	opponent VARCHAR(50),
+	date_time DATETIME,
+	site VARCHAR(20),
+	home_score INT,
+	away_score INT,
+	bTenOpp VARCHAR(50),	
+	w_L VARCHAR(11),
+	box_score_link VARCHAR(200),
+	teamID INT,
+	PRIMARY KEY (BBscheduleID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE BBteamStat
+	(BBtstatID INT AUTO_INCREMENT,
+	stat_type VARCHAR(15),
+	stat_number FLOAT,
+	teamID INT NOT NULL,
+	PRIMARY KEY (BBtstatID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE FBathlete 
+	(FBathleteID INT AUTO_INCREMENT,
+	fname VARCHAR(100),
+	lname VARCHAR(100),
+	number INT,
+	position VARCHAR(20),
+	year VARCHAR(9),
+	height VARCHAR(7),
+	weight VARCHAR(8),
+	hometown VARCHAR(50),
+	highschool VARCHAR(50),
+	image_path VARCHAR(200),
+	teamID INT NOT NULL,
+	PRIMARY KEY (FBathleteID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE FBstat
+	(FBstatID INT AUTO_INCREMENT,
+	stat_type VARCHAR(15),
+	stat_number FLOAT,
+	FBathleteID INT NOT NULL,
+	teamID INT NOT NULL,
+	PRIMARY KEY (FBstatID),
+	FOREIGN KEY (FBathleteID) REFERENCES FBathlete(FBathleteID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE FBschedule    
+	(FBscheduleID INT AUTO_INCREMENT,
+	opponent VARCHAR(50),
+	date_time DATETIME,
+	site VARCHAR(20),
+	home_score INT,
+	away_score INT,
+	bTenOpp VARCHAR(50),	
+	w_L VARCHAR(11),
+	box_score_link VARCHAR(200),
+	teamID INT,
+	PRIMARY KEY (FBscheduleID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE FBteamStat
+	(FBtstatID INT AUTO_INCREMENT,
+	stat_type VARCHAR(15),
+	stat_number FLOAT,
+	teamID INT NOT NULL,
+	PRIMARY KEY (FBtstatID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE BSathlete 
+	(BSathleteID INT AUTO_INCREMENT,
+	fname VARCHAR(100),
+	lname VARCHAR(100),
+	number INT,
+	position VARCHAR(20),
+	year VARCHAR(9),
+	height VARCHAR(7),
+	weight VARCHAR(8),
+	hometown VARCHAR(50),
+	highschool VARCHAR(50),
+	image_path VARCHAR(200),
+	teamID INT NOT NULL,
+	PRIMARY KEY (BSathleteID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE BSstat
+	(BSstatID INT AUTO_INCREMENT,
+	stat_type VARCHAR(15),
+	stat_number FLOAT,
+	BSathleteID INT NOT NULL,
+	teamID INT NOT NULL,
+	PRIMARY KEY (BSstatID),
+	FOREIGN KEY (BSathleteID) REFERENCES BSathlete(BSathleteID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE BSschedule    
+	(BSscheduleID INT AUTO_INCREMENT,
+	opponent VARCHAR(50),
+	date_time DATETIME,
+	site VARCHAR(20),
+	home_score INT,
+	away_score INT,
+	bTenOpp VARCHAR(50),	
+	w_L VARCHAR(11),
+	box_score_link VARCHAR(200),
+	teamID INT,
+	PRIMARY KEY (BSscheduleID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE BSteamStat
+	(BStstatID INT AUTO_INCREMENT,
+	stat_type VARCHAR(15),
+	stat_number FLOAT,
+	teamID INT NOT NULL,
+	PRIMARY KEY (BStstatID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE SCathlete 
+	(SCathleteID INT AUTO_INCREMENT,
+	fname VARCHAR(100),
+	lname VARCHAR(100),
+	number INT,
+	position VARCHAR(20),
+	year VARCHAR(9),
+	height VARCHAR(7),
+	weight VARCHAR(8),
+	hometown VARCHAR(50),
+	highschool VARCHAR(50),
+	image_path VARCHAR(200),
+	teamID INT NOT NULL,
+	PRIMARY KEY (SCathleteID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE SCstat
+	(SCstatID INT AUTO_INCREMENT,
+	stat_type VARCHAR(15),
+	stat_number FLOAT,
+	BBathleteID INT NOT NULL,
+	teamID INT NOT NULL,
+	PRIMARY KEY (SCstatID),
+	FOREIGN KEY (SCathleteID) REFERENCES SCathlete(SCathleteID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE SCschedule    
+	(SCscheduleID INT AUTO_INCREMENT,
+	opponent VARCHAR(50),
+	date_time DATETIME,
+	site VARCHAR(20),
+	home_score INT,
+	away_score INT,
+	bTenOpp VARCHAR(50),	
+	w_L VARCHAR(11),
+	box_score_link VARCHAR(200),
+	teamID INT,
+	PRIMARY KEY (SCscheduleID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
+
+CREATE TABLE SCteamStat
+	(SCtstatID INT AUTO_INCREMENT,
+	stat_type VARCHAR(15),
+	stat_number FLOAT,
+	teamID INT NOT NULL,
+	PRIMARY KEY (SCtstatID),
+	FOREIGN KEY (teamID) REFERENCES team(teamID)
+)
+ENGINE = INNODB;
