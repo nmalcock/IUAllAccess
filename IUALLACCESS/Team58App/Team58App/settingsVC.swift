@@ -12,35 +12,93 @@ import Alamofire
 
 class settingsVC: UIViewController {
     
-var userID = ""
-
+    var userID = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let userSettingsURL = "https://cgi.sice.indiana.edu/~team58/userSetting.php"
+        /*let userSettingsURL = "https://cgi.sice.indiana.edu/~team58/userSetting.php"
+         let defaultValues = UserDefaults.standard
+         let myUser = defaultValues.string(forKey: "userID")!
+         
+         let parameters: Parameters=[
+         "userID":myUser
+         ]
+         
+         Alamofire.request(userSettingsURL, method: .post, parameters: parameters).responseJSON
+         {
+         response in
+         print(response)
+         
+         
+         }*/
+        getUserPrefs()
+        
+    }
+    func getUserPrefs() {
+        
         let defaultValues = UserDefaults.standard
         let myUser = defaultValues.string(forKey: "userID")!
+        print(myUser)
+        
         
         let parameters: Parameters=[
-            "userID":myUser
+            "userID": myUser
         ]
+        let userSettingsURL = "https://cgi.sice.indiana.edu/~team58/userSetting.php"
         
-        Alamofire.request(userSettingsURL, method: .post, parameters: parameters).responseJSON
+        Alamofire.request(userSettingsURL, method: .post, parameters: parameters).responseString
             {
                 response in
-                print(response)
                 
-                //getting the json value from the server
-                if let result = response.result.value {
-                    print(result)
-                    //print(jsonData[2])
-                }else{
-                    //error message in case of invalid credential
-                    //self.labelMessage.text = "Invalid username or password"
-                }
+                //print(response.result.value!)
+                let data = response.data
+                self.parseJSON(data!)
+                print(data!)
         }
+        
     }
+    
+    
+    
+    func parseJSON(_ data:Data) {
+        
+        var jsonResult = NSArray()
+        
+        do{
+            jsonResult = try JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.allowFragments) as! NSArray
+            
+        } catch let error as NSError {
+            print(error)
+            
+        }
+        
+        var jsonElement = NSDictionary()
+        
+        for i in 0 ..< jsonResult.count
+        {
+            
+            jsonElement = jsonResult[i] as! NSDictionary
+            
+            
+            //the following insures none of the JsonElement values are nil through optional binding
+            if let gameReminder = jsonElement["gameReminder"] as? String,
+                let statUpdate = jsonElement["statUpdate"] as? String
+                
+                
+                
+            {
+                print(gameReminder)
+                print(statUpdate)
+            }
+            
+            
+        }
+        
+        
+    }
+    
     
     
     
@@ -49,16 +107,15 @@ var userID = ""
         
         if (sender.isOn == true ) {
             
-        
-        let gameRemindersURL = "https://cgi.sice.indiana.edu/~team58/ModuserSetting.php"
-        let defaultValues = UserDefaults.standard
-        let myUser = defaultValues.string(forKey: "userID")!
-        
-        let parameters: Parameters=[
-            "userID":myUser,
-            "gameReminder":"Yes",
-            "statUpdate":"No"
-        ]
+            
+            let gameRemindersURL = "https://cgi.sice.indiana.edu/~team58/ModuserSetting.php"
+            let defaultValues = UserDefaults.standard
+            let myUser = defaultValues.string(forKey: "userID")!
+            
+            let parameters: Parameters=[
+                "userID":myUser,
+                "gameReminder":"Yes"
+            ]
         
         Alamofire.request(gameRemindersURL, method: .post, parameters: parameters).responseJSON
             {
@@ -109,16 +166,15 @@ var userID = ""
     @IBAction func updates(_ sender: UISwitch) {
         
         if (sender.isOn == true ) {
-        let gameRemindersURL = "https://cgi.sice.indiana.edu/~team58/ModuserSetting.php"
-        let defaultValues = UserDefaults.standard
-        let myUser = defaultValues.string(forKey: "userID")!
-        
+            let gameRemindersURL = "https://cgi.sice.indiana.edu/~team58/statreminderupdate.php"
+            let defaultValues = UserDefaults.standard
+            let myUser = defaultValues.string(forKey: "userID")!
+            
         let parameters: Parameters=[
-            "userID":myUser,
-            "gameReminder":"No",
-            "statUpdate":"Yes"
+                "userID":myUser,
+                "statUpdate":"Yes"
         ]
-        
+            
         Alamofire.request(gameRemindersURL, method: .post, parameters: parameters).responseJSON
             {
                 response in
