@@ -12,7 +12,7 @@ import Alamofire
 
 class homeScreenViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FavPullDataProtocol {
     
-    var user = ""
+    var email = ""
     
     var feedItems: NSArray = NSArray()
     var selectedFavorites : FavStoreData = FavStoreData()
