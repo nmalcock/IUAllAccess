@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 
-class settingsVC: UIViewController {
+class settingsVC: UIViewController, UITextFieldDelegate {
     
     var userID = ""
     
@@ -273,6 +273,10 @@ class settingsVC: UIViewController {
         }
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
  
     
 }

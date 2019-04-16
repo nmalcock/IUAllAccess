@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="thg-At-2lU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UUn-C9-2Oq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -103,7 +103,7 @@
                         <outlet property="lblTitle" destination="U5L-kY-sW0" id="jmI-BS-P67"/>
                         <outlet property="textFieldEmail" destination="ycl-8q-KQu" id="jBM-st-aOn"/>
                         <outlet property="textFieldPassword" destination="vZC-bU-OqB" id="NIr-XF-dtU"/>
-                        <segue destination="UUn-C9-2Oq" kind="show" identifier="homeScreenViewController" id="9Ho-LK-DkP"/>
+                        <segue destination="sY8-Ab-Bpm" kind="show" identifier="homeScreenViewController" id="NMS-j0-Xbs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -270,7 +270,7 @@
             <objects>
                 <viewController storyboardIdentifier="todaysGamesVC" title="Today's Games" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YZe-yf-9Ef" customClass="todaysGamesVC" customModule="Team58App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Agv-zG-8ve">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="big10today" translatesAutoresizingMaskIntoConstraints="NO" id="nLm-uo-n0m">
@@ -311,6 +311,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Today's Games" image="calendar-1" id="ovV-HH-MmV"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <connections>
                         <outlet property="todaysTableView" destination="Zmw-Ja-prg" id="4la-O9-NGc"/>
                     </connections>
@@ -766,10 +767,10 @@
                         <viewLayoutGuide key="safeArea" id="qAo-92-eKO"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="sC8-Ld-T8o">
-                        <color key="badgeColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="sC8-Ld-T8o"/>
                     <navigationItem key="navigationItem" title="Home" id="B4c-NC-beB"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <connections>
                         <outlet property="tableView" destination="o9J-cv-b1E" id="3Av-ag-ysy"/>
                     </connections>
@@ -927,26 +928,21 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="sY8-Ab-Bpm" kind="relationship" relationship="rootViewController" id="Emf-1j-prX"/>
+                        <segue destination="thg-At-2lU" kind="relationship" relationship="rootViewController" id="rrn-Ue-Bnb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="681-QJ-ZVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2167" y="-387"/>
+            <point key="canvasLocation" x="-4602" y="222"/>
         </scene>
         <!--IU ALL ACCESS-->
         <scene sceneID="OTT-8C-etY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ANz-I4-u34" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="homeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sY8-Ab-Bpm" customClass="homeController" customModule="Team58App" customModuleProvider="target" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="" id="14J-8c-Ko0"/>
                     <navigationItem key="navigationItem" title="IU ALL ACCESS" id="FS4-B3-hSg">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="1SP-8B-lII">
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="showDetail" id="xs8-ce-mcg"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="1SP-8B-lII"/>
                     </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="fill" id="UbV-sT-c9H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -963,8 +959,9 @@
                         <segue destination="pNu-8V-Pww" kind="relationship" relationship="viewControllers" id="tbS-Gg-7Ru"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ANz-I4-u34" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1375" y="-199"/>
+            <point key="canvasLocation" x="-1841" y="61"/>
         </scene>
         <!--Settings-->
         <scene sceneID="GNa-9d-5sI">
@@ -1068,8 +1065,9 @@
                         <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="jto-zH-ZY6"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings-work-tool-1" id="sCD-af-GeE"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <connections>
                         <outlet property="confirmPassword" destination="l8H-c5-TvU" id="xX7-oo-4Lb"/>
                         <outlet property="enterEmail" destination="nOh-BF-4V2" id="O8Y-HE-Koi"/>
@@ -1588,7 +1586,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fDk-Uy-FZg"/>
-        <segue reference="xs8-ce-mcg"/>
+        <segue reference="E0f-E4-io5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
