@@ -15,6 +15,7 @@ import SwiftyJSON
 class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelegate, UITextFieldDelegate {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var btnGoogleSignIn:UIButton!
+    @IBOutlet weak var Login: UIButton!
     
     //you can get the ip using ifconfig command in terminal
     let URL_USER_LOGIN = "http://cgi.sice.indiana.edu/~team58/login.php"
@@ -66,11 +67,11 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
         if let error = error {
             print("We have error signing in user == \(error.localizedDescription)")
         } else {
-            performSegue(withIdentifier: "popOutNoteExpanded", sender: self)
+            //performSegue(withIdentifier: "homeScreenViewController", sender: self)
             if let gmailUser = user {
-                lblTitle.text = "You are signed in using id \(gmailUser.profile.email)"
+                lblTitle.text = "You are signed in as: \(gmailUser.profile.email!)"
                 btnGoogleSignIn.setTitle("Sign Out", for: .normal)
-                
+                performSegue(withIdentifier: "homeScreenViewController", sender: self)
                 /// end google sign in ///
             }
         }
@@ -80,17 +81,20 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
     
     
     @IBAction func LoginButton(_ sender: UIButton) {
+        
+        
+        if self.Login.title(for: .normal) == "Log Out" {
+            lblTitle.text = ""
+            textFieldEmail.text = ""
+            textFieldPassword.text = ""
+            self.Login.setTitle("Log In", for: .normal)
+        } else {
+            
         let parameters: Parameters=[
             "email":textFieldEmail.text!,
             "password":textFieldPassword.text!,
         ]
-        //        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //            self.view.endEditing(true)
-        //            return false
-        //        }
-        
-        //making a post request
-        //making a post request
+
         Alamofire.request(URL_USER_LOGIN, method: .post, parameters: parameters).responseJSON
             {
                 response in
@@ -120,11 +124,14 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
                         let myuser = UserDefaults.standard.integer(forKey: "userID")
                         print("yo", myuser)
                         //print(jsonData[2])
-                        self.performSegue(withIdentifier: "homeScreenViewController", sender: nil)
+                        self.lblTitle.text = "You are signed in as: \(self.textFieldEmail.text!)"
+
                         
+                        self.performSegue(withIdentifier: "homeScreenViewController", sender: nil)
+                        self.Login.setTitle("Log Out", for: .normal)
                         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                             let DestViewController : homeScreenViewController = segue.destination as! homeScreenViewController
-                            //                        DestViewController.user = user
+                            DestViewController.email = self.textFieldEmail.text!
                             //                        DestViewController.label.text = self.textFieldEmail.text!
                             //                        print(DestViewController.label.text!)
                         }
@@ -132,6 +139,7 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
                 }else{
                     //error message in case of invalid credential
                     self.createAlert(title: "", message: "Invalid username or password")
+                }
                 }
                 
         }
