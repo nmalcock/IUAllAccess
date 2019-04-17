@@ -254,11 +254,11 @@ class settingsVC: UIViewController, UITextFieldDelegate {
         let myUser = defaultValues.string(forKey: "userID")!
         
         let parameters: Parameters=[
-            "userID":myUser,
+            //"userID":myUser,
             "email":enterEmail.text!,
-            "oldPW":oldPassword.text!,
-            "newPW":newPassword.text!,
-            "confirmNewPW":confirmPassword.text!
+            "oldPassword":oldPassword.text!,
+            "newPassword":newPassword.text!,
+            "newPasswordconfirm":confirmPassword.text!
         ]
         
         Alamofire.request(changePassURL, method: .post, parameters: parameters).responseJSON
