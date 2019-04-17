@@ -143,8 +143,7 @@ class settingsVC: UIViewController, UITextFieldDelegate {
             
             let parameters: Parameters=[
                 "userID":myUser,
-                "gameReminder":"No",
-                "statUpdate":"No"
+                "gameReminder":"No"
             ]
             
             Alamofire.request(gameRemindersURL, method: .post, parameters: parameters).responseJSON
