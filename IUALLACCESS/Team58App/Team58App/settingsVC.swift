@@ -18,6 +18,11 @@ class settingsVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.enterEmail.delegate = self
+        self.oldPassword.delegate = self
+        self.newPassword.delegate = self
+        self.confirmPassword.delegate = self
+        
         /*let userSettingsURL = "https://cgi.sice.indiana.edu/~team58/userSetting.php"
          let defaultValues = UserDefaults.standard
          let myUser = defaultValues.string(forKey: "userID")!
@@ -273,7 +278,7 @@ class settingsVC: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
