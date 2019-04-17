@@ -201,8 +201,7 @@ class settingsVC: UIViewController, UITextFieldDelegate {
             
             let parameters: Parameters=[
                 "userID":myUser,
-                "gameReminder":"No",
-                "statUpdate":"Yes"
+                "gameReminder":"No"
             ]
             
             Alamofire.request(gameRemindersURL, method: .post, parameters: parameters).responseJSON
@@ -278,7 +277,7 @@ class settingsVC: UIViewController, UITextFieldDelegate {
         }
     }
     
-func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
