@@ -1382,6 +1382,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Schedule" id="FJM-m7-xdK"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="listTableView" destination="huI-QZ-1HX" id="Yy4-Rs-aiF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGc-Vr-Gak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
