@@ -1,0 +1,16 @@
+import csv
+import mysql.connector
+
+db = mysql.connector.connect(host = 'db.sice.indiana.edu',
+                     user = 'i494f18_team58',
+                     passwd = 'my+sql=i494f18_team58',
+                     database = 'i494f18_team58')
+cursor = db.cursor()
+
+batStat = csv.reader(file('BaseBatstats.csv'), delimiter=',')
+
+next(batStat)
+
+for row in batStat:
+    cursor.execute('REPLACE INTO BSstat(stat_type,stat_number, BSathleteID, teamID) VALUES (%s, %s, %s, %s)',row)
+db.commit()
